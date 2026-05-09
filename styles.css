@@ -3154,3 +3154,108 @@ input {
     animation: none !important;
   }
 }
+
+/* Final homepage fit pass for desktop browser windows */
+@media (min-width: 1081px) {
+  .hero {
+    min-height: calc(100vh - 96px);
+  }
+
+  .hero-inner {
+    width: min(1280px, calc(100% - 88px));
+    min-height: calc(100vh - 96px);
+    grid-template-columns: minmax(520px, 1fr) minmax(330px, 380px);
+    gap: 34px;
+    align-items: center;
+    padding: 18px 0 24px;
+  }
+
+  .hero-copy {
+    max-width: 680px;
+  }
+
+  .now-available {
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 3vw, 2.65rem);
+    line-height: 1;
+  }
+
+  .hero-copy h1 {
+    max-width: 700px;
+    margin: 10px 0 18px;
+    font-size: clamp(4.7rem, 6vw, 6.35rem);
+    line-height: 0.86;
+  }
+
+  .tagline {
+    max-width: 650px;
+    font-size: clamp(1.1rem, 1.45vw, 1.35rem);
+    line-height: 1.45;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+  }
+
+  .quantum-orb-entry {
+    margin-top: 22px;
+    max-width: 420px;
+    padding: 12px 20px 12px 12px;
+  }
+
+  .orb-image {
+    width: 86px;
+  }
+
+  .orb-copy strong {
+    font-size: 1.7rem;
+  }
+
+  .latest-card {
+    max-width: 380px;
+    padding: 20px;
+    border-radius: 28px;
+  }
+
+  .latest-card .eyebrow {
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    font-size: 0.72rem;
+  }
+
+  .latest-book {
+    margin-bottom: 16px;
+    aspect-ratio: 1.06 / 1;
+  }
+
+  .latest-book.electric-book {
+    padding: 12px 12px 26px;
+  }
+
+  .latest-book img {
+    max-height: 300px;
+  }
+
+  .latest-card h2 {
+    font-size: clamp(2.2rem, 3vw, 2.7rem);
+  }
+
+  .latest-card .book-subtitle {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+  }
+
+  .release-copy {
+    padding: 12px 14px;
+    font-size: 0.93rem;
+    line-height: 1.45;
+  }
+
+  .latest-card p:not(.eyebrow):not(.book-subtitle):not(.release-copy) {
+    display: none;
+  }
+
+  .latest-card .card-actions {
+    margin-top: 14px;
+  }
+}
