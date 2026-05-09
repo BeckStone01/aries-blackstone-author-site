@@ -9,6 +9,27 @@ let characterResetTimer;
 
 document.body.classList.add("is-ready");
 
+const setActiveNavigation = () => {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentHash = window.location.hash;
+
+  document.querySelectorAll(".main-nav a").forEach((link) => {
+    const linkUrl = new URL(link.href, window.location.href);
+    const linkPage = linkUrl.pathname.split("/").pop() || "index.html";
+    const isHome = currentPage === "index.html" && linkPage === "index.html";
+    const isSamePage = currentPage === linkPage && !isHome;
+    const isActive = isSamePage || (isHome && (!currentHash || linkUrl.hash === currentHash || linkUrl.hash === "#home"));
+
+    link.classList.toggle("is-active", isActive);
+
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+};
+
 const updateChrome = () => {
   const scrolled = window.scrollY > 18;
   header?.classList.toggle("is-scrolled", scrolled);
@@ -124,6 +145,8 @@ const onScroll = () => {
 
 window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("resize", updateParallax);
+window.addEventListener("hashchange", setActiveNavigation);
 
+setActiveNavigation();
 updateChrome();
 updateParallax();

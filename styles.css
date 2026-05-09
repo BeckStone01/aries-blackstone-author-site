@@ -132,6 +132,38 @@ img {
   white-space: nowrap;
 }
 
+.main-nav a {
+  position: relative;
+  padding: 10px 0;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--gold);
+  opacity: 0;
+  transform: scaleX(0.55);
+  transform-origin: center;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.is-active::after,
+.main-nav a[aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.main-nav a.is-active,
+.main-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
 .main-nav a:hover,
 .text-link:hover,
 .footer-inner a:hover {
@@ -538,7 +570,7 @@ h1 {
 }
 
 .page-hero {
-  padding: 96px 0 44px;
+  padding: 64px 0 48px;
   background:
     radial-gradient(circle at 14% 10%, rgba(214, 171, 96, 0.22), transparent 30%),
     radial-gradient(circle at 88% 12%, rgba(39, 83, 91, 0.15), transparent 28%),
@@ -547,6 +579,7 @@ h1 {
 }
 
 .page-hero .section-title {
+  max-width: 940px;
   margin-bottom: 0;
 }
 
@@ -593,9 +626,9 @@ h1 {
 .signup-panel h2,
 .contact-grid h2 {
   margin: 0;
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  line-height: 0.96;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.35rem, 4.2vw, 4.65rem);
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .intro-grid p,
@@ -1755,9 +1788,97 @@ input {
 .footer-brand-mark img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 22%;
   transform: none;
+}
+
+/* GitHub Pages layout polish */
+@media (min-width: 1081px) {
+  .site-header {
+    padding-left: max(40px, calc((100vw - 1480px) / 2));
+    padding-right: max(40px, calc((100vw - 1480px) / 2));
+  }
+
+  .hero {
+    min-height: calc(100vh - 88px);
+  }
+
+  .hero-inner {
+    width: min(1320px, calc(100% - 80px));
+    min-height: calc(100vh - 88px);
+    grid-template-columns: minmax(520px, 1fr) minmax(360px, 440px);
+    gap: 48px;
+    padding: 40px 0 48px;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+    padding-left: 0;
+  }
+
+  .hero-copy h1 {
+    max-width: 780px;
+    font-size: 7.2rem;
+    letter-spacing: 0;
+  }
+
+  .now-available {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    max-width: 720px;
+    font-size: 1.45rem;
+  }
+
+  .latest-card {
+    width: 100%;
+    max-width: 440px;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .latest-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+  }
+
+  .latest-book img {
+    width: auto;
+    max-width: 100%;
+    max-height: 390px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1320px) {
+  .hero-inner {
+    width: min(1180px, calc(100% - 56px));
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
+    gap: 40px;
+  }
+
+  .hero-copy h1 {
+    font-size: 6rem;
+  }
+
+  .now-available {
+    font-size: 2.45rem;
+  }
+
+  .latest-book img {
+    max-height: 380px;
+  }
+}
+
+.footer-brand-mark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: transparent;
 }
 
 .footer-inner nav {
