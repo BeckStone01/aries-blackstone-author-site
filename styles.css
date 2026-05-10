@@ -2820,6 +2820,1167 @@ input {
   }
 }
 
+/* Designer QA final pass: production layout, image fit, active states */
+h1,
+h2,
+h3,
+.section-title h1,
+.section-title h2,
+.hero-copy h1,
+.quantum-copy-panel h1 {
+  letter-spacing: 0;
+}
+
+.hero .reveal,
+.page-hero .reveal,
+.quantum-entry .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.main-nav a.is-active,
+.main-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.main-nav a.is-active::after,
+.main-nav a[aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+  height: 3px;
+}
+
+.hero-bg img,
+.quantum-entry-bg img {
+  object-position: center center;
+  filter: saturate(1.03) brightness(0.82) contrast(1.05);
+}
+
+.footer-brand-mark img,
+.brand-mark img {
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.cover-link img,
+.quantum-book-node img,
+.child-cover img {
+  object-fit: contain;
+  object-position: center center;
+}
+
+@media (min-width: 1081px) {
+  .site-header {
+    min-height: 76px;
+    padding-block: 12px;
+  }
+
+  .hero {
+    height: calc(100svh - 76px);
+    min-height: 620px;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    width: min(1360px, calc(100% - 96px));
+    height: 100%;
+    min-height: 0;
+    padding: clamp(14px, 2.4vh, 28px) 0;
+    grid-template-columns: minmax(0, 1.08fr) minmax(330px, 390px);
+    gap: clamp(34px, 5vw, 82px);
+    align-items: center;
+  }
+
+  .now-available {
+    margin-bottom: 6px;
+    font-size: clamp(2rem, 3.15vw, 3.45rem);
+    line-height: 0.9;
+  }
+
+  .hero-copy h1 {
+    margin: 8px 0 14px;
+    font-size: clamp(3.9rem, 5.75vw, 6.25rem);
+    line-height: 0.88;
+  }
+
+  .hero-copy .lead,
+  .tagline {
+    max-width: 760px;
+    font-size: clamp(1rem, 1.28vw, 1.22rem);
+    line-height: 1.45;
+  }
+
+  .hero-actions {
+    margin-top: 18px;
+    gap: 12px;
+  }
+
+  .quantum-orb-entry {
+    max-width: 430px;
+    margin-top: 20px;
+    grid-template-columns: 70px minmax(0, 1fr);
+    padding: 10px 18px 10px 10px;
+    border-radius: 999px;
+  }
+
+  .orb-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .orb-copy strong {
+    font-size: clamp(1.3rem, 1.7vw, 1.8rem);
+    line-height: 1;
+  }
+
+  .latest-card {
+    width: min(100%, 390px);
+    max-height: calc(100svh - 118px);
+    padding: 16px 18px 18px;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+
+  .latest-card .eyebrow {
+    margin-bottom: 9px;
+    padding: 7px 12px;
+    font-size: 0.7rem;
+  }
+
+  .latest-book {
+    margin-bottom: 14px;
+    border-radius: 20px;
+  }
+
+  .latest-book.electric-book {
+    padding: 8px 12px 22px;
+  }
+
+  .latest-book img {
+    height: clamp(170px, 24vh, 232px);
+    object-fit: contain;
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.85rem, 2.45vw, 2.55rem);
+    line-height: 0.96;
+  }
+
+  .latest-card .book-subtitle {
+    margin-bottom: 8px;
+    font-size: 0.82rem;
+  }
+
+  .latest-card .release-copy {
+    margin-bottom: 0;
+    padding: 11px 13px;
+    font-size: 0.84rem;
+    line-height: 1.34;
+  }
+
+  .latest-card > p:not(.eyebrow):not(.book-subtitle):not(.release-copy) {
+    display: none;
+  }
+
+  .latest-card .card-actions {
+    margin-top: 12px;
+  }
+
+  .page-hero {
+    min-height: min(58svh, 560px);
+    padding: clamp(74px, 8vw, 116px) 0 clamp(58px, 6vw, 90px);
+  }
+
+  .page-hero .section-title h1 {
+    font-size: clamp(4.1rem, 8vw, 8rem);
+    line-height: 0.92;
+  }
+
+  .books-section,
+  .coming-soon-grid,
+  .contact-main {
+    padding-top: clamp(58px, 6vw, 86px);
+    padding-bottom: clamp(70px, 7vw, 104px);
+  }
+
+  .cover-link img {
+    height: clamp(230px, 21vw, 292px);
+    background: rgba(255, 250, 242, 0.62);
+  }
+
+  .book-copy h3 {
+    font-size: clamp(1.65rem, 1.85vw, 2rem);
+  }
+
+  .quantum-entry {
+    min-height: calc(100svh - 76px);
+    overflow: hidden;
+  }
+
+  .quantum-entry-inner {
+    min-height: calc(100svh - 76px);
+    padding: clamp(30px, 4vh, 52px) 0;
+    grid-template-columns: minmax(330px, 0.88fr) minmax(520px, 1.12fr);
+    align-items: center;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: clamp(3.7rem, 5.75vw, 6.15rem);
+    line-height: 0.94;
+  }
+
+  .quantum-copy-panel p {
+    max-width: 660px;
+    font-size: clamp(1rem, 1.25vw, 1.18rem);
+  }
+
+  .quantum-orbit-stage {
+    min-height: min(590px, calc(100svh - 150px));
+  }
+
+  .quantum-center {
+    width: clamp(185px, 16vw, 232px);
+  }
+
+  .book-orbit img {
+    width: 86px;
+    height: 122px;
+    background: transparent;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.36);
+  }
+
+  .orbit-book-title {
+    min-width: 150px;
+    padding: 12px 16px;
+    font-size: clamp(1.05rem, 1.34vw, 1.55rem);
+  }
+
+  .quantum-books-panel {
+    grid-template-columns: repeat(3, minmax(270px, 1fr));
+    gap: 26px;
+    padding-inline: max(32px, calc((100vw - 1380px) / 2));
+  }
+
+  .quantum-book-node {
+    min-height: 0;
+    grid-template-columns: minmax(145px, 0.82fr) minmax(0, 1.18fr);
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .quantum-book-node img {
+    width: 100%;
+    height: clamp(210px, 18vw, 280px);
+    background: rgba(255, 250, 242, 0.66);
+  }
+
+  .quantum-book-node h2 {
+    font-size: clamp(1.7rem, 2vw, 2.15rem);
+    line-height: 1;
+  }
+
+  .children-section {
+    padding: clamp(44px, 5vh, 70px) 0 clamp(78px, 8vh, 110px);
+  }
+
+  .children-section .section-title {
+    margin-bottom: 34px;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    max-width: 940px;
+    font-size: clamp(3.2rem, 5.45vw, 5.75rem);
+    line-height: 0.94;
+  }
+
+  .children-section .section-title p {
+    max-width: 820px;
+    font-size: clamp(1rem, 1.3vw, 1.18rem);
+  }
+
+  .children-books {
+    gap: 26px;
+  }
+
+  .child-book-card {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .child-cover {
+    padding: 16px 16px 0;
+  }
+
+  .child-cover img {
+    height: clamp(245px, 21vw, 335px);
+    background: rgba(255, 250, 242, 0.7);
+  }
+
+  .child-book-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 18px 20px 22px;
+  }
+
+  .child-book-copy h3 {
+    font-size: clamp(1.55rem, 1.8vw, 1.95rem);
+  }
+
+  .child-book-copy .button {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1081px) and (max-height: 830px) {
+  .hero {
+    min-height: calc(100svh - 76px);
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.12fr) minmax(310px, 360px);
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.55rem, 5.4vw, 5.85rem);
+  }
+
+  .now-available {
+    font-size: clamp(1.8rem, 2.95vw, 3.15rem);
+  }
+
+  .latest-card {
+    width: min(100%, 358px);
+    padding: 14px 16px 16px;
+  }
+
+  .latest-book img {
+    height: clamp(150px, 22vh, 205px);
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.65rem, 2.25vw, 2.25rem);
+  }
+
+  .latest-card .release-copy {
+    font-size: 0.78rem;
+  }
+
+  .quantum-orb-entry {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    padding: 12px 20px;
+  }
+
+  .main-nav a.is-active::after,
+  .main-nav a[aria-current="page"]::after {
+    bottom: -5px;
+  }
+
+  .hero,
+  .quantum-entry {
+    overflow: hidden;
+  }
+
+  .latest-card,
+  .quantum-book-node,
+  .child-book-card {
+    overflow: hidden;
+  }
+
+  .child-cover img,
+  .cover-link img,
+  .quantum-book-node img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+  }
+}
+
+/* Production QA polish pass */
+main#home {
+  background: #120e0b;
+}
+
+@media (min-width: 1081px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+
+  .site-header {
+    min-height: 80px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-shadow: 0 1px 0 rgba(32, 24, 18, 0.08);
+  }
+
+  .brand-mark {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+  }
+
+  .brand strong {
+    font-size: clamp(1.55rem, 1.55vw, 1.9rem);
+  }
+
+  .brand small {
+    margin-top: 3px;
+    font-size: 0.78rem;
+  }
+
+  .main-nav {
+    align-self: center;
+    gap: clamp(18px, 1.6vw, 30px);
+  }
+
+  .main-nav a {
+    padding-bottom: 9px;
+  }
+
+  .main-nav a.is-active::after,
+  .main-nav a[aria-current="page"]::after {
+    bottom: 0 !important;
+    background: var(--gold);
+    border-radius: 999px;
+  }
+
+  .hero {
+    height: calc(100vh - 80px) !important;
+    min-height: calc(100vh - 80px) !important;
+    overflow: hidden;
+    background: #120e0b;
+  }
+
+  .hero-inner {
+    height: 100% !important;
+    min-height: 0 !important;
+    align-items: center;
+    padding-top: clamp(8px, 1.5vh, 18px) !important;
+    padding-bottom: clamp(8px, 1.5vh, 18px) !important;
+    grid-template-columns: minmax(560px, 1fr) minmax(330px, 370px);
+    gap: clamp(32px, 4vw, 64px);
+  }
+
+  .hero-copy {
+    transform: translateY(-1vh) !important;
+  }
+
+  .now-available {
+    margin-bottom: 12px;
+    font-size: clamp(2.5rem, 4.3vw, 4.7rem);
+    line-height: 0.92;
+  }
+
+  .hero-copy h1 {
+    margin: 8px 0 12px;
+    font-size: clamp(3.8rem, 5.2vw, 5.55rem);
+    line-height: 0.9;
+  }
+
+  .hero-copy .tagline,
+  .hero-copy .lead {
+    max-width: 780px;
+    font-size: clamp(1rem, 1.18vw, 1.18rem);
+    line-height: 1.45;
+  }
+
+  .hero-actions {
+    margin-top: 18px;
+  }
+
+  .quantum-orb-entry {
+    width: min(100%, 500px);
+    min-height: 0;
+    margin-top: 20px;
+    padding: 10px 16px;
+  }
+
+  .orb-image {
+    width: 74px;
+    height: 74px;
+    flex-basis: 74px;
+  }
+
+  .orb-copy strong {
+    font-size: clamp(1.55rem, 2.1vw, 2.15rem);
+    line-height: 0.95;
+  }
+
+  .latest-card {
+    width: min(100%, 360px) !important;
+    max-height: calc(100vh - 118px);
+    padding: 14px 16px 16px !important;
+    align-self: center;
+  }
+
+  .latest-book img {
+    height: clamp(150px, 24vh, 238px) !important;
+    max-height: 238px;
+  }
+
+  .latest-card .eyebrow {
+    margin-bottom: 8px;
+    padding: 7px 12px;
+    font-size: 0.72rem;
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.6rem, 2.1vw, 2.25rem) !important;
+  }
+
+  .latest-card .book-subtitle {
+    margin-bottom: 6px;
+    font-size: 0.78rem;
+  }
+
+  .latest-card .release-copy {
+    padding: 10px 12px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.32 !important;
+  }
+
+  .latest-card .button {
+    min-height: 44px;
+    padding: 10px 18px;
+  }
+
+  .page-main > .page-hero {
+    min-height: 0 !important;
+    padding-top: clamp(44px, 4.8vw, 68px) !important;
+    padding-bottom: clamp(30px, 3.6vw, 50px) !important;
+  }
+
+  .page-hero .section-title h1 {
+    max-width: 980px;
+    font-size: clamp(3.1rem, 5.65vw, 5.9rem) !important;
+    line-height: 0.94 !important;
+  }
+
+  .page-hero .section-title p {
+    max-width: 820px;
+    margin-top: 18px;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .page-main > .section {
+    padding-top: clamp(40px, 4.5vw, 70px);
+    padding-bottom: clamp(54px, 5vw, 82px);
+  }
+
+  .contact-grid {
+    align-items: start;
+    gap: 32px;
+  }
+
+  .footer-brand-mark {
+    width: 58px !important;
+    height: 58px !important;
+    flex: 0 0 58px !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    overflow: hidden;
+  }
+
+  .footer-brand-mark img {
+    object-fit: cover !important;
+    object-position: center 18% !important;
+  }
+
+  .footer-inner {
+    gap: 20px;
+  }
+
+  .quantum-entry {
+    min-height: calc(100vh - 80px) !important;
+  }
+
+  .quantum-entry-inner {
+    min-height: calc(100vh - 80px) !important;
+    padding-top: clamp(24px, 3vh, 42px) !important;
+    padding-bottom: clamp(24px, 3vh, 42px) !important;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: clamp(3.4rem, 5.3vw, 5.7rem) !important;
+  }
+
+  .quantum-orbit-stage {
+    min-height: min(540px, calc(100vh - 150px)) !important;
+  }
+
+  .children-section {
+    padding-top: clamp(34px, 4vw, 52px) !important;
+    padding-bottom: clamp(58px, 6vw, 88px) !important;
+  }
+
+  .children-section .section-title {
+    margin-bottom: 28px !important;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    max-width: 880px !important;
+    font-size: clamp(2.75rem, 4.65vw, 4.75rem) !important;
+    line-height: 0.96 !important;
+  }
+
+  .children-section .section-title p {
+    max-width: 760px;
+    font-size: 1.03rem;
+    line-height: 1.55;
+  }
+
+  .children-books {
+    gap: 24px !important;
+  }
+
+  .child-cover {
+    padding: 12px !important;
+  }
+
+  .child-cover img {
+    height: clamp(225px, 18vw, 302px) !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+@media (min-width: 1081px) and (max-height: 860px) {
+  .hero {
+    height: calc(100vh - 80px) !important;
+    min-height: 0 !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(540px, 1fr) minmax(315px, 350px);
+    gap: 36px;
+  }
+
+  .now-available {
+    margin-bottom: 8px;
+    font-size: clamp(2.2rem, 3.8vw, 4rem);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.4rem, 4.8vw, 5rem);
+  }
+
+  .quantum-orb-entry {
+    margin-top: 14px;
+    padding: 8px 14px;
+  }
+
+  .orb-image {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .latest-book img {
+    height: clamp(132px, 22vh, 190px) !important;
+  }
+
+  .latest-card .release-copy {
+    font-size: 0.74rem !important;
+  }
+}
+
+/* Designer QA production lock */
+html {
+  scroll-padding-top: 86px;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+.button,
+.main-nav a,
+.section-kicker,
+.book-label,
+.child-status,
+.eyebrow,
+.brand small {
+  letter-spacing: 0 !important;
+}
+
+[id] {
+  scroll-margin-top: 94px;
+}
+
+.main-nav a.is-active,
+.main-nav a[aria-current="page"] {
+  color: var(--ink) !important;
+}
+
+.main-nav a.is-active::after,
+.main-nav a[aria-current="page"]::after {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+  height: 3px !important;
+  background: var(--gold) !important;
+}
+
+@media (min-width: 1081px) {
+  .site-header {
+    min-height: 78px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .brand {
+    gap: 12px !important;
+  }
+
+  .brand-mark {
+    width: 56px !important;
+    height: 56px !important;
+    flex-basis: 56px !important;
+  }
+
+  .brand strong {
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+  }
+
+  .brand small {
+    margin-top: 4px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .main-nav {
+    gap: 20px !important;
+    font-size: 0.91rem !important;
+  }
+
+  main#home {
+    background: #120e0b !important;
+  }
+
+  main#home .hero {
+    height: calc(100dvh - 78px) !important;
+    min-height: calc(100dvh - 78px) !important;
+    max-height: calc(100dvh - 78px) !important;
+    overflow: hidden !important;
+  }
+
+  main#home .hero-inner {
+    width: min(1440px, calc(100% - 104px)) !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 340px) !important;
+    gap: 52px !important;
+    align-items: center !important;
+  }
+
+  main#home .hero-copy {
+    transform: none !important;
+  }
+
+  main#home .now-available {
+    margin-bottom: 6px !important;
+    font-size: 3.25rem !important;
+    line-height: 0.9 !important;
+  }
+
+  main#home .hero .eyebrow {
+    margin-bottom: 8px !important;
+    font-size: 0.76rem !important;
+  }
+
+  main#home .hero-copy h1 {
+    max-width: 850px !important;
+    margin: 6px 0 12px !important;
+    font-size: 5rem !important;
+    line-height: 0.9 !important;
+  }
+
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead {
+    max-width: 760px !important;
+    font-size: 1.05rem !important;
+    line-height: 1.42 !important;
+  }
+
+  main#home .hero-actions {
+    margin-top: 16px !important;
+  }
+
+  main#home .hero-actions .button {
+    min-height: 42px !important;
+    padding: 10px 19px !important;
+  }
+
+  main#home .quantum-orb-entry {
+    width: min(100%, 430px) !important;
+    min-height: 0 !important;
+    margin-top: 16px !important;
+    padding: 8px 14px 8px 8px !important;
+    grid-template-columns: 64px minmax(0, 1fr) !important;
+  }
+
+  main#home .orb-image {
+    width: 64px !important;
+    height: 64px !important;
+    flex-basis: 64px !important;
+  }
+
+  main#home .orb-copy strong {
+    font-size: 1.55rem !important;
+    line-height: 0.96 !important;
+  }
+
+  main#home .latest-card {
+    width: min(100%, 340px) !important;
+    max-height: none !important;
+    padding: 12px 14px 14px !important;
+    align-self: center !important;
+    overflow: hidden !important;
+  }
+
+  main#home .latest-card .eyebrow {
+    margin-bottom: 7px !important;
+    padding: 7px 12px !important;
+    font-size: 0.68rem !important;
+  }
+
+  main#home .latest-book {
+    margin-bottom: 10px !important;
+  }
+
+  main#home .latest-book img {
+    height: 198px !important;
+    max-height: 198px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  main#home .latest-card h2 {
+    font-size: 1.95rem !important;
+    line-height: 0.95 !important;
+  }
+
+  main#home .latest-card .book-subtitle {
+    margin-bottom: 6px !important;
+    font-size: 0.76rem !important;
+  }
+
+  main#home .latest-card .release-copy {
+    padding: 9px 10px !important;
+    font-size: 0.72rem !important;
+    line-height: 1.28 !important;
+  }
+
+  main#home .latest-card .card-actions {
+    margin-top: 9px !important;
+    gap: 12px !important;
+  }
+
+  main#home .latest-card .button {
+    min-height: 40px !important;
+    padding: 9px 18px !important;
+  }
+
+  .page-main > .page-hero {
+    min-height: 0 !important;
+    padding-top: 62px !important;
+    padding-bottom: 54px !important;
+  }
+
+  .page-hero .section-title h1 {
+    max-width: 960px !important;
+    font-size: 5.2rem !important;
+    line-height: 0.94 !important;
+  }
+
+  .page-hero .section-title p {
+    max-width: 780px !important;
+    font-size: 1rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .quantum-entry {
+    min-height: calc(100dvh - 78px) !important;
+  }
+
+  .quantum-entry-inner {
+    min-height: calc(100dvh - 78px) !important;
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: 5.25rem !important;
+    line-height: 0.94 !important;
+  }
+
+  .quantum-orbit-stage {
+    min-height: 530px !important;
+  }
+
+  .quantum-book-node,
+  .child-book-card,
+  .book-card {
+    height: 100% !important;
+  }
+
+  .cover-link,
+  .child-cover,
+  .coming-cover {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .cover-link img {
+    width: 100% !important;
+    height: 270px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .quantum-book-node img {
+    width: 100% !important;
+    height: 255px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .children-section {
+    padding-top: 48px !important;
+    padding-bottom: 76px !important;
+  }
+
+  .children-section .section-title {
+    margin-bottom: 26px !important;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    max-width: 860px !important;
+    font-size: 4.35rem !important;
+    line-height: 0.96 !important;
+  }
+
+  .children-section .section-title p {
+    max-width: 740px !important;
+    font-size: 1rem !important;
+  }
+
+  .children-books {
+    gap: 24px !important;
+    align-items: stretch !important;
+  }
+
+  .child-book-card {
+    min-height: 0 !important;
+  }
+
+  .child-cover {
+    padding: 12px !important;
+  }
+
+  .child-cover img {
+    width: 100% !important;
+    height: 286px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .coming-cover img {
+    width: 100% !important;
+    height: 255px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+@media (min-width: 1081px) and (max-height: 900px) {
+  .site-header {
+    min-height: 74px !important;
+  }
+
+  .brand-mark {
+    width: 52px !important;
+    height: 52px !important;
+    flex-basis: 52px !important;
+  }
+
+  .brand strong {
+    font-size: 1.42rem !important;
+  }
+
+  .brand small {
+    font-size: 0.68rem !important;
+  }
+
+  main#home .hero {
+    height: calc(100dvh - 74px) !important;
+    min-height: calc(100dvh - 74px) !important;
+    max-height: calc(100dvh - 74px) !important;
+  }
+
+  main#home .hero-inner {
+    width: min(1420px, calc(100% - 96px)) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(295px, 330px) !important;
+    gap: 46px !important;
+  }
+
+  main#home .now-available {
+    font-size: 2.9rem !important;
+  }
+
+  main#home .hero-copy h1 {
+    font-size: 4.55rem !important;
+  }
+
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead {
+    font-size: 1rem !important;
+    line-height: 1.38 !important;
+  }
+
+  main#home .quantum-orb-entry {
+    margin-top: 13px !important;
+  }
+
+  main#home .latest-card {
+    width: min(100%, 328px) !important;
+    padding: 11px 13px 13px !important;
+  }
+
+  main#home .latest-book img {
+    height: 174px !important;
+    max-height: 174px !important;
+  }
+
+  main#home .latest-card h2 {
+    font-size: 1.72rem !important;
+  }
+
+  main#home .latest-card .release-copy {
+    font-size: 0.68rem !important;
+    line-height: 1.24 !important;
+  }
+
+  .quantum-entry-inner {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: 4.8rem !important;
+  }
+
+  .quantum-orbit-stage {
+    min-height: 480px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Final viewport tightening after screenshot review */
+@media (min-width: 1081px) {
+  .latest-card {
+    padding: 20px 22px 22px;
+  }
+
+  .latest-book img {
+    height: clamp(190px, 27vh, 250px);
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.95rem, 2.55vw, 2.8rem);
+  }
+
+  .latest-card .release-copy {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .latest-card > p:not(.eyebrow):not(.book-subtitle):not(.release-copy) {
+    display: none;
+  }
+
+  .latest-card .card-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  .latest-card .button {
+    min-height: 42px;
+    padding-inline: 20px;
+  }
+
+  .children-section {
+    padding: clamp(48px, 5.5vw, 76px) 0;
+  }
+
+  .children-section .section-title {
+    margin-bottom: 32px;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    font-size: clamp(3.15rem, 5.6vw, 5.9rem);
+    line-height: 0.92;
+  }
+
+  .children-section .section-title p {
+    max-width: 780px;
+    margin-inline: auto;
+  }
+
+  .children-books {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1081px) and (max-height: 850px) {
+  .latest-card {
+    width: min(100%, 450px);
+  }
+
+  .latest-book img {
+    height: clamp(170px, 24vh, 220px);
+  }
+
+  .latest-card .release-copy {
+    font-size: 0.9rem;
+  }
+}
+
 @keyframes bookCoverBreathe {
   0% {
     scale: 1;
@@ -3257,5 +4418,1095 @@ input {
 
   .latest-card .card-actions {
     margin-top: 14px;
+  }
+}
+
+/* Card alignment corrections */
+@media (min-width: 1081px) {
+  .quantum-books-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .quantum-book-node {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 26px;
+  }
+
+  .quantum-book-node img {
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(12, 10, 9, 0.06);
+  }
+
+  .quantum-book-copy {
+    min-height: 0;
+    flex: 1;
+  }
+
+  .quantum-book-copy p:not(.book-label):not(.book-subtitle) {
+    min-height: 0;
+  }
+
+  .quantum-book-node h2 {
+    font-size: clamp(2rem, 2.6vw, 2.65rem);
+  }
+
+  .quantum-book-copy .buy-now {
+    align-self: flex-start;
+    margin-top: 18px;
+  }
+}
+
+.book-orbit img {
+  object-fit: contain;
+  background: transparent;
+}
+
+.child-cover img {
+  aspect-ratio: 1.08 / 1;
+  object-fit: contain;
+  object-position: center top;
+  background: rgba(255, 250, 242, 0.66);
+}
+
+/* Professional launch polish pass */
+html {
+  scroll-padding-top: 92px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.site-header {
+  min-height: unset;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  grid-template-columns: minmax(300px, auto) minmax(0, 1fr) auto;
+  gap: clamp(16px, 2.2vw, 38px);
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+}
+
+.brand strong {
+  font-size: clamp(1.22rem, 1.45vw, 1.55rem);
+}
+
+.brand small {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+}
+
+.main-nav {
+  justify-content: flex-end;
+  gap: clamp(14px, 1.5vw, 26px);
+}
+
+.main-nav a {
+  padding: 12px 0 13px;
+  line-height: 1;
+}
+
+.main-nav a::after {
+  bottom: 5px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.main-nav a.is-active,
+.main-nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.header-button {
+  min-height: 50px;
+  padding-inline: 26px;
+  white-space: nowrap;
+}
+
+.page-hero {
+  padding: clamp(44px, 5vw, 70px) 0 clamp(36px, 4vw, 56px);
+}
+
+.page-hero .section-title h1 {
+  max-width: 1040px;
+  margin-inline: auto;
+  font-size: clamp(3.6rem, 7.1vw, 7.3rem);
+  line-height: 0.9;
+}
+
+.page-hero .section-title p {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.footer-inner {
+  grid-template-columns: minmax(210px, auto) minmax(280px, 1fr) minmax(300px, auto);
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-brand-mark {
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+  border-radius: 50%;
+}
+
+.footer-brand-mark img {
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+@media (min-width: 1081px) {
+  .hero {
+    height: calc(100svh - 76px);
+    min-height: 650px;
+    max-height: 820px;
+  }
+
+  .hero-inner {
+    min-height: 100%;
+    padding: clamp(24px, 4vh, 44px) 0;
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.72fr);
+    align-items: center;
+    gap: clamp(34px, 4vw, 78px);
+  }
+
+  .hero-copy {
+    max-width: 900px;
+  }
+
+  .now-available {
+    margin-bottom: 14px;
+    font-size: clamp(2.7rem, 4.2vw, 4.7rem);
+    line-height: 0.8;
+  }
+
+  .hero-copy h1 {
+    max-width: 860px;
+    font-size: clamp(4.7rem, 7vw, 7.55rem);
+    line-height: 0.82;
+  }
+
+  .hero-copy .lead {
+    max-width: 800px;
+    margin-top: 20px;
+    font-size: clamp(1.14rem, 1.65vw, 1.58rem);
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    margin-top: 26px;
+  }
+
+  .quantum-orb-link {
+    max-width: 620px;
+    margin-top: 28px;
+    padding: 12px 24px 12px 14px;
+  }
+
+  .orb-image {
+    width: 92px;
+    height: 92px;
+  }
+
+  .latest-card {
+    width: min(100%, 480px);
+    max-width: 480px;
+    justify-self: center;
+    align-self: center;
+    padding: 22px 24px 24px;
+  }
+
+  .latest-card .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .latest-book.electric-book {
+    padding: 10px 18px 28px;
+  }
+
+  .latest-book img {
+    width: 100%;
+    height: clamp(230px, 33vh, 310px);
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .latest-card h2 {
+    font-size: clamp(2.18rem, 3.05vw, 3.45rem);
+    line-height: 0.95;
+  }
+
+  .latest-card p:not(.eyebrow):not(.book-subtitle) {
+    margin-bottom: 18px;
+    line-height: 1.55;
+  }
+
+  .latest-card .card-actions {
+    margin-top: 12px;
+  }
+
+  .book-grid {
+    gap: 24px;
+  }
+
+  .cover-link {
+    padding: 22px 20px 0;
+  }
+
+  .cover-link img {
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(255, 250, 242, 0.58);
+  }
+
+  .book-copy {
+    padding: 22px 26px 26px;
+  }
+
+  .book-copy h3 {
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+    line-height: 0.98;
+  }
+
+  .book-copy > p:not(.book-label):not(.book-subtitle) {
+    min-height: 0;
+  }
+
+  .quantum-entry {
+    min-height: calc(100svh - 76px);
+  }
+
+  .quantum-entry-inner {
+    min-height: calc(100svh - 76px);
+    padding: clamp(44px, 5.2vw, 72px) 0;
+    align-items: center;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: clamp(4.5rem, 6.8vw, 7.15rem);
+    line-height: 0.94;
+  }
+
+  .quantum-orbit-stage {
+    min-height: min(660px, calc(100svh - 118px));
+  }
+
+  .book-orbit img {
+    width: 78px;
+    height: 112px;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .orbit-book-title {
+    min-width: 160px;
+    padding: 14px 18px;
+    font-size: clamp(1.15rem, 1.45vw, 1.7rem);
+  }
+
+  .quantum-books-panel {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  .quantum-book-node {
+    min-height: 480px;
+  }
+
+  .quantum-book-node img {
+    height: 260px;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(255, 250, 242, 0.68);
+  }
+
+  .quantum-book-node h2 {
+    font-size: clamp(2rem, 2.35vw, 2.55rem);
+    line-height: 0.98;
+  }
+
+  .children-section {
+    padding: clamp(62px, 7vw, 94px) 0;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    max-width: 1040px;
+    margin-inline: auto;
+    font-size: clamp(3.45rem, 7vw, 7rem);
+    line-height: 0.9;
+  }
+
+  .children-books {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .child-book-card {
+    border-radius: 24px;
+  }
+
+  .child-cover {
+    padding: 16px 16px 0;
+  }
+
+  .child-cover img {
+    width: 100%;
+    height: clamp(250px, 19vw, 330px);
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center top;
+    background: rgba(255, 250, 242, 0.72);
+  }
+
+  .child-book-copy {
+    padding: 18px 20px 22px;
+  }
+
+  .child-book-copy h3 {
+    font-size: clamp(1.55rem, 1.9vw, 2.05rem);
+    line-height: 1.02;
+  }
+}
+
+@media (min-width: 1081px) and (max-height: 850px) {
+  .hero {
+    min-height: 610px;
+  }
+
+  .now-available {
+    font-size: clamp(2.25rem, 3.7vw, 3.85rem);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(4rem, 6vw, 6.25rem);
+  }
+
+  .hero-copy .lead {
+    font-size: clamp(1.05rem, 1.42vw, 1.34rem);
+  }
+
+  .latest-card {
+    padding: 18px 22px 20px;
+  }
+
+  .latest-book img {
+    height: clamp(205px, 29vh, 260px);
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.95rem, 2.6vw, 2.8rem);
+  }
+
+  .latest-card p:not(.eyebrow):not(.book-subtitle) {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner,
+  .quantum-entry-inner {
+    min-height: auto;
+  }
+
+  .page-hero .section-title h1,
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    font-size: clamp(3rem, 13vw, 5.8rem);
+  }
+
+  .cover-link img,
+  .quantum-book-node img,
+  .child-cover img {
+    height: auto;
+    max-height: none;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-inner nav {
+    justify-content: center;
+  }
+
+  .footer-inner p {
+    text-align: center;
+  }
+}
+
+@keyframes bookOrbit {
+  0% {
+    transform: translate(-120px, -210px) scale(0.72);
+    opacity: 0.68;
+    z-index: 2;
+  }
+
+  28% {
+    transform: translate(260px, -80px) scale(0.92);
+    opacity: 0.82;
+    z-index: 4;
+  }
+
+  52% {
+    transform: translate(-205px, 52px) scale(1.2);
+    opacity: 1;
+    z-index: 7;
+  }
+
+  76% {
+    transform: translate(240px, 168px) scale(0.86);
+    opacity: 0.78;
+    z-index: 3;
+  }
+
+  100% {
+    transform: translate(-120px, -210px) scale(0.72);
+    opacity: 0.68;
+    z-index: 2;
+  }
+}
+
+/* Absolute final QA overrides */
+.brand,
+.main-nav,
+.header-button,
+body.is-ready .brand,
+body.is-ready .main-nav,
+body.is-ready .header-button {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.reveal,
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+h1,
+h2,
+h3,
+.section-title h1,
+.section-title h2,
+.hero-copy h1,
+.quantum-copy-panel h1 {
+  letter-spacing: 0 !important;
+}
+
+.main-nav a.is-active::after,
+.main-nav a[aria-current="page"]::after {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+  height: 3px;
+}
+
+.hero-bg img,
+.quantum-entry-bg img {
+  object-position: center center;
+  filter: saturate(1.04) brightness(0.82) contrast(1.05);
+}
+
+.footer-brand-mark img,
+.brand-mark img {
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.cover-link img,
+.quantum-book-node img,
+.child-cover img,
+.latest-book img,
+.book-orbit img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (min-width: 1081px) {
+  .site-header {
+    min-height: 76px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .hero {
+    height: calc(100svh - 76px);
+    min-height: calc(100svh - 76px);
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    width: min(1360px, calc(100% - 96px));
+    height: 100%;
+    min-height: 0;
+    padding-top: clamp(12px, 2vh, 22px);
+    padding-bottom: clamp(12px, 2vh, 22px);
+    grid-template-columns: minmax(0, 1.1fr) minmax(310px, 370px);
+    gap: clamp(34px, 5vw, 76px);
+    align-items: center;
+  }
+
+  .now-available {
+    margin-bottom: 4px;
+    font-size: clamp(1.85rem, 3vw, 3.25rem);
+    line-height: 0.9;
+  }
+
+  .hero-copy h1 {
+    margin: 8px 0 12px;
+    font-size: clamp(3.55rem, 5.45vw, 5.85rem);
+    line-height: 0.88;
+  }
+
+  .hero-copy .lead,
+  .tagline {
+    max-width: 760px;
+    font-size: clamp(0.98rem, 1.22vw, 1.16rem);
+    line-height: 1.44;
+  }
+
+  .hero-actions {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  .quantum-orb-entry {
+    max-width: 410px;
+    margin-top: 18px;
+    grid-template-columns: 66px minmax(0, 1fr);
+    padding: 9px 17px 9px 9px;
+  }
+
+  .orb-image {
+    width: 66px;
+    height: 66px;
+  }
+
+  .orb-copy strong {
+    font-size: clamp(1.24rem, 1.6vw, 1.68rem);
+    line-height: 1;
+  }
+
+  .latest-card {
+    width: min(100%, 370px);
+    max-height: calc(100svh - 110px);
+    padding: 14px 16px 16px;
+    overflow: hidden;
+  }
+
+  .latest-book {
+    margin-bottom: 12px;
+  }
+
+  .latest-book img {
+    height: clamp(150px, 22vh, 218px);
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.65rem, 2.25vw, 2.3rem);
+    line-height: 0.96;
+  }
+
+  .latest-card .book-subtitle {
+    margin-bottom: 7px;
+    font-size: 0.8rem;
+  }
+
+  .latest-card .release-copy {
+    padding: 10px 12px;
+    font-size: 0.78rem;
+    line-height: 1.34;
+  }
+
+  .latest-card > p:not(.eyebrow):not(.book-subtitle):not(.release-copy) {
+    display: none;
+  }
+
+  .latest-card .card-actions {
+    margin-top: 11px;
+  }
+
+  .page-hero {
+    min-height: min(56svh, 540px);
+    padding-top: clamp(70px, 7vw, 106px);
+    padding-bottom: clamp(52px, 6vw, 82px);
+  }
+
+  .page-hero .section-title h1 {
+    font-size: clamp(3.8rem, 7.4vw, 7.4rem);
+    line-height: 0.94;
+  }
+
+  .books-section,
+  .coming-soon-grid,
+  .contact-main {
+    padding-top: clamp(56px, 6vw, 82px);
+    padding-bottom: clamp(70px, 7vw, 104px);
+  }
+
+  .cover-link img {
+    height: clamp(225px, 20vw, 286px);
+    background: rgba(255, 250, 242, 0.62);
+  }
+
+  .book-copy h3,
+  .quantum-book-node h2,
+  .child-book-copy h3 {
+    line-height: 1.02;
+  }
+
+  .quantum-entry {
+    min-height: calc(100svh - 76px);
+    overflow: hidden;
+  }
+
+  .quantum-entry-inner {
+    min-height: calc(100svh - 76px);
+    padding-top: clamp(30px, 4vh, 52px);
+    padding-bottom: clamp(30px, 4vh, 52px);
+    grid-template-columns: minmax(320px, 0.86fr) minmax(520px, 1.14fr);
+    align-items: center;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: clamp(3.55rem, 5.6vw, 6rem);
+    line-height: 0.94;
+  }
+
+  .quantum-orbit-stage {
+    min-height: min(590px, calc(100svh - 150px));
+  }
+
+  .quantum-center {
+    width: clamp(180px, 15vw, 228px);
+  }
+
+  .book-orbit img {
+    width: 86px;
+    height: 122px;
+    background: transparent;
+  }
+
+  .quantum-books-panel {
+    grid-template-columns: repeat(3, minmax(270px, 1fr));
+    gap: 26px;
+    padding-inline: max(32px, calc((100vw - 1380px) / 2));
+  }
+
+  .quantum-book-node {
+    min-height: 0;
+    grid-template-columns: minmax(138px, 0.78fr) minmax(0, 1.22fr);
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .quantum-book-node img {
+    height: clamp(210px, 18vw, 278px);
+    background: rgba(255, 250, 242, 0.66);
+  }
+
+  .quantum-book-node h2 {
+    font-size: clamp(1.62rem, 1.85vw, 2.05rem);
+  }
+
+  .children-section {
+    padding-top: clamp(42px, 4.6vh, 64px);
+    padding-bottom: clamp(78px, 8vh, 110px);
+  }
+
+  .children-section .section-title {
+    margin-bottom: 32px;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    max-width: 900px;
+    font-size: clamp(3rem, 5.1vw, 5.35rem);
+    line-height: 0.95;
+  }
+
+  .children-books {
+    gap: 26px;
+  }
+
+  .child-book-card {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .child-cover img {
+    height: clamp(245px, 21vw, 335px);
+    background: rgba(255, 250, 242, 0.7);
+  }
+
+  .child-book-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .child-book-copy .button {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    padding: 12px 20px;
+  }
+
+  .main-nav a.is-active::after,
+  .main-nav a[aria-current="page"]::after {
+    bottom: -5px;
+  }
+
+  .hero,
+  .quantum-entry,
+  .latest-card,
+  .quantum-book-node,
+  .child-book-card {
+    overflow: hidden;
+  }
+
+  .child-cover img,
+  .cover-link img,
+  .quantum-book-node img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+  }
+}
+
+/* True final production overrides */
+@media (min-width: 1081px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    min-height: 80px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .brand-mark {
+    width: 58px !important;
+    height: 58px !important;
+    flex-basis: 58px !important;
+  }
+
+  .brand strong {
+    font-size: clamp(1.55rem, 1.55vw, 1.9rem) !important;
+  }
+
+  .brand small {
+    font-size: 0.78rem !important;
+  }
+
+  .main-nav a {
+    position: relative;
+    padding-bottom: 9px !important;
+  }
+
+  .main-nav a.is-active::after,
+  .main-nav a[aria-current="page"]::after {
+    bottom: 0 !important;
+    height: 3px !important;
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+    background: var(--gold) !important;
+    border-radius: 999px;
+  }
+
+  .hero {
+    height: calc(100vh - 80px) !important;
+    min-height: calc(100vh - 80px) !important;
+    overflow: hidden !important;
+    background: #120e0b !important;
+  }
+
+  .hero-inner {
+    height: 100% !important;
+    min-height: 0 !important;
+    align-items: center !important;
+    grid-template-columns: minmax(560px, 1fr) minmax(320px, 360px) !important;
+    gap: clamp(30px, 4vw, 62px) !important;
+    padding-top: clamp(8px, 1.4vh, 18px) !important;
+    padding-bottom: clamp(8px, 1.4vh, 18px) !important;
+  }
+
+  .hero-copy {
+    transform: translateY(-1vh) !important;
+  }
+
+  .now-available {
+    margin-bottom: 10px !important;
+    font-size: clamp(2.35rem, 4.15vw, 4.55rem) !important;
+    line-height: 0.92 !important;
+  }
+
+  .hero-copy h1 {
+    margin: 8px 0 12px !important;
+    font-size: clamp(3.65rem, 5vw, 5.35rem) !important;
+    line-height: 0.9 !important;
+  }
+
+  .hero-copy .tagline,
+  .hero-copy .lead {
+    max-width: 780px !important;
+    font-size: clamp(1rem, 1.15vw, 1.16rem) !important;
+    line-height: 1.44 !important;
+  }
+
+  .hero-actions {
+    margin-top: 18px !important;
+  }
+
+  .quantum-orb-entry {
+    width: min(100%, 500px) !important;
+    min-height: 0 !important;
+    margin-top: 18px !important;
+    padding: 10px 16px !important;
+  }
+
+  .orb-image {
+    width: 72px !important;
+    height: 72px !important;
+    flex-basis: 72px !important;
+  }
+
+  .orb-copy strong {
+    font-size: clamp(1.5rem, 2vw, 2.1rem) !important;
+    line-height: 0.95 !important;
+  }
+
+  .latest-card {
+    width: min(100%, 360px) !important;
+    max-height: calc(100vh - 118px) !important;
+    align-self: center !important;
+    padding: 14px 16px 16px !important;
+  }
+
+  .latest-book img {
+    height: clamp(145px, 24vh, 232px) !important;
+    max-height: 232px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .latest-card .eyebrow {
+    margin-bottom: 8px !important;
+    padding: 7px 12px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .latest-card h2 {
+    font-size: clamp(1.58rem, 2.05vw, 2.22rem) !important;
+  }
+
+  .latest-card .book-subtitle {
+    margin-bottom: 6px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .latest-card .release-copy {
+    padding: 10px 12px !important;
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .latest-card .button {
+    min-height: 44px !important;
+    padding: 10px 18px !important;
+  }
+
+  .page-main > .page-hero {
+    min-height: 0 !important;
+    padding-top: clamp(44px, 4.5vw, 66px) !important;
+    padding-bottom: clamp(30px, 3.4vw, 48px) !important;
+  }
+
+  .page-hero .section-title h1 {
+    max-width: 980px !important;
+    font-size: clamp(3rem, 5.45vw, 5.65rem) !important;
+    line-height: 0.94 !important;
+  }
+
+  .page-hero .section-title p {
+    max-width: 820px !important;
+    margin-top: 18px !important;
+    font-size: 1.02rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .page-main > .section {
+    padding-top: clamp(40px, 4.3vw, 68px) !important;
+    padding-bottom: clamp(54px, 5vw, 80px) !important;
+  }
+
+  .contact-grid {
+    align-items: start !important;
+    gap: 32px !important;
+  }
+
+  .footer-brand-mark {
+    width: 58px !important;
+    height: 58px !important;
+    flex: 0 0 58px !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+  }
+
+  .footer-brand-mark img {
+    object-fit: cover !important;
+    object-position: center 18% !important;
+  }
+
+  .footer-inner {
+    gap: 20px !important;
+  }
+
+  .quantum-entry {
+    min-height: calc(100vh - 80px) !important;
+  }
+
+  .quantum-entry-inner {
+    min-height: calc(100vh - 80px) !important;
+    padding-top: clamp(24px, 3vh, 42px) !important;
+    padding-bottom: clamp(24px, 3vh, 42px) !important;
+  }
+
+  .quantum-copy-panel h1 {
+    font-size: clamp(3.25rem, 5.15vw, 5.55rem) !important;
+  }
+
+  .quantum-orbit-stage {
+    min-height: min(535px, calc(100vh - 150px)) !important;
+  }
+
+  .cover-link img,
+  .quantum-book-node img,
+  .child-cover img,
+  .book-orbit img {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .children-section {
+    padding-top: clamp(34px, 4vw, 52px) !important;
+    padding-bottom: clamp(58px, 6vw, 88px) !important;
+  }
+
+  .children-section .section-title {
+    margin-bottom: 28px !important;
+  }
+
+  .children-section .section-title h1,
+  .children-section .section-title h2 {
+    max-width: 880px !important;
+    font-size: clamp(2.7rem, 4.55vw, 4.65rem) !important;
+    line-height: 0.96 !important;
+  }
+
+  .children-section .section-title p {
+    max-width: 760px !important;
+    font-size: 1.03rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .children-books {
+    gap: 24px !important;
+  }
+
+  .child-cover {
+    padding: 12px !important;
+  }
+
+  .child-cover img {
+    height: clamp(225px, 18vw, 302px) !important;
+  }
+}
+
+@media (min-width: 1081px) and (max-height: 860px) {
+  .hero {
+    height: calc(100vh - 80px) !important;
+    min-height: 0 !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(540px, 1fr) minmax(315px, 350px) !important;
+    gap: 36px !important;
+  }
+
+  .now-available {
+    margin-bottom: 8px !important;
+    font-size: clamp(2.2rem, 3.8vw, 4rem) !important;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.4rem, 4.8vw, 5rem) !important;
+  }
+
+  .quantum-orb-entry {
+    margin-top: 14px !important;
+    padding: 8px 14px !important;
+  }
+
+  .orb-image {
+    width: 64px !important;
+    height: 64px !important;
+    flex-basis: 64px !important;
+  }
+
+  .latest-book img {
+    height: clamp(132px, 22vh, 190px) !important;
+  }
+
+  .latest-card .release-copy {
+    font-size: 0.74rem !important;
   }
 }
