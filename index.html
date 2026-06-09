@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -11,15 +11,16 @@
   <meta property="og:site_name" content="Aries Blackstone">
   <meta property="og:title" content="Aries Blackstone | Quantum Series Author">
   <meta property="og:description" content="Explore Aries Blackstone's Quantum Series, children's books, reader updates, and publishing contact information.">
-  <meta property="og:image" content="images/ladonna-world.png">
+  <meta property="og:image" content="images/ladonna-stone-blue-suit-sharp.jpeg">
   <meta property="og:url" content="https://ariesblackstone.com/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aries Blackstone | Quantum Series Author">
   <meta name="twitter:description" content="Technology thrillers, children's adventures, reader updates, and book links from Aries Blackstone.">
-  <meta name="twitter:image" content="images/ladonna-world.png">
+  <meta name="twitter:image" content="images/ladonna-stone-blue-suit-sharp.jpeg">
   <link rel="icon" href="images/author-photo.jpg">
   <link rel="apple-touch-icon" href="images/author-photo.jpg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260516-final-portrait-2">
+  <link rel="stylesheet" href="desktop-fixes.css?v=20260516-final-portrait-2">
 </head>
 <body>
   <header class="site-header" data-site-header>
@@ -36,7 +37,6 @@
     <nav class="main-nav" aria-label="Main navigation">
       <a href="index.html#home">Home</a>
       <a href="books.html">Books</a>
-      <a href="quantum-series.html">Quantum Realm</a>
       <a href="children.html">Children</a>
       <a href="coming-soon.html">Coming Soon</a>
       <a href="contact.html">Contact</a>
@@ -46,52 +46,45 @@
   </header>
 
   <main id="home">
+    <aside class="reader-rail" aria-label="Reader shortcuts">
+      <a href="books.html" aria-label="Books">Books</a>
+      <a href="children.html" aria-label="Children's books">Kids</a>
+      <a href="contact.html#signup" aria-label="Reader updates">Updates</a>
+    </aside>
+
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true" data-parallax="0.18">
-        <img src="images/ladonna-world.png" alt="">
+      <div class="hero-bg" aria-hidden="true">
+      <img src="images/ladonna-stone-blue-suit-sharp.jpeg" alt="">
       </div>
+      <div class="hero-parallax-layer hero-gold-line" aria-hidden="true" data-parallax="-0.16"></div>
+      <div class="hero-parallax-layer hero-blue-glow" aria-hidden="true" data-parallax="0.24"></div>
       <div class="hero-shade" aria-hidden="true"></div>
 
       <div class="hero-inner">
-        <div class="hero-copy reveal">
+        <div class="hero-copy reveal" data-parallax="-0.08">
           <p class="now-available" aria-label="Now Available">
             <span>N</span><span>o</span><span>w</span>
             <span>A</span><span>v</span><span>a</span><span>i</span><span>l</span><span>a</span><span>b</span><span>l</span><span>e</span>
           </p>
           <p class="eyebrow">Official Author Site</p>
           <h1>Aries Blackstone</h1>
+          <a class="hero-release-title" href="books.html" aria-label="View Quantum Divide: Forces in Conflict">
+            <span>Featured Release</span>
+            <strong>Quantum Divide</strong>
+            <em>Forces in Conflict</em>
+          </a>
           <p class="tagline">High-stakes technology thrillers built on ambition, danger, loyalty, and global consequence.</p>
           <div class="hero-actions">
             <a class="button button-gold" href="books.html">Explore Books</a>
-            <a class="button button-light" href="quantum-series.html">Latest Release</a>
+            <a class="button button-light" href="books.html">Latest Release</a>
           </div>
-          <a class="quantum-orb-entry" href="quantum-series.html" aria-label="Enter the Quantum Realm">
-            <span class="orb-image" aria-hidden="true">
-              <img src="images/quantum-entry-orb.jpg" alt="">
-            </span>
-            <span class="orb-copy">
-              <small>Enter</small>
-              <strong>The Quantum Realm</strong>
-            </span>
-          </a>
         </div>
-
-        <aside class="latest-card reveal delay-2" id="latest" aria-label="New release">
-          <p class="eyebrow">New Release</p>
-          <div class="latest-book electric-book">
-            <img src="images/quantum-divide-floating2.png" alt="Quantum Divide book cover">
-            <span class="electric-field" aria-hidden="true"></span>
-          </div>
-          <h2>Quantum Divide</h2>
-          <p class="book-subtitle">Forces in Conflict</p>
-          <p class="release-copy">New Release: Quantum Divide is now available. Continue the Quantum Series as power, infrastructure, and global resistance collide around Ladonna Stone.</p>
-          <p>Influence, infrastructure, and global resistance turn Ladonna Stone's expanding vision into a larger conflict over the future.</p>
-          <div class="card-actions">
-            <a class="button button-dark buy-now" href="https://www.amazon.com/Quantum-Divide-Forces-Conflict-Edge-ebook/dp/B0GX2SSSBC/" target="_blank" rel="noreferrer">Buy Now</a>
-            <a class="text-link" href="#series">View Series</a>
-          </div>
-        </aside>
       </div>
+      <a class="hero-ladonna-question reveal" href="books.html" data-parallax="0.12" aria-label="Learn more about Dr. Ladonna Stone">
+        <span>Character Spotlight</span>
+        <strong>Who is Dr. Ladonna Stone?</strong>
+        <small>The strategist at the center of the Quantum Series.</small>
+      </a>
     </section>
 
     <section class="intro-band reveal">
@@ -131,7 +124,7 @@
               <p>Brilliance, corporate power, and buried secrets collide as Ladonna Stone's saga begins.</p>
               <div class="card-actions">
                 <a class="button button-dark buy-now" href="https://www.amazon.com/Quantum-Edge-Enigma-Ladonna-Stone-ebook/dp/B0CLR9WBXK/" target="_blank" rel="noreferrer">Buy Now</a>
-                <a class="text-link" href="quantum-series.html#quantum-books">More</a>
+                <a class="text-link" href="books.html">More</a>
               </div>
             </div>
           </article>
@@ -150,7 +143,7 @@
               <p>Deception, danger, and divided loyalties close in around Quantum Innovations.</p>
               <div class="card-actions">
                 <a class="button button-dark buy-now" href="https://www.amazon.com/Quantum-Pursuit-Hunt-Aries-Blackstone-ebook/dp/B0DW2PYK4K/" target="_blank" rel="noreferrer">Buy Now</a>
-                <a class="text-link" href="quantum-series.html#quantum-books">More</a>
+                <a class="text-link" href="books.html">More</a>
               </div>
             </div>
           </article>
@@ -169,7 +162,7 @@
               <p>Ladonna's vision collides with global resistance, influence, and control.</p>
               <div class="card-actions">
                 <a class="button button-dark buy-now" href="https://www.amazon.com/Quantum-Divide-Forces-Conflict-Edge-ebook/dp/B0GX2SSSBC/" target="_blank" rel="noreferrer">Buy Now</a>
-                <a class="text-link" href="quantum-series.html#quantum-books">More</a>
+                <a class="text-link" href="books.html">More</a>
               </div>
             </div>
           </article>
@@ -180,11 +173,11 @@
     <section class="section about-section" id="about">
       <div class="container about-grid">
         <div class="portrait-frame reveal">
-          <img src="images/author-photo.jpg" alt="Aries Blackstone portrait">
+          <img src="images/author-photo.jpg" alt="Aries Blackstone">
         </div>
         <div class="reveal delay-1">
           <p class="section-kicker">About Aries</p>
-          <h2>Author of technology-driven fiction with power, pressure, and consequence.</h2>
+            <h2>Technology-driven fiction with power, pressure, and consequence.</h2>
           <p>
             Aries Blackstone writes fiction centered on bold ideas, strategic tension, and characters navigating
             systems larger than themselves. The Quantum Series introduces Ladonna Stone and Quantum Innovations,
@@ -209,6 +202,7 @@
 
         <div class="series-grid">
           <article class="series-card large reveal">
+            <img class="series-card-art" src="images/ladonna-stone-portrait.jpg" alt="Ladonna Stone portrait">
             <p class="book-label">Featured Series</p>
             <h3>Quantum Series</h3>
             <p>
@@ -249,7 +243,9 @@
         </div>
 
         <div class="quantum-orb-card reveal delay-1">
-          <img src="images/quantum-entry-orb.jpg" alt="Glowing quantum network sphere">
+          <video autoplay muted loop playsinline poster="images/quantum-entry-orb.jpg" aria-label="Animated glowing quantum network sphere">
+            <source src="images/quantum-network-sphere-video.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
@@ -443,9 +439,9 @@
             <span>Characters</span>
             <strong>Ladonna Stone</strong>
           </a>
-          <a href="quantum-series.html" class="explore-tile reveal delay-1">
-            <span>Story World</span>
-            <strong>Quantum Innovations</strong>
+          <a href="children.html" class="explore-tile reveal delay-1">
+            <span>Children's Books</span>
+            <strong>Max and Zoey</strong>
           </a>
           <a href="books.html" class="explore-tile reveal delay-2">
             <span>Catalog</span>
@@ -518,7 +514,6 @@
       <nav aria-label="Footer navigation">
         <a href="index.html#about">About</a>
         <a href="books.html">Books</a>
-        <a href="quantum-series.html">Quantum Realm</a>
         <a href="children.html">Children</a>
         <a href="coming-soon.html">Coming Soon</a>
         <a href="contact.html">Contact</a>
@@ -535,7 +530,7 @@
       <p>&copy; 2026 Aries Blackstone. Presented by Publishing Creative Creations.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260514-desktop-parallax-2"></script>
 </body>
 </html>
 

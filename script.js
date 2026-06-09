@@ -6,6 +6,8 @@ const revealItems = document.querySelectorAll(".reveal");
 const characterImage = document.querySelector(".character-image");
 const characterButtons = document.querySelectorAll("[data-character-src]");
 let characterResetTimer;
+let pointerX = 0;
+let pointerY = 0;
 
 document.body.classList.add("is-ready");
 
@@ -39,17 +41,30 @@ const updateChrome = () => {
 const updateParallax = () => {
   if (prefersReducedMotion) return;
 
-  const viewportHeight = window.innerHeight;
+  const viewportHeight = window.innerHeight || 1;
 
   parallaxItems.forEach((item) => {
     const speed = Number(item.dataset.parallax || 0);
     const rect = item.getBoundingClientRect();
-    const progress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
-    const clamped = Math.max(0, Math.min(1, progress));
-    const offset = (clamped - 0.5) * speed * 120;
+    const itemCenter = rect.top + rect.height / 2;
+    const distanceFromCenter = itemCenter - viewportHeight / 2;
+    const depth = Math.max(0.12, Math.abs(speed));
+    const offset = Math.max(-120, Math.min(120, distanceFromCenter * speed * -0.48));
+    const pointerOffsetX = pointerX * depth * 88;
+    const pointerOffsetY = pointerY * depth * 46;
 
-    item.style.transform = `translate3d(0, ${offset}px, 0)`;
+    item.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
+    item.style.setProperty("--parallax-x", `${pointerOffsetX.toFixed(2)}px`);
+    item.style.setProperty("--parallax-hover-y", `${pointerOffsetY.toFixed(2)}px`);
   });
+};
+
+const updatePointerParallax = (event) => {
+  if (prefersReducedMotion || window.innerWidth < 1000) return;
+
+  pointerX = (event.clientX / window.innerWidth - 0.5) * 2;
+  pointerY = (event.clientY / window.innerHeight - 0.5) * 2;
+  updateParallax();
 };
 
 const revealObserver = new IntersectionObserver(
@@ -145,6 +160,7 @@ const onScroll = () => {
 
 window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("resize", updateParallax);
+window.addEventListener("pointermove", updatePointerParallax, { passive: true });
 window.addEventListener("hashchange", setActiveNavigation);
 
 setActiveNavigation();
