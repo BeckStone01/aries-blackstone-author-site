@@ -1,0 +1,242 @@
+﻿/* 2026-06-19 final page polish for upload build. */
+
+/* Children page card rhythm: remove oversized image gutters and keep rows compact. */
+html body .children-books {
+  align-items: start !important;
+  gap: 20px !important;
+  margin-top: 24px !important;
+}
+
+html body .child-book-card {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+html body .child-cover {
+  padding: 10px 10px 0 !important;
+}
+
+html body .child-cover img {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(230px, 18vw, 292px) !important;
+  max-height: 292px !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  background: rgba(255, 250, 242, 0.72) !important;
+  border-radius: 18px !important;
+}
+
+html body .child-book-copy {
+  flex: 0 0 auto !important;
+  padding: 14px 18px 18px !important;
+}
+
+html body .child-status {
+  width: 100% !important;
+  justify-content: center !important;
+  margin-bottom: 10px !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+}
+
+html body .child-book-copy h3 {
+  margin-bottom: 8px !important;
+}
+
+html body .child-book-copy p {
+  min-height: 0 !important;
+  margin-bottom: 14px !important;
+}
+
+html body .child-book-copy .button {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 980px) {
+  html body .child-cover img {
+    height: clamp(220px, 34vw, 310px) !important;
+    max-height: 310px !important;
+  }
+}
+
+/* 2026-06-19 children cover crop fix: show full artwork without forced image windows. */
+html body .child-cover {
+  padding: 10px !important;
+}
+
+html body .child-cover img {
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (max-width: 980px) {
+  html body .child-cover img {
+    height: auto !important;
+    max-height: none !important;
+  }
+}
+
+/* 2026-06-19 children card alignment fix: equal cover frames, full art visible. */
+html body .child-cover {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: clamp(260px, 20vw, 330px) !important;
+  padding: 10px !important;
+  background: rgba(255, 250, 242, 0.58) !important;
+  border-radius: 22px 22px 0 0 !important;
+}
+
+html body .child-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+
+@media (max-width: 980px) {
+  html body .child-cover {
+    height: clamp(240px, 44vw, 330px) !important;
+  }
+}
+
+/* 2026-06-19 children full-art/even-label final pass. */
+html body .children-books {
+  align-items: stretch !important;
+}
+
+html body .child-book-card {
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
+html body .child-cover {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: clamp(330px, 23vw, 390px) !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+  background: rgba(255, 250, 242, 0.78) !important;
+  border-radius: 22px 22px 0 0 !important;
+}
+
+html body .child-cover img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html body .child-book-copy {
+  display: grid !important;
+  grid-template-rows: 40px auto minmax(78px, 1fr) 52px !important;
+  gap: 12px !important;
+  padding: 16px 18px 20px !important;
+}
+
+html body .child-status {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 40px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  line-height: 1 !important;
+}
+
+html body .child-book-copy h3 {
+  margin: 0 !important;
+  min-height: 2.1em !important;
+}
+
+html body .child-book-copy p {
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+html body .child-book-copy .button {
+  align-self: end !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 980px) {
+  html body .child-cover {
+    height: clamp(300px, 52vw, 390px) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  html body .child-book-copy {
+    grid-template-rows: 40px auto auto 52px !important;
+  }
+}
+
+/* 2026-06-19 children portrait-safe cover frame. */
+html body .child-cover {
+  height: clamp(455px, 32vw, 540px) !important;
+  padding: 14px !important;
+  overflow: visible !important;
+}
+
+html body .child-cover a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+html body .child-cover img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+html body .child-book-copy {
+  grid-template-rows: 40px auto minmax(72px, 1fr) 52px !important;
+}
+
+@media (max-width: 980px) {
+  html body .child-cover {
+    height: clamp(390px, 58vw, 520px) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  html body .child-cover {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  html body .child-cover img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
