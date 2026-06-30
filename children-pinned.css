@@ -1,0 +1,173 @@
+/* Children page pinned storybook stage. Loaded after styles.css on children.html. */
+.children-section,
+.children-section .children-inner,
+.children-section .storybook-scroll[data-pinned-storybook] {
+  overflow: visible !important;
+}
+
+@media (min-width: 900px) {
+  .storybook-scroll[data-pinned-storybook] {
+    position: relative !important;
+    display: block !important;
+    height: 430svh !important;
+    max-width: 1120px !important;
+    margin: 0 auto clamp(44px, 6vw, 76px) !important;
+    overflow: visible !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-pin-stage {
+    position: sticky !important;
+    top: 104px !important;
+    width: 100% !important;
+    height: calc(100svh - 104px) !important;
+    min-height: 620px !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    z-index: 20 !important;
+    background:
+      radial-gradient(circle at 18% 18%, rgba(255, 224, 105, 0.72), transparent 24%),
+      radial-gradient(circle at 82% 22%, rgba(107, 204, 210, 0.42), transparent 30%),
+      linear-gradient(90deg, rgba(220, 249, 232, 0.96), rgba(255, 248, 213, 0.94) 50%, rgba(201, 244, 229, 0.96)) !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-effects {
+    position: absolute !important;
+    inset: -80px -6vw !important;
+    z-index: 0 !important;
+    height: auto !important;
+    top: auto !important;
+    pointer-events: none !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-panel {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+    opacity: var(--slide-opacity, 0) !important;
+    transform: translate3d(var(--slide-x, 120vw), 0, 0) scale(var(--slide-scale, 0.96)) !important;
+    transition: opacity 140ms linear, transform 140ms linear !important;
+    pointer-events: none !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-panel + .storybook-panel {
+    margin-top: 0 !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-panel.is-visible {
+    pointer-events: auto !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-panel.reveal,
+  .storybook-scroll[data-pinned-storybook] .storybook-panel.reveal.is-visible,
+  .storybook-scroll[data-pinned-storybook] .storybook-panel.reverse.reveal {
+    opacity: var(--slide-opacity, 0) !important;
+    transform: translate3d(var(--slide-x, 120vw), 0, 0) scale(var(--slide-scale, 0.96)) !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .children-books-scroll[data-pinned-books] {
+    position: relative !important;
+    height: 720svh !important;
+    max-width: 1120px !important;
+    margin: 0 auto clamp(60px, 8vw, 100px) !important;
+    overflow: visible !important;
+  }
+
+  .children-books {
+    position: sticky !important;
+    top: 104px !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    height: calc(100svh - 104px) !important;
+    min-height: 620px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+    border-radius: 34px !important;
+    background:
+      radial-gradient(circle at 20% 18%, rgba(255, 213, 89, 0.46), transparent 26%),
+      radial-gradient(circle at 78% 24%, rgba(76, 176, 218, 0.32), transparent 30%),
+      linear-gradient(90deg, rgba(220, 249, 232, 0.96), rgba(255, 248, 213, 0.95) 50%, rgba(201, 244, 229, 0.96)) !important;
+  }
+
+  .children-books .child-book-card[data-parallax],
+  .children-books .child-book-card.reveal,
+  .children-books .child-book-card.reveal.is-visible,
+  .children-books .child-book-card:nth-child(even).reveal {
+    position: absolute !important;
+    inset: clamp(28px, 4vw, 58px) !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    opacity: var(--book-opacity, 0) !important;
+    transform: translate3d(var(--book-x, 120vw), 0, 0) scale(var(--book-scale, 0.96)) !important;
+    transition: opacity 150ms linear, transform 150ms linear !important;
+    pointer-events: none !important;
+  }
+
+  .children-books .child-book-card.is-visible {
+    pointer-events: auto !important;
+  }
+
+  .children-books .child-cover {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  .children-books .child-cover a {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .children-books .child-cover img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: min(560px, calc(100svh - 190px)) !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    border-radius: 18px !important;
+  }
+
+  .children-books .child-book-copy h3 {
+    font-size: clamp(2.2rem, 4.2vw, 4.6rem) !important;
+  }
+
+  .children-books .child-book-copy p {
+    font-size: clamp(1rem, 1.35vw, 1.2rem) !important;
+  }
+}
+
+@media (max-width: 899px) {
+  .storybook-scroll[data-pinned-storybook] {
+    height: auto !important;
+  }
+
+  .storybook-scroll[data-pinned-storybook] .storybook-pin-stage,
+  .storybook-scroll[data-pinned-storybook] .storybook-panel,
+  .children-books-scroll[data-pinned-books],
+  .children-books,
+  .children-books .child-book-card {
+    position: relative !important;
+    height: auto !important;
+  }
+}

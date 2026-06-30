@@ -1,0 +1,229 @@
+/* Final homepage hero lock: desktop book + Ladonna, mobile book-only. */
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+html body .hero {
+  position: relative !important;
+  display: block !important;
+  height: calc(100vh - 104px) !important;
+  min-height: 650px !important;
+  max-height: 840px !important;
+  overflow: hidden !important;
+  background: linear-gradient(
+    90deg,
+    #100b08 0%,
+    #140e0b 33%,
+    #2b2622 45%,
+    #d4d2cd 58%,
+    #f8f6f1 100%
+  ) !important;
+}
+
+html body .hero *,
+html body .hero *::before,
+html body .hero *::after {
+  transition: none !important;
+}
+
+html body .hero-pin,
+html body .hero-stage {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+html body .hero-content,
+html body .hero-panel,
+html body .hero-copy,
+html body .hero-story,
+html body .hero-storyline,
+html body .hero-text-panel,
+html body .hero-final-buy,
+html body .hero-narrative,
+html body .hero-word-panel,
+html body .story-reveal,
+html body [class*="orbit"],
+html body [class*="spin"],
+html body [class*="story-word"],
+html body [class*="scroll-word"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+html body .hero-stage::before,
+html body .hero-stage::after,
+html body .hero-bg::before,
+html body .hero-bg::after,
+html body .hero-book-reveal::before {
+  content: none !important;
+  display: none !important;
+}
+
+html body .hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  display: block !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+html body .hero-bg img {
+  position: absolute !important;
+  right: clamp(24px, 6vw, 130px) !important;
+  bottom: 0 !important;
+  display: block !important;
+  width: auto !important;
+  height: min(94%, 780px) !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+html body .hero-book-reveal {
+  position: absolute !important;
+  left: clamp(330px, 35vw, 620px) !important;
+  top: 55% !important;
+  z-index: 5 !important;
+  display: block !important;
+  width: clamp(340px, 29vw, 500px) !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translate(-50%, -50%) !important;
+  animation: none !important;
+}
+
+html body .hero-book-reveal img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38) !important;
+}
+
+html body .hero-book-reveal::after {
+  content: "BUY NOW";
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 8% !important;
+  z-index: 7 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: min(72%, 310px) !important;
+  min-height: 48px !important;
+  padding: 12px 28px !important;
+  border: 1px solid rgba(255, 96, 96, 0.72) !important;
+  border-radius: 999px !important;
+  background: rgba(58, 5, 5, 0.82) !important;
+  color: #fff6f2 !important;
+  font-size: clamp(1rem, 1.4vw, 1.3rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.13em !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  text-shadow:
+    0 0 7px rgba(255, 255, 255, 0.95),
+    0 0 15px rgba(255, 85, 85, 0.82),
+    0 0 28px rgba(175, 0, 16, 0.7) !important;
+  box-shadow:
+    0 0 18px rgba(255, 74, 74, 0.42),
+    0 0 38px rgba(150, 8, 20, 0.34),
+    inset 0 0 18px rgba(255, 255, 255, 0.16) !important;
+  transform: translateX(-50%) !important;
+  animation: heroStableBuyFlicker 4.5s ease-in-out infinite !important;
+}
+
+html body .hero-book-buy {
+  display: none !important;
+}
+
+@keyframes heroStableBuyFlicker {
+  0%,
+  8%,
+  12%,
+  18%,
+  100% {
+    opacity: 1;
+    filter: brightness(1.12);
+  }
+
+  10%,
+  16% {
+    opacity: 0.64;
+    filter: brightness(0.78);
+  }
+
+  22%,
+  26% {
+    opacity: 0.9;
+    filter: brightness(1);
+  }
+}
+
+@media (max-width: 700px) {
+  html body .hero {
+    height: calc(100svh - 170px) !important;
+    min-height: 620px !important;
+    max-height: none !important;
+    background: radial-gradient(circle at 50% 36%, #31251f 0%, #130d0a 58%, #0e0907 100%) !important;
+  }
+
+  html body .hero-bg {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  html body .hero-book-reveal {
+    left: 50% !important;
+    top: 50% !important;
+    width: min(86vw, 420px) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  html body .hero-book-reveal img {
+    width: 100% !important;
+    height: auto !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.46) !important;
+  }
+
+  html body .hero-book-reveal::after {
+    bottom: 7% !important;
+    min-width: min(76%, 320px) !important;
+    min-height: 50px !important;
+    font-size: clamp(1.05rem, 5vw, 1.45rem) !important;
+  }
+}

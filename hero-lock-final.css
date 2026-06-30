@@ -1,0 +1,381 @@
+/* 2026-06-02 final locked hero cleanup: keep only the book and Ladonna visible. */
+html body main#home .hero,
+html body.home-hero-stage-active main#home .hero {
+  position: relative !important;
+  height: clamp(620px, calc(100svh - var(--header-height, 96px)), 790px) !important;
+  min-height: 620px !important;
+  max-height: 790px !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #120d0a !important;
+}
+
+/* 2026-06-02 desktop hero reset: lock the book and Ladonna in place. */
+@media (min-width: 701px) {
+  html body main#home .hero,
+  html body main#home .hero-pin {
+    min-height: calc(100vh - 96px) !important;
+    height: calc(100vh - 96px) !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  html body main#home .hero-pin {
+    position: relative !important;
+    display: block !important;
+    background:
+      linear-gradient(90deg, #17110f 0%, #211915 30%, #d9d7d1 56%, #fbfaf7 100%) !important;
+  }
+
+  html body main#home .hero-pin::before,
+  html body main#home .hero-pin::after,
+  html body main#home .hero-stage::before,
+  html body main#home .hero-stage::after,
+  html body main#home .hero-bg,
+  html body main#home .hero-bg img {
+    display: none !important;
+    animation: none !important;
+  }
+
+  html body main#home .hero-book-reveal,
+  html body main#home .hero-ladonna,
+  html body main#home .ladonna,
+  html body main#home [class*="ladonna"] {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html body main#home .hero-book-reveal {
+    display: block !important;
+    position: absolute !important;
+    left: 32% !important;
+    top: 55% !important;
+    width: min(31vw, 520px) !important;
+    max-width: 520px !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 12 !important;
+    filter: none !important;
+    pointer-events: auto !important;
+  }
+
+  html body main#home .hero-book-reveal img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 150px) !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    filter: none !important;
+  }
+
+  html body main#home .hero-book-reveal::before {
+    content: "BUY NOW" !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 8.5% !important;
+    transform: translateX(-50%) !important;
+    width: min(64%, 270px) !important;
+    padding: 12px 22px !important;
+    border-radius: 999px !important;
+    background: linear-gradient(90deg, #2b0909, #8f1717 45%, #d34b39 58%, #7d1212 100%) !important;
+    color: #fff7f0 !important;
+    font-family: inherit !important;
+    font-size: clamp(18px, 1.25vw, 25px) !important;
+    font-weight: 900 !important;
+    letter-spacing: .08em !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 0 10px rgba(255, 220, 205, .95), 0 0 24px rgba(202, 43, 30, .75) !important;
+    box-shadow: 0 0 0 1px rgba(255, 214, 190, .55), 0 0 22px rgba(210, 46, 30, .55), inset 0 0 14px rgba(255, 255, 255, .22) !important;
+    z-index: 15 !important;
+  }
+
+  html body main#home .hero-book-reveal::after {
+    display: none !important;
+  }
+
+  html body main#home .hero-ladonna,
+  html body main#home .ladonna,
+  html body main#home [class*="ladonna"] {
+    display: block !important;
+    position: absolute !important;
+    left: 70% !important;
+    top: 55% !important;
+    width: min(33vw, 560px) !important;
+    max-width: 560px !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 13 !important;
+    filter: none !important;
+  }
+
+  html body main#home .hero-ladonna img,
+  html body main#home .ladonna img,
+  html body main#home [class*="ladonna"] img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    filter: none !important;
+  }
+
+  html body main#home .hero-panel,
+  html body main#home .hero-copy,
+  html body main#home .hero-content,
+  html body main#home .hero-text {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+html body main#home .hero-pin,
+html body.home-hero-stage-active main#home .hero-pin {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  transform: none !important;
+  background:
+    linear-gradient(90deg, #120d0a 0%, #18100c 25%, #5b5953 47%, #f4f2ee 58%, #eeeeea 100%) !important;
+}
+
+html body main#home .hero::before,
+html body main#home .hero::after,
+html body main#home .hero-pin::before,
+html body main#home .hero-pin::after,
+html body main#home .hero-bg::before,
+html body main#home .hero-bg::after,
+html body main#home .hero-book-reveal::before,
+html body main#home .hero-book-reveal::after,
+html body main#home .hero [class*="orbit"],
+html body main#home .hero [class*="spin"],
+html body main#home .hero [class*="glow"],
+html body main#home .hero [class*="shade"],
+html body main#home .hero [class*="parallax"],
+html body main#home .hero [class*="scroll"],
+html body main#home .hero [class*="panel"],
+html body main#home .hero [class*="story"],
+html body main#home .hero-inner,
+html body main#home .hero-copy,
+html body main#home .hero-final-buy,
+html body main#home .release-title::after,
+html body main#home .release-subtitle::after {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+html body main#home .hero *,
+html body.home-hero-stage-active main#home .hero * {
+  animation: none !important;
+  transition: none !important;
+}
+
+html body main#home .hero-bg,
+html body.home-hero-stage-active main#home .hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+
+html body main#home .hero-bg img,
+html body.home-hero-stage-active main#home .hero-bg img {
+  position: absolute !important;
+  right: clamp(68px, 7vw, 150px) !important;
+  bottom: 0 !important;
+  width: min(42vw, 620px) !important;
+  max-width: 620px !important;
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  filter: none !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+html body main#home .hero-book-reveal,
+html body.home-hero-stage-active main#home .hero-book-reveal {
+  position: absolute !important;
+  left: clamp(90px, 16vw, 300px) !important;
+  top: clamp(92px, 15vh, 140px) !important;
+  width: min(31vw, 510px) !important;
+  max-width: 510px !important;
+  height: auto !important;
+  z-index: 3 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+
+html body main#home .hero-book-reveal img,
+html body.home-hero-stage-active main#home .hero-book-reveal img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 900px) {
+  html body main#home .hero,
+  html body.home-hero-stage-active main#home .hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    background: #120d0a !important;
+  }
+
+  html body main#home .hero-pin,
+  html body.home-hero-stage-active main#home .hero-pin {
+    position: relative !important;
+    min-height: 760px !important;
+    background:
+      linear-gradient(180deg, #f6f3ed 0 39%, #120d0a 39% 100%) !important;
+  }
+
+  html body main#home .hero-bg img,
+  html body.home-hero-stage-active main#home .hero-bg img {
+    right: -18px !important;
+    top: 0 !important;
+    bottom: auto !important;
+    width: min(67vw, 390px) !important;
+    max-width: none !important;
+  }
+
+  html body main#home .hero-book-reveal,
+  html body.home-hero-stage-active main#home .hero-book-reveal {
+    left: 20px !important;
+    top: 28px !important;
+    width: min(44vw, 230px) !important;
+    max-width: none !important;
+  }
+}
+@media (max-width: 700px) {
+  main#home .hero {
+    min-height: 760px !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  main#home .hero-pin {
+    min-height: 760px !important;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.2), transparent 34%),
+      linear-gradient(180deg, #f7f2e8 0%, #f7f2e8 38%, #17100d 38%, #17100d 100%) !important;
+  }
+
+  main#home .hero-bg,
+  main#home .hero-bg img {
+    display: none !important;
+  }
+
+  main#home .hero-book-reveal {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 52% !important;
+    width: min(78vw, 350px) !important;
+    max-width: 350px !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+    z-index: 6 !important;
+    pointer-events: auto !important;
+  }
+
+  main#home .hero-book-reveal::before,
+  main#home .hero-book-reveal::after {
+    display: none !important;
+  }
+
+  main#home .hero-book-reveal img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+/* Final mobile lock: simplify the hero to the book only. */
+@media (max-width: 700px) {
+  html body main#home .hero {
+    min-height: 760px !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  html body main#home .hero-pin {
+    min-height: 760px !important;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.18), transparent 34%),
+      linear-gradient(180deg, #f7f2e8 0%, #f7f2e8 38%, #17100d 38%, #17100d 100%) !important;
+  }
+
+  html body main#home .hero-bg,
+  html body main#home .hero-bg img,
+  html body main#home .hero-ladonna,
+  html body main#home .ladonna,
+  html body main#home [class*="ladonna"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  html body main#home .hero-book-reveal {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 52% !important;
+    width: min(82vw, 370px) !important;
+    max-width: 370px !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+  }
+
+  html body main#home .hero-book-reveal::before,
+  html body main#home .hero-book-reveal::after {
+    display: none !important;
+  }
+
+  html body main#home .hero-book-reveal img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
