@@ -2075,3 +2075,414 @@ html body main#home .intro-grid {
     min-height: auto !important;
   }
 }
+
+/* Quantum Series dedicated landing page. */
+.quantum-series-page {
+  background: #070b12;
+  color: var(--ab-paper, #fff7e8);
+  overflow-x: hidden;
+}
+
+.quantum-series-page .site-header {
+  background: rgba(5, 7, 10, 0.96);
+}
+
+.quantum-series-page .button:focus-visible,
+.quantum-series-page a:focus-visible,
+.quantum-series-page input:focus-visible {
+  outline: 3px solid rgba(224, 184, 105, 0.95);
+  outline-offset: 4px;
+}
+
+.qs-main {
+  background:
+    linear-gradient(180deg, #070b12 0%, #101a27 48%, #070b12 100%);
+}
+
+.qs-hero {
+  position: relative;
+  min-height: calc(100svh - 96px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(6, 8, 12, 0.96) 0%, rgba(6, 8, 12, 0.82) 35%, rgba(6, 8, 12, 0.48) 62%, rgba(6, 8, 12, 0.94) 100%),
+    url("images/ladonna-stone-portrait.jpg") center 38% / cover no-repeat;
+  border-bottom: 1px solid rgba(214, 171, 96, 0.22);
+}
+
+.qs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 74% 38%, rgba(214, 171, 96, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(7, 11, 18, 0.2), rgba(7, 11, 18, 0.76));
+  pointer-events: none;
+}
+
+.qs-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.qs-hero-copy {
+  max-width: 780px;
+  padding: clamp(48px, 7vw, 96px) 0;
+}
+
+.qs-hero h1,
+.qs-section h2 {
+  font-family: var(--ab-serif, Georgia, serif);
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: var(--ab-paper, #fff7e8);
+}
+
+.qs-hero h1 {
+  max-width: 820px;
+  margin: 0 0 24px;
+  font-size: clamp(3.2rem, 7vw, 8rem);
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.68);
+}
+
+.qs-hero-copy > p:not(.section-kicker) {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 247, 232, 0.86);
+  font-size: clamp(1.02rem, 1.25vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.qs-actions,
+.qs-card-actions,
+.qs-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.qs-actions {
+  margin-top: 30px;
+}
+
+.quantum-series-page .button-gold {
+  background: linear-gradient(135deg, #e8bd66, #b9792a);
+  color: #120c07;
+  border: 1px solid rgba(255, 224, 152, 0.5);
+  box-shadow: 0 16px 42px rgba(176, 117, 42, 0.18);
+}
+
+.quantum-series-page .button-ghost {
+  background: rgba(255, 247, 232, 0.06);
+  color: #fff7e8;
+  border: 1px solid rgba(255, 247, 232, 0.35);
+}
+
+.qs-section {
+  padding: clamp(64px, 7vw, 112px) 0;
+  border-bottom: 1px solid rgba(214, 171, 96, 0.14);
+}
+
+.qs-two-column {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(300px, 1fr);
+  gap: clamp(32px, 6vw, 86px);
+  align-items: start;
+}
+
+.qs-section h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 5.5rem);
+}
+
+.qs-prose p,
+.qs-section-heading p,
+.qs-callout p,
+.qs-newsletter-panel p {
+  color: rgba(255, 247, 232, 0.78);
+  line-height: 1.75;
+  font-size: clamp(1rem, 1.12vw, 1.16rem);
+}
+
+.qs-prose p:first-child {
+  margin-top: 0;
+}
+
+.qs-section-heading {
+  max-width: 880px;
+  margin: 0 auto clamp(30px, 4vw, 54px);
+  text-align: center;
+}
+
+.qs-left-heading {
+  margin-left: 0;
+  text-align: left;
+}
+
+.qs-books {
+  background:
+    radial-gradient(circle at 22% 8%, rgba(214, 171, 96, 0.11), transparent 26%),
+    linear-gradient(180deg, #0b121d, #070b12);
+}
+
+.qs-book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.qs-book-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100%;
+  padding: clamp(18px, 2vw, 28px);
+  border: 1px solid rgba(214, 171, 96, 0.22);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 247, 232, 0.08), rgba(255, 247, 232, 0.025));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+
+.qs-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+  margin-bottom: 24px;
+}
+
+.qs-cover img {
+  width: min(100%, 250px);
+  max-height: 255px;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 24px 32px rgba(0, 0, 0, 0.44));
+}
+
+.qs-book-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.qs-book-copy h3 {
+  margin: 6px 0 8px;
+  font-family: var(--ab-serif, Georgia, serif);
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 0.98;
+  color: var(--ab-paper, #fff7e8);
+}
+
+.qs-book-copy p:not(.book-label):not(.book-subtitle) {
+  color: rgba(255, 247, 232, 0.72);
+  line-height: 1.65;
+}
+
+.qs-book-copy .book-subtitle {
+  margin: 0 0 14px;
+  color: rgba(224, 184, 105, 0.86);
+}
+
+.qs-card-actions {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.qs-ladonna {
+  background:
+    linear-gradient(90deg, rgba(7, 11, 18, 0.98), rgba(14, 23, 35, 0.92)),
+    url("images/ladonna-stone-boardroom.jpg") center / cover no-repeat;
+}
+
+.qs-ladonna-grid {
+  align-items: center;
+}
+
+.qs-portrait-card {
+  overflow: hidden;
+  border: 1px solid rgba(214, 171, 96, 0.22);
+  border-radius: 10px;
+  min-height: 420px;
+  background: #0a0d12;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+}
+
+.qs-portrait-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.92) contrast(1.02) brightness(0.86);
+}
+
+.qs-like-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.qs-like-list li {
+  padding: 18px 20px;
+  border: 1px solid rgba(214, 171, 96, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 247, 232, 0.055);
+  color: rgba(255, 247, 232, 0.86);
+  font-weight: 700;
+}
+
+.qs-continues {
+  background: linear-gradient(135deg, rgba(214, 171, 96, 0.12), transparent 42%), #070b12;
+}
+
+.qs-callout {
+  max-width: 900px;
+  text-align: center;
+}
+
+.qs-callout .button {
+  margin-top: 18px;
+}
+
+.qs-newsletter {
+  background: #f8f2e8;
+  color: #1f1711;
+}
+
+.qs-newsletter-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 0.85fr);
+  gap: clamp(26px, 5vw, 72px);
+  align-items: center;
+  padding: clamp(28px, 5vw, 60px);
+  border: 1px solid rgba(95, 72, 48, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 252, 246, 0.92);
+  box-shadow: 0 24px 70px rgba(40, 31, 22, 0.12);
+}
+
+.qs-newsletter-panel h2 {
+  color: #1f1711;
+}
+
+.qs-newsletter-panel p {
+  color: #5c4b3d;
+}
+
+.qs-form {
+  padding: 24px;
+  border: 1px solid rgba(95, 72, 48, 0.18);
+  border-radius: 10px;
+  background: rgba(245, 234, 218, 0.66);
+}
+
+.qs-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #5c4b3d;
+  font-weight: 800;
+}
+
+.qs-form input {
+  flex: 1 1 220px;
+  min-height: 52px;
+  border: 1px solid rgba(95, 72, 48, 0.22);
+  border-radius: 999px;
+  padding: 0 18px;
+  color: #1f1711;
+  background: #fffaf0;
+}
+
+.qs-form .button {
+  min-height: 52px;
+}
+
+@media (max-width: 1100px) {
+  .qs-book-grid,
+  .qs-like-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .qs-hero h1 {
+    font-size: clamp(3rem, 8vw, 6.4rem);
+  }
+}
+
+@media (max-width: 820px) {
+  .qs-hero {
+    min-height: auto;
+    background-position: 58% center;
+  }
+
+  .qs-hero-copy {
+    padding: 70px 0;
+  }
+
+  .qs-two-column,
+  .qs-newsletter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .qs-book-grid,
+  .qs-like-list {
+    grid-template-columns: 1fr;
+  }
+
+  .qs-book-card,
+  .qs-section-heading,
+  .qs-left-heading {
+    text-align: center;
+  }
+
+  .qs-book-copy {
+    align-items: center;
+  }
+
+  .qs-cover {
+    min-height: 200px;
+  }
+
+  .qs-cover img {
+    max-height: 230px;
+  }
+
+  .qs-card-actions,
+  .qs-actions,
+  .qs-form-row {
+    justify-content: center;
+  }
+
+  .qs-portrait-card,
+  .qs-portrait-card img {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .qs-hero h1 {
+    font-size: clamp(2.55rem, 13vw, 4.4rem);
+  }
+
+  .qs-hero-copy > p:not(.section-kicker) {
+    font-size: 1rem;
+  }
+
+  .qs-section {
+    padding: 52px 0;
+  }
+
+  .qs-actions .button,
+  .qs-card-actions .button,
+  .qs-form .button {
+    width: 100%;
+  }
+
+  .qs-newsletter-panel,
+  .qs-form {
+    padding: 22px;
+  }
+}
