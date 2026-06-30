@@ -1,4 +1,4 @@
-/* Local preview only: cinematic author-brand revision for the current Aries Blackstone site. */
+﻿/* Local preview only: cinematic author-brand revision for the current Aries Blackstone site. */
 :root {
   --ab-night: #07090d;
   --ab-ink: #101722;
@@ -2613,3 +2613,67 @@ html body.contact-page .contact-card strong {
 html body.contact-page .contact-card a {
   text-decoration-color: rgba(224, 184, 105, 0.55) !important;
 }
+
+/* Homepage hero parallax restoration: preserve the recovered image while restoring motion. */
+@media (min-width: 701px) {
+  html body main#home section.hero {
+    z-index: 0 !important;
+    background:
+      linear-gradient(90deg, rgba(13, 8, 5, 0.98) 0%, rgba(68, 43, 24, 0.34) 38%, rgba(29, 19, 12, 0.16) 66%, rgba(13, 8, 5, 0.94) 100%),
+      radial-gradient(circle at 54% 42%, rgba(214, 171, 96, 0.16), transparent 34%) !important;
+  }
+
+  html body main#home section.hero > img.hero-fixed-image {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: translate3d(0, var(--home-hero-bg-y, 0px), 0) scale(1.045) !important;
+    transform-origin: center center !important;
+    will-change: transform !important;
+    z-index: 0 !important;
+  }
+
+  html body main#home section.hero::before {
+    position: fixed !important;
+    inset: 0 !important;
+    transform: translate3d(0, calc(var(--home-hero-bg-y, 0px) * 0.35), 0) !important;
+    will-change: transform !important;
+    z-index: 0 !important;
+  }
+
+  html body main#home section.hero .hero-pin {
+    transform: translate3d(0, var(--home-hero-panel-y, 0px), 0) !important;
+    will-change: transform !important;
+  }
+
+  html body main#home .intro-band,
+  html body main#home .featured-release-section,
+  html body main#home .books-section,
+  html body main#home .about-section,
+  html body main#home .series-section,
+  html body main#home .children-section,
+  html body main#home .reader-section,
+  html body main#home .explore-section,
+  html body main#home .signup-section,
+  html body main#home .contact-section,
+  html body .site-footer {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
+
+@media (max-width: 700px) {
+  html body main#home section.hero > img.hero-fixed-image {
+    position: absolute !important;
+    transform: none !important;
+  }
+
+  html body main#home section.hero .hero-pin {
+    transform: none !important;
+  }
+}
+
