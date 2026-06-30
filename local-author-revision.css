@@ -1942,3 +1942,98 @@ html body:not(:has(main#home)) .signup-section .signup-form {
   background: rgba(245, 234, 218, 0.64) !important;
   border-color: rgba(95, 72, 48, 0.18) !important;
 }
+
+/* Intro Ladonna full-background pass: use the image across the whole story section. */
+html body main#home .intro-band {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: clamp(620px, 78vh, 860px) !important;
+  display: flex !important;
+  align-items: center !important;
+  background:
+    linear-gradient(90deg, rgba(7, 9, 13, 0.94) 0%, rgba(7, 9, 13, 0.82) 34%, rgba(7, 9, 13, 0.42) 62%, rgba(7, 9, 13, 0.82) 100%),
+    radial-gradient(circle at 73% 42%, rgba(214, 171, 96, 0.2), transparent 36%),
+    url("images/ladonna-stone-portrait.jpg") center 26% / cover no-repeat !important;
+  border-bottom: 1px solid rgba(214, 171, 96, 0.16) !important;
+}
+
+html body main#home .intro-band::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background: linear-gradient(180deg, rgba(7, 9, 13, 0.2), rgba(7, 9, 13, 0.9)) !important;
+  pointer-events: none !important;
+}
+
+html body main#home .intro-grid {
+  position: relative !important;
+  z-index: 1 !important;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.72fr) !important;
+  align-items: center !important;
+}
+
+html body main#home .intro-grid > div:first-child {
+  max-width: 760px !important;
+}
+
+html body main#home .intro-grid h2 {
+  color: var(--ab-paper) !important;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.72) !important;
+}
+
+html body main#home .intro-ladonna-card {
+  min-height: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+html body main#home .intro-ladonna-card img,
+html body main#home .intro-ladonna-card::before {
+  display: none !important;
+}
+
+html body main#home .intro-ladonna-copy {
+  min-height: 0 !important;
+  display: block !important;
+  padding: clamp(22px, 2.6vw, 34px) !important;
+  border-left: 3px solid rgba(214, 171, 96, 0.82) !important;
+  background: rgba(7, 9, 13, 0.32) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24) !important;
+}
+
+html body main#home .intro-ladonna-copy p {
+  max-width: 480px !important;
+  color: rgba(255, 247, 232, 0.88) !important;
+}
+
+@media (max-width: 1080px) {
+  html body main#home .intro-band {
+    min-height: auto !important;
+    padding: clamp(70px, 10vw, 110px) 0 !important;
+    background-position: 58% center !important;
+  }
+
+  html body main#home .intro-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body main#home .intro-ladonna-copy {
+    width: min(100%, 620px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  html body main#home .intro-band {
+    padding: 54px 0 !important;
+    background-position: 54% center !important;
+  }
+
+  html body main#home .intro-ladonna-copy {
+    padding: 18px !important;
+  }
+}
