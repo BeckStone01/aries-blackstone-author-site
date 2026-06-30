@@ -2486,3 +2486,80 @@ html body main#home .intro-grid {
     padding: 22px;
   }
 }
+
+/* Homepage hero recovery pass: restore the desk image as a full-bleed first-screen background. */
+html body main#home section.hero {
+  position: relative !important;
+  isolation: isolate !important;
+  min-height: calc(100svh - 88px) !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(90deg, rgba(13, 8, 5, 0.98) 0%, rgba(68, 43, 24, 0.34) 38%, rgba(29, 19, 12, 0.16) 66%, rgba(13, 8, 5, 0.94) 100%),
+    radial-gradient(circle at 54% 42%, rgba(214, 171, 96, 0.16), transparent 34%),
+    url("images/quantum-divide-desk-hero.png") center center / cover no-repeat !important;
+}
+
+html body main#home section.hero > img.hero-fixed-image {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  opacity: 1 !important;
+  filter: saturate(0.94) contrast(1.05) brightness(0.58) !important;
+  transform: none !important;
+  z-index: 0 !important;
+}
+
+html body main#home section.hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background:
+    linear-gradient(90deg, rgba(13, 8, 5, 0.92) 0%, rgba(13, 8, 5, 0.48) 42%, rgba(13, 8, 5, 0.08) 68%, rgba(13, 8, 5, 0.58) 100%),
+    linear-gradient(180deg, rgba(13, 8, 5, 0.18), rgba(13, 8, 5, 0.38)) !important;
+  pointer-events: none !important;
+}
+
+html body main#home section.hero .hero-pin {
+  position: relative !important;
+  z-index: 2 !important;
+  min-height: calc(100svh - 88px) !important;
+  display: flex !important;
+  align-items: center !important;
+  width: min(100% - 64px, 1440px) !important;
+  margin: 0 auto !important;
+  padding: clamp(40px, 5vw, 76px) 0 !important;
+}
+
+html body main#home .hero-redo-copy {
+  transform: none !important;
+  margin-left: 0 !important;
+  width: min(520px, 42vw) !important;
+  max-width: 520px !important;
+  background: rgba(28, 18, 10, 0.42) !important;
+  border: 1px solid rgba(255, 247, 232, 0.26) !important;
+  border-left: 4px solid rgba(224, 184, 105, 0.9) !important;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+@media (max-width: 900px) {
+  html body main#home section.hero,
+  html body main#home section.hero .hero-pin {
+    min-height: auto !important;
+  }
+
+  html body main#home section.hero .hero-pin {
+    width: min(100% - 28px, 560px) !important;
+    padding: 56px 0 42px !important;
+  }
+
+  html body main#home .hero-redo-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
