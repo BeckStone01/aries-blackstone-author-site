@@ -2563,3 +2563,53 @@ html body main#home .hero-redo-copy {
     max-width: 100% !important;
   }
 }
+
+/* Contact page contrast pass: keep inquiry details readable on dark panels. */
+html body.contact-page .contact-section {
+  background: linear-gradient(180deg, #070b12, #0d1621) !important;
+}
+
+html body.contact-page .contact-section .contact-grid {
+  background: linear-gradient(135deg, rgba(255, 247, 232, 0.08), rgba(255, 247, 232, 0.035)) !important;
+  border: 1px solid rgba(224, 184, 105, 0.26) !important;
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.22) !important;
+  color: #fff7e8 !important;
+}
+
+html body.contact-page .contact-grid h2,
+html body.contact-page .contact-grid .section-kicker {
+  color: #fff7e8 !important;
+  opacity: 1 !important;
+}
+
+html body.contact-page .contact-grid .section-kicker {
+  color: #e0b869 !important;
+}
+
+html body.contact-page .contact-grid p,
+html body.contact-page .contact-card p,
+html body.contact-page .contact-card a {
+  color: rgba(255, 247, 232, 0.86) !important;
+  opacity: 1 !important;
+}
+
+html body.contact-page .contact-grid > div > p:not(.section-kicker) {
+  max-width: 650px !important;
+  color: rgba(255, 247, 232, 0.82) !important;
+}
+
+html body.contact-page .contact-card {
+  background: rgba(255, 247, 232, 0.08) !important;
+  border: 1px solid rgba(224, 184, 105, 0.28) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 247, 232, 0.06), 0 20px 55px rgba(0, 0, 0, 0.16) !important;
+}
+
+html body.contact-page .contact-card strong {
+  color: #e0b869 !important;
+  display: inline-block !important;
+  margin-bottom: 6px !important;
+}
+
+html body.contact-page .contact-card a {
+  text-decoration-color: rgba(224, 184, 105, 0.55) !important;
+}
