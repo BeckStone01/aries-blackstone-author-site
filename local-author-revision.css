@@ -1812,3 +1812,22 @@ html body .contact-section .contact-grid {
     font-size: clamp(1.6rem, 8vw, 2.4rem) !important;
   }
 }
+
+/* Hero alignment pass: raise the glass panel to align with the top of the book stack. */
+@media (min-width: 981px) {
+  html body main#home .hero-redo-copy {
+    transform: translateY(clamp(-138px, -7.2vw, -96px)) !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  html body main#home .hero-redo-copy {
+    transform: translateY(-38px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  html body main#home .hero-redo-copy {
+    transform: none !important;
+  }
+}
