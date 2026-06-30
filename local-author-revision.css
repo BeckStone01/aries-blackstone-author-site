@@ -2037,3 +2037,41 @@ html body main#home .intro-ladonna-copy p {
     padding: 18px !important;
   }
 }
+
+/* Ladonna story section full-screen pass: cover the hero transition completely. */
+html body main#home .intro-band {
+  min-height: 100vh !important;
+  margin-top: -1px !important;
+  padding: clamp(80px, 8vw, 120px) 0 !important;
+  background:
+    linear-gradient(90deg, rgba(7, 9, 13, 0.96) 0%, rgba(7, 9, 13, 0.84) 32%, rgba(7, 9, 13, 0.48) 62%, rgba(7, 9, 13, 0.88) 100%),
+    radial-gradient(circle at 55% 42%, rgba(214, 171, 96, 0.18), transparent 38%),
+    url("images/ladonna-stone-portrait.jpg") center center / cover no-repeat !important;
+}
+
+html body main#home .intro-band::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: -140px !important;
+  height: 140px !important;
+  z-index: 0 !important;
+  background: linear-gradient(180deg, rgba(7, 9, 13, 0.96), rgba(7, 9, 13, 0.88)) !important;
+  pointer-events: none !important;
+}
+
+html body main#home .intro-grid {
+  min-height: calc(100vh - 220px) !important;
+}
+
+@media (max-width: 760px) {
+  html body main#home .intro-band {
+    min-height: 100svh !important;
+    padding: 52px 0 !important;
+  }
+
+  html body main#home .intro-grid {
+    min-height: auto !important;
+  }
+}
