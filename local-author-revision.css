@@ -1831,3 +1831,74 @@ html body .contact-section .contact-grid {
     transform: none !important;
   }
 }
+
+/* Intro Ladonna image panel: bring character presence into the first story section. */
+html body main#home .intro-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.8fr) !important;
+  gap: clamp(28px, 4vw, 64px) !important;
+  align-items: center !important;
+}
+
+html body main#home .intro-ladonna-card {
+  position: relative !important;
+  min-height: clamp(300px, 34vw, 460px) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(214, 171, 96, 0.18) !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, rgba(255, 247, 232, 0.08), rgba(255, 247, 232, 0.03)) !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32) !important;
+}
+
+html body main#home .intro-ladonna-card img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 18% !important;
+  filter: saturate(0.96) contrast(1.04) brightness(0.76) !important;
+}
+
+html body main#home .intro-ladonna-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: linear-gradient(90deg, rgba(7, 9, 13, 0.78), rgba(7, 9, 13, 0.32) 48%, rgba(7, 9, 13, 0.08)) !important;
+}
+
+html body main#home .intro-ladonna-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: end !important;
+  min-height: inherit !important;
+  padding: clamp(20px, 2.4vw, 34px) !important;
+}
+
+html body main#home .intro-ladonna-copy p {
+  max-width: 420px !important;
+  margin: 0 !important;
+  color: rgba(255, 247, 232, 0.9) !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55) !important;
+}
+
+@media (max-width: 1080px) {
+  html body main#home .intro-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body main#home .intro-ladonna-card {
+    min-height: 360px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  html body main#home .intro-ladonna-card {
+    min-height: 320px !important;
+  }
+
+  html body main#home .intro-ladonna-copy {
+    padding: 20px !important;
+  }
+}
