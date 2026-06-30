@@ -2677,3 +2677,83 @@ html body.contact-page .contact-card a {
   }
 }
 
+
+/* Homepage hero glass/parallax refinement: keep motion, restore lighter panel and better framing. */
+@media (min-width: 901px) {
+  html body main#home section.hero > img.hero-fixed-image {
+    object-position: center 42% !important;
+    transform: translate3d(0, var(--home-hero-bg-y, 0px), 0) scale(1.015) !important;
+    filter: saturate(0.96) contrast(1.04) brightness(0.62) !important;
+  }
+
+  html body main#home section.hero::before {
+    background:
+      linear-gradient(90deg, rgba(13, 8, 5, 0.84) 0%, rgba(13, 8, 5, 0.34) 39%, rgba(13, 8, 5, 0.06) 68%, rgba(13, 8, 5, 0.46) 100%),
+      linear-gradient(180deg, rgba(13, 8, 5, 0.1), rgba(13, 8, 5, 0.28)) !important;
+  }
+
+  html body main#home section.hero .hero-pin {
+    width: min(100% - 70px, 1440px) !important;
+    align-items: flex-start !important;
+    padding-top: clamp(72px, 8.2vh, 106px) !important;
+    padding-bottom: 0 !important;
+    transform: translate3d(0, calc(var(--home-hero-panel-y, 0px) - 34px), 0) !important;
+  }
+
+  html body main#home .hero-redo-copy {
+    width: min(460px, 32vw) !important;
+    max-width: 460px !important;
+    padding: clamp(18px, 1.45vw, 24px) !important;
+    background: rgba(24, 17, 10, 0.22) !important;
+    border: 1px solid rgba(255, 247, 232, 0.34) !important;
+    border-left: 4px solid rgba(224, 184, 105, 0.88) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 18px 56px rgba(0, 0, 0, 0.18) !important;
+    backdrop-filter: blur(15px) saturate(1.08) !important;
+  }
+
+  html body main#home .hero-redo-copy h1 {
+    max-width: 400px !important;
+    font-size: clamp(2.65rem, 3.85vw, 4.2rem) !important;
+    line-height: 0.94 !important;
+    margin-bottom: 12px !important;
+  }
+
+  html body main#home .hero-redo-kicker {
+    margin-bottom: 10px !important;
+    font-size: 0.78rem !important;
+  }
+
+  html body main#home .hero-redo-lead {
+    max-width: 410px !important;
+    margin-top: 0 !important;
+    font-size: clamp(0.84rem, 0.86vw, 0.96rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  html body main#home .hero-redo-actions {
+    margin-top: 16px !important;
+    gap: 9px !important;
+  }
+
+  html body main#home .hero-redo-actions .button {
+    min-height: 40px !important;
+    padding: 9px 14px !important;
+    font-size: 0.84rem !important;
+  }
+
+  html body main#home .hero-redo-note {
+    margin-top: 12px !important;
+    font-size: 0.76rem !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  html body main#home .hero-redo-copy {
+    width: min(440px, 42vw) !important;
+  }
+
+  html body main#home .hero-redo-copy h1 {
+    font-size: clamp(2.35rem, 4.45vw, 3.7rem) !important;
+  }
+}
