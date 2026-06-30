@@ -1902,3 +1902,43 @@ html body main#home .intro-ladonna-copy p {
     padding: 20px !important;
   }
 }
+
+/* Contact/signup contrast fix: keep the light panel readable and professional. */
+html body:not(:has(main#home)) .signup-section {
+  background: linear-gradient(180deg, #f8f2e8, #fff8ec) !important;
+}
+
+html body:not(:has(main#home)) .signup-section .signup-panel {
+  background: rgba(255, 252, 246, 0.92) !important;
+  border: 1px solid rgba(95, 72, 48, 0.16) !important;
+  box-shadow: 0 24px 70px rgba(40, 31, 22, 0.14) !important;
+  color: #1f1711 !important;
+}
+
+html body:not(:has(main#home)) .signup-section .signup-panel h2,
+html body:not(:has(main#home)) .signup-section .signup-panel .section-kicker {
+  color: #1f1711 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html body:not(:has(main#home)) .signup-section .signup-panel .section-kicker {
+  color: #b47a31 !important;
+}
+
+html body:not(:has(main#home)) .signup-section .signup-panel p,
+html body:not(:has(main#home)) .signup-section .form-note,
+html body:not(:has(main#home)) .signup-section .form-disclaimer,
+html body:not(:has(main#home)) .signup-section .signup-form label {
+  color: #6b5848 !important;
+  opacity: 1 !important;
+}
+
+html body:not(:has(main#home)) .signup-section .form-note {
+  color: #594536 !important;
+}
+
+html body:not(:has(main#home)) .signup-section .signup-form {
+  background: rgba(245, 234, 218, 0.64) !important;
+  border-color: rgba(95, 72, 48, 0.18) !important;
+}
