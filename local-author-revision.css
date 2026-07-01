@@ -2757,3 +2757,75 @@ html body.contact-page .contact-card a {
     font-size: clamp(2.35rem, 4.45vw, 3.7rem) !important;
   }
 }
+
+/* Site-wide persistent header: keep navigation visible above every page section. */
+html {
+  scroll-padding-top: 92px !important;
+}
+
+html body .site-header {
+  position: sticky !important;
+  top: 0 !important;
+  inset-inline: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
+  background: rgba(7, 9, 13, 0.96) !important;
+  border-bottom: 1px solid rgba(224, 184, 105, 0.22) !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22) !important;
+  backdrop-filter: blur(18px) saturate(1.08) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.08) !important;
+}
+
+html body .site-header.is-scrolled {
+  background: rgba(7, 9, 13, 0.98) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3) !important;
+}
+
+html body main[id],
+html body section[id] {
+  scroll-margin-top: 96px !important;
+}
+
+@media (max-width: 1080px) {
+  html {
+    scroll-padding-top: 142px !important;
+  }
+
+  html body main[id],
+  html body section[id] {
+    scroll-margin-top: 148px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 178px !important;
+  }
+
+  html body main[id],
+  html body section[id] {
+    scroll-margin-top: 184px !important;
+  }
+}
+
+/* Header active-link contrast: keep the current page label readable on dark nav. */
+html body .site-header .main-nav a,
+html body .site-header .main-nav a:visited {
+  color: rgba(255, 247, 232, 0.92) !important;
+  opacity: 1 !important;
+}
+
+html body .site-header .main-nav a.is-active,
+html body .site-header .main-nav a[aria-current="page"],
+html body .site-header .main-nav a:hover,
+html body .site-header .main-nav a:focus-visible {
+  color: #f2c66f !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 16px rgba(224, 184, 105, 0.22) !important;
+}
+
+html body .site-header .main-nav a.is-active::after,
+html body .site-header .main-nav a[aria-current="page"]::after {
+  background: #f2c66f !important;
+  opacity: 1 !important;
+}
