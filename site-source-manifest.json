@@ -1,0 +1,27 @@
+{
+  "canonicalDomain": "https://aries-blackstone.com",
+  "purpose": "Required source files for the public Aries Blackstone author site. CI treats this manifest as the minimum rebuildable site surface.",
+  "routes": [
+    { "route": "/", "source": "index.html", "required": true },
+    { "route": "/books", "source": "books.html", "required": true },
+    { "route": "/children", "source": "children.html", "required": true },
+    { "route": "/quantum-series", "source": "quantum-series.html", "required": true },
+    { "route": "/press", "source": "press.html", "required": true },
+    { "route": "/libraries", "source": "libraries.html", "required": true },
+    { "route": "/book-clubs", "source": "book-clubs.html", "required": true },
+    { "route": "/educators", "source": "educators.html", "required": true },
+    { "route": "/reviews", "source": "reviews.html", "required": true },
+    { "route": "/appearances", "source": "appearances.html", "required": true },
+    { "route": "/inside-the-quantum-series/why-i-created-dr-ladonna-stone", "source": "inside-the-quantum-series/why-i-created-dr-ladonna-stone.html", "required": true },
+    { "route": "/coming-soon", "source": "coming-soon.html", "required": true },
+    { "route": "/contact", "source": "contact.html", "required": true },
+    { "route": "/privacy", "source": "privacy.html", "required": true },
+    { "route": "/terms", "source": "terms.html", "required": true },
+    { "route": "/thank-you", "source": "thank-you.html", "required": true }
+  ],
+  "requiredSupportFiles": [
+    "_redirects",
+    "RELEASE_CHECKLIST.md",
+    "scripts/check-site-integrity.mjs"
+  ]
+}
