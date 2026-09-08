@@ -470,11 +470,12 @@
 @media (min-width: 1000px) {
   main#home {
     background-image:
-      linear-gradient(90deg, rgba(248, 241, 230, 0.36) 0%, rgba(248, 241, 230, 0.12) 36%, rgba(18, 11, 7, 0.08) 58%, rgba(18, 11, 7, 0.5) 100%) !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: scroll !important;
+      linear-gradient(90deg, rgba(248, 241, 230, 0.36) 0%, rgba(248, 241, 230, 0.12) 36%, rgba(18, 11, 7, 0.08) 58%, rgba(18, 11, 7, 0.5) 100%),
+      url("images/ladonna-stone-blue-suit.png") !important;
+    background-size: cover, cover !important;
+    background-position: center center, 58% 10% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: scroll, fixed !important;
   }
 
   main#home .hero {
@@ -483,44 +484,17 @@
   }
 
   main#home .hero-bg {
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    overflow: hidden !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  main#home .hero-bg img {
-    position: absolute !important;
-    top: 50% !important;
-    right: clamp(-210px, -8vw, -90px) !important;
-    left: auto !important;
-    width: clamp(760px, 58vw, 980px) !important;
-    height: auto !important;
-    max-width: none !important;
-    max-height: none !important;
-    object-fit: contain !important;
-    object-position: center !important;
-    opacity: 0.9 !important;
-    transform: translateY(-48%) !important;
-    filter: saturate(1.08) contrast(1.06) brightness(0.9) !important;
+    display: none !important;
   }
 
   main#home .hero-shade {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 2 !important;
     background:
       linear-gradient(90deg, rgba(255, 249, 238, 0.32) 0%, rgba(255, 249, 238, 0.2) 33%, rgba(18, 11, 7, 0.02) 54%, rgba(18, 11, 7, 0.36) 100%),
       radial-gradient(circle at 73% 34%, rgba(39, 171, 214, 0.18), transparent 28%) !important;
   }
 
   main#home .hero-inner {
-    position: relative !important;
-    z-index: 4 !important;
-    grid-template-columns: minmax(560px, 850px) 1fr !important;
+    grid-template-columns: minmax(560px, 760px) 1fr !important;
     align-items: center !important;
   }
 
@@ -544,35 +518,6 @@
     color: rgba(48, 38, 30, 0.92) !important;
   }
 
-  main#home .hero-actions .button-light {
-    border-color: rgba(32, 21, 15, 0.28) !important;
-    background: rgba(255, 250, 242, 0.72) !important;
-    color: #20150f !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42) !important;
-  }
-
-  main#home .hero-actions .button-light:hover {
-    background: #fffaf2 !important;
-    border-color: rgba(168, 101, 43, 0.42) !important;
-  }
-
-  main#home .hero-actions .hero-buy-now {
-    min-width: 178px !important;
-    background: #d6ab60 !important;
-    color: #1f150f !important;
-    font-size: 1.05rem !important;
-    letter-spacing: 0.08em !important;
-    text-transform: uppercase !important;
-    box-shadow: 0 16px 34px rgba(168, 101, 43, 0.3) !important;
-  }
-
-  main#home .hero-release .release-buy-now {
-    width: fit-content !important;
-    min-width: 190px !important;
-    margin-top: 10px !important;
-    margin-left: 0 !important;
-  }
-
   main#home .intro-band {
     background: rgba(248, 241, 230, 0.86) !important;
     backdrop-filter: blur(8px) saturate(1.04) !important;
@@ -587,13 +532,123 @@
 }
 
 @media (min-width: 1000px) and (max-width: 1280px) {
+  main#home {
+    background-position: center center, 62% 9% !important;
+  }
+
   main#home .hero-copy {
     max-width: 680px !important;
   }
+}
 
-  main#home .hero-bg img {
-    right: clamp(-260px, -16vw, -150px) !important;
-    width: clamp(730px, 64vw, 880px) !important;
+/* Hero release title and Ladonna character spotlight. */
+main#home .hero-release-title {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: baseline !important;
+  gap: 0.35rem 0.7rem !important;
+  margin: 0.1rem 0 0.95rem !important;
+  max-width: 720px !important;
+  text-decoration: none !important;
+}
+
+main#home .hero-release-title span {
+  color: rgba(168, 101, 43, 0.9) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+}
+
+main#home .hero-release-title strong {
+  color: rgba(28, 18, 12, 0.94) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.35rem, 2vw, 2.05rem) !important;
+  line-height: 0.96 !important;
+}
+
+main#home .hero-release-title em {
+  color: rgba(70, 55, 43, 0.9) !important;
+  font-size: 0.78rem !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+}
+
+main#home .hero-ladonna-question {
+  display: block !important;
+  color: #fff8ec !important;
+  text-decoration: none !important;
+  padding: clamp(16px, 1.8vw, 24px) !important;
+  border-left: 3px solid rgba(218, 176, 93, 0.92) !important;
+  background:
+    linear-gradient(135deg, rgba(18, 11, 7, 0.48), rgba(18, 11, 7, 0.18)) !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(4px) saturate(1.08) !important;
+}
+
+main#home .hero-ladonna-question span {
+  display: block !important;
+  margin-bottom: 0.35rem !important;
+  color: rgba(218, 176, 93, 0.95) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+}
+
+main#home .hero-ladonna-question strong {
+  display: block !important;
+  max-width: 11ch !important;
+  color: #fffaf2 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.55rem, 2.4vw, 2.45rem) !important;
+  line-height: 0.96 !important;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+main#home .hero-ladonna-question small {
+  display: block !important;
+  max-width: 25ch !important;
+  margin-top: 0.75rem !important;
+  color: rgba(255, 248, 236, 0.82) !important;
+  font-size: clamp(0.86rem, 1vw, 1rem) !important;
+  line-height: 1.45 !important;
+}
+
+@media (min-width: 1000px) {
+  main#home .hero {
+    position: relative !important;
+    isolation: isolate !important;
+  }
+
+  main#home .hero-ladonna-question {
+    position: absolute !important;
+    z-index: 4 !important;
+    top: clamp(92px, 13vh, 142px) !important;
+    right: clamp(34px, 6vw, 112px) !important;
+    width: min(29vw, 410px) !important;
+    transform: translate3d(0, var(--parallax-y, 0px), 0) !important;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  main#home .hero-ladonna-question {
+    right: clamp(24px, 3vw, 48px) !important;
+    width: min(31vw, 350px) !important;
+  }
+}
+
+@media (max-width: 999px) {
+  main#home .hero-release-title {
+    margin-bottom: 0.85rem !important;
+  }
+
+  main#home .hero-ladonna-question {
+    margin: 18px auto 0 !important;
+    width: min(calc(100% - 32px), 430px) !important;
+    background: rgba(18, 11, 7, 0.58) !important;
   }
 }
 
@@ -694,362 +749,3208 @@ main#home .explore-tile:hover::before {
     min-height: 220px !important;
   }
 }
+/* Final homepage hero polish: readable glass, clearer fixed Ladonna background. */
+@media (min-width: 1000px) {
+  main#home {
+    background-image:
+      linear-gradient(90deg, rgba(248, 241, 230, 0.42) 0%, rgba(248, 241, 230, 0.16) 34%, rgba(18, 11, 7, 0.03) 60%, rgba(18, 11, 7, 0.26) 100%),
+      url("images/ladonna-stone-blue-suit-sharp.jpeg") !important;
+    background-size: cover, auto 108vh !important;
+    background-position: center center, 61% 66% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: scroll, fixed !important;
+  }
 
-/* Latest release hero callout. */
-main#home .hero-release {
-  display: grid !important;
-  gap: clamp(4px, 0.6vw, 8px) !important;
-  margin: 0 0 clamp(18px, 2.4vw, 28px) !important;
+  main#home .hero {
+    min-height: calc(100svh - 88px) !important;
+    padding-top: clamp(74px, 9vh, 112px) !important;
+    overflow: hidden !important;
+    background: transparent !important;
+  }
+
+  main#home .hero-bg {
+    display: none !important;
+  }
+
+  main#home .hero-shade {
+    background:
+      radial-gradient(circle at 76% 50%, rgba(42, 122, 148, 0.12), transparent 34%),
+      linear-gradient(90deg, rgba(255, 249, 238, 0.14) 0%, rgba(255, 249, 238, 0.05) 42%, rgba(18, 11, 7, 0.07) 64%, rgba(18, 11, 7, 0.16) 100%) !important;
+    opacity: 0.38 !important;
+  }
+
+  main#home .hero-inner {
+    grid-template-columns: minmax(560px, 760px) 1fr !important;
+    align-items: center !important;
+    min-height: auto !important;
+  }
+
+  main#home .hero-copy {
+    width: min(760px, 54vw) !important;
+    max-width: 760px !important;
+    margin-top: clamp(20px, 4vh, 50px) !important;
+    padding: clamp(28px, 3vw, 42px) !important;
+    background: rgba(248, 241, 230, 0.72) !important;
+    border: 1px solid rgba(255, 255, 255, 0.84) !important;
+    box-shadow: 0 28px 84px rgba(8, 6, 4, 0.22) !important;
+    backdrop-filter: blur(1px) saturate(1.08) !important;
+    -webkit-backdrop-filter: blur(1px) saturate(1.08) !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .hero-copy .lead,
+  main#home .hero-copy .tagline {
+    color: rgba(31, 20, 15, 0.98) !important;
+  }
+
+  main#home .hero-release-title {
+    display: inline-flex !important;
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+    background: rgba(34, 24, 17, 0.12) !important;
+    border-color: rgba(183, 111, 50, 0.35) !important;
+  }
+
+  main#home .hero-ladonna-question {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    top: clamp(112px, 15vh, 150px) !important;
+    right: max(24px, 4vw) !important;
+    width: min(420px, 28vw) !important;
+    background: rgba(16, 11, 8, 0.30) !important;
+    border-color: rgba(221, 177, 88, 0.48) !important;
+    color: rgba(255, 248, 235, 0.98) !important;
+    box-shadow: 0 24px 76px rgba(0, 0, 0, 0.20) !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+  }
+
+  main#home .hero-ladonna-question strong {
+    color: #fff7e8 !important;
+  }
+
+  main#home .realm-entry,
+  main#home .hero-realm,
+  main#home .hero-portal,
+  main#home a[href*="quantum-series.html"].realm-entry {
+    display: none !important;
+  }
 }
 
-main#home .hero-release .now-available {
-  display: inline-flex !important;
-  width: fit-content !important;
-  margin: 0 !important;
-  padding: 7px 13px !important;
-  border: 1px solid rgba(168, 101, 43, 0.36) !important;
-  border-radius: 999px !important;
-  background: rgba(255, 250, 242, 0.72) !important;
-  color: #8d5223 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: clamp(0.74rem, 0.85vw, 0.92rem) !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-  letter-spacing: 0.18em !important;
-  text-transform: uppercase !important;
-  text-shadow: none !important;
-}
-
-main#home .release-title {
-  margin: 0 !important;
-  color: #21150f !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(3rem, 5vw, 6rem) !important;
-  font-weight: 900 !important;
-  line-height: 0.9 !important;
-  letter-spacing: 0 !important;
-  text-shadow: none !important;
-}
-
-main#home .release-subtitle {
-  width: fit-content !important;
-  margin: 0 !important;
-  padding: 8px 13px 9px !important;
-  border-left: 4px solid #d6ab60 !important;
-  background: rgba(32, 21, 15, 0.08) !important;
-  color: #6d3f1d !important;
-  font-size: clamp(1.18rem, 1.7vw, 1.75rem) !important;
-  font-weight: 900 !important;
-  line-height: 1.05 !important;
-  letter-spacing: 0.01em !important;
-}
-
-main#home .hero-feature {
-  position: relative !important;
-  z-index: 5 !important;
-  align-self: center !important;
-  justify-self: end !important;
-  width: min(100%, 360px) !important;
-  display: grid !important;
-  gap: 13px !important;
-  justify-items: center !important;
-  padding: clamp(16px, 1.7vw, 22px) !important;
-  border: 1px solid rgba(214, 171, 96, 0.46) !important;
-  background:
-    linear-gradient(180deg, rgba(20, 13, 9, 0.78), rgba(20, 13, 9, 0.54)),
-    radial-gradient(circle at 50% 28%, rgba(53, 173, 205, 0.22), transparent 52%) !important;
-  box-shadow: 0 28px 80px rgba(12, 8, 6, 0.42) !important;
-  color: #fffaf2 !important;
-  backdrop-filter: blur(3px) saturate(1.08) !important;
-}
-
-main#home .hero-feature-cover {
-  display: block !important;
-  width: min(66%, 196px) !important;
-  filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.44)) !important;
-  transform: rotate(-2deg) !important;
-  transition: transform 220ms ease, filter 220ms ease !important;
-}
-
-main#home .hero-feature-cover:hover {
-  transform: translateY(-4px) rotate(-1deg) !important;
-  filter: drop-shadow(0 32px 40px rgba(0, 0, 0, 0.5)) !important;
-}
-
-main#home .hero-feature-cover img {
-  width: 100% !important;
-  height: auto !important;
-}
-
-main#home .hero-feature-copy {
-  text-align: center !important;
-}
-
-main#home .hero-feature-copy p {
-  margin: 0 0 6px !important;
-  color: #d6ab60 !important;
-  font-size: 0.72rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.18em !important;
-  text-transform: uppercase !important;
-}
-
-main#home .hero-feature-copy h2 {
-  margin: 0 !important;
-  color: #fffaf2 !important;
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: clamp(1.95rem, 2.75vw, 2.9rem) !important;
-  line-height: 0.92 !important;
-  letter-spacing: 0 !important;
-  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.42) !important;
-}
-
-main#home .hero-feature-copy span {
-  display: inline-block !important;
-  margin-top: 6px !important;
-  padding: 7px 12px !important;
-  background: rgba(255, 250, 242, 0.12) !important;
-  color: #ffe0a6 !important;
-  font-size: clamp(1rem, 1.2vw, 1.2rem) !important;
-  font-weight: 900 !important;
-}
-
-main#home .hero-feature-buy {
-  width: min(100%, 210px) !important;
-  margin-top: 14px !important;
-  color: #1f150f !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34) !important;
-}
-
-main#home .hero-feature {
-  display: none !important;
+@media (min-width: 1400px) {
+  main#home {
+    background-position: center center, 62% 68% !important;
+    background-size: cover, auto 110vh !important;
+  }
 }
 
 @media (max-width: 999px) {
-  main#home .hero-feature {
-    width: min(100%, 520px) !important;
-    margin: 0 auto 32px !important;
+  main#home {
+    background-image:
+      linear-gradient(180deg, rgba(250, 244, 232, 0.24), rgba(18, 12, 8, 0.50)),
+      url("images/ladonna-stone-blue-suit-sharp.jpeg") !important;
+    background-position: center center, 56% 18% !important;
+    background-size: cover, auto 92vh !important;
+  }
+}
+
+/* Final requested hero pass: fixed Ladonna background, clearer panel, visible story prompt. */
+@media (min-width: 1000px) {
+  main#home {
+    background-image:
+      linear-gradient(90deg, rgba(248, 241, 230, 0.36) 0%, rgba(248, 241, 230, 0.14) 33%, rgba(18, 11, 7, 0.00) 58%, rgba(18, 11, 7, 0.18) 100%),
+      url("images/ladonna-stone-blue-suit-sharp.jpeg") !important;
+    background-size: cover, auto 104vh !important;
+    background-position: center center, 63% 72% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: scroll, fixed !important;
   }
 
-  main#home .hero-feature-cover {
-    width: min(58%, 210px) !important;
+  main#home .hero {
+    min-height: calc(100svh - 88px) !important;
+    padding-top: clamp(72px, 8vh, 104px) !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  main#home .hero-bg {
+    display: none !important;
+  }
+
+  main#home .hero-shade {
+    background:
+      radial-gradient(circle at 80% 55%, rgba(41, 129, 152, 0.10), transparent 35%),
+      linear-gradient(90deg, rgba(255, 249, 238, 0.08) 0%, rgba(255, 249, 238, 0.02) 38%, rgba(18, 11, 7, 0.02) 62%, rgba(18, 11, 7, 0.10) 100%) !important;
+    opacity: 0.24 !important;
+  }
+
+  main#home .hero-inner {
+    grid-template-columns: minmax(600px, 780px) 1fr !important;
+    align-items: center !important;
+    min-height: auto !important;
+  }
+
+  main#home .hero-copy {
+    width: min(780px, 56vw) !important;
+    max-width: 780px !important;
+    margin-top: clamp(12px, 3vh, 36px) !important;
+    padding: clamp(28px, 3vw, 40px) !important;
+    background: linear-gradient(90deg, rgba(248, 241, 230, 0.78), rgba(248, 241, 230, 0.58)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.84) !important;
+    box-shadow: 0 28px 84px rgba(8, 6, 4, 0.22) !important;
+    backdrop-filter: blur(1px) saturate(1.08) !important;
+    -webkit-backdrop-filter: blur(1px) saturate(1.08) !important;
+  }
+
+  main#home .hero-copy h1 {
+    font-size: clamp(3.2rem, 5.4vw, 5.9rem) !important;
+    line-height: 0.9 !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .hero-copy .lead,
+  main#home .hero-copy .tagline {
+    color: rgba(31, 20, 15, 0.98) !important;
+    text-shadow: none !important;
+  }
+
+  main#home .hero-release-title {
+    display: inline-flex !important;
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+    background: rgba(34, 24, 17, 0.10) !important;
+    border-color: rgba(183, 111, 50, 0.34) !important;
+  }
+
+  main#home .hero-ladonna-question {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    top: clamp(110px, 14vh, 148px) !important;
+    right: max(30px, 4.5vw) !important;
+    width: min(430px, 28vw) !important;
+    padding: 18px 20px !important;
+    background: rgba(16, 11, 8, 0.24) !important;
+    border-color: rgba(221, 177, 88, 0.50) !important;
+    color: rgba(255, 248, 235, 0.98) !important;
+    z-index: 5 !important;
+    box-shadow: 0 24px 76px rgba(0, 0, 0, 0.18) !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+  }
+
+  main#home .hero-ladonna-question strong {
+    color: #fff7e8 !important;
+    font-size: clamp(1.35rem, 1.7vw, 2rem) !important;
+  }
+
+  main#home .realm-entry,
+  main#home .hero-realm,
+  main#home .hero-portal,
+  main#home a[href*="quantum-series.html"].realm-entry {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home {
+    background-position: center center, 64% 73% !important;
+    background-size: cover, auto 105vh !important;
+  }
+}
+
+/* Hero clarity adjustment: lower Ladonna and strengthen the glass copy panel. */
+@media (min-width: 1000px) {
+  main#home {
+    background-image:
+      linear-gradient(90deg, rgba(248, 241, 230, 0.26) 0%, rgba(248, 241, 230, 0.08) 31%, rgba(18, 11, 7, 0.00) 58%, rgba(18, 11, 7, 0.10) 100%),
+      url("images/ladonna-stone-blue-suit-sharp.jpeg") !important;
+    background-size: cover, auto 96vh !important;
+    background-position: center center, 64% 88% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: scroll, fixed !important;
+  }
+
+  main#home .hero-shade {
+    background:
+      radial-gradient(circle at 80% 55%, rgba(41, 129, 152, 0.07), transparent 36%),
+      linear-gradient(90deg, rgba(255, 249, 238, 0.04) 0%, rgba(255, 249, 238, 0.01) 40%, rgba(18, 11, 7, 0.00) 64%, rgba(18, 11, 7, 0.06) 100%) !important;
+    opacity: 0.16 !important;
+  }
+
+  main#home .hero-copy {
+    background: linear-gradient(90deg, rgba(248, 241, 230, 0.90), rgba(248, 241, 230, 0.72)) !important;
+    border-color: rgba(255, 255, 255, 0.94) !important;
+    box-shadow: 0 30px 90px rgba(8, 6, 4, 0.20) !important;
+    backdrop-filter: blur(0.5px) saturate(1.08) !important;
+    -webkit-backdrop-filter: blur(0.5px) saturate(1.08) !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .hero-copy .lead,
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .eyebrow {
+    color: rgba(29, 19, 14, 0.99) !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) !important;
+  }
+
+  main#home .hero-ladonna-question {
+    top: clamp(108px, 13vh, 138px) !important;
+    right: clamp(140px, 13vw, 300px) !important;
+    background: rgba(18, 12, 8, 0.18) !important;
+    border-color: rgba(221, 177, 88, 0.54) !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home {
+    background-size: cover, auto 98vh !important;
+    background-position: center center, 64% 90% !important;
+  }
+}
+/* Final Ladonna portrait pass: large, clear, fixed, and blended into the hero. */
+@media (min-width: 1000px) {
+  main#home {
+    background-color: #17110d !important;
+    background-image:
+      radial-gradient(circle at 82% 56%, rgba(48, 126, 145, 0.12), transparent 35%),
+      linear-gradient(90deg, rgba(246, 238, 224, 0.05) 0%, rgba(246, 238, 224, 0.02) 35%, rgba(20, 13, 9, 0) 59%, rgba(20, 13, 9, 0.1) 100%) !important;
+    background-size: cover, cover !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: scroll, scroll !important;
+  }
+
+  main#home .hero {
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    min-height: 650px !important;
+    max-height: none !important;
+    padding-top: clamp(56px, 7vh, 80px) !important;
+    overflow: hidden !important;
+    background:
+      radial-gradient(circle at 78% 56%, rgba(44, 138, 162, 0.16), transparent 32%),
+      linear-gradient(90deg, #17110d 0%, #15100d 42%, #19130f 100%) !important;
+  }
+
+  main#home .hero-bg {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: none !important;
+    overflow: visible !important;
+  }
+
+  main#home .hero-bg img {
+    position: fixed !important;
+    left: 57.5% !important;
+    top: calc(var(--header-height, 88px) + 28px) !important;
+    width: auto !important;
+    height: calc(134svh - var(--header-height, 88px)) !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    transform: translateX(-18%) !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  main#home .hero-bg::after {
+    content: "" !important;
+    position: fixed !important;
+    left: 47% !important;
+    top: var(--header-height, 88px) !important;
+    width: 50vw !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    background:
+      linear-gradient(90deg, rgba(23, 17, 13, 0.52) 0%, rgba(23, 17, 13, 0) 22%, rgba(23, 17, 13, 0) 76%, rgba(23, 17, 13, 0.62) 100%),
+      linear-gradient(180deg, rgba(23, 17, 13, 0.04) 0%, rgba(23, 17, 13, 0) 25%, rgba(23, 17, 13, 0.18) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  main#home .hero-shade {
+    z-index: 1 !important;
+    background: linear-gradient(90deg, rgba(23, 17, 13, 0.05) 0%, rgba(23, 17, 13, 0) 62%, rgba(23, 17, 13, 0.06) 100%) !important;
+    opacity: 0.03 !important;
+  }
+
+  main#home .hero-inner {
+    position: relative !important;
+    z-index: 3 !important;
+    width: min(100% - 56px, 1500px) !important;
+    grid-template-columns: minmax(600px, 790px) 1fr !important;
+    align-items: center !important;
+    min-height: auto !important;
+    padding-top: 0 !important;
+  }
+
+  main#home .hero-copy {
+    width: min(780px, 54vw) !important;
+    max-width: 780px !important;
+    margin-top: clamp(10px, 2vh, 30px) !important;
+    padding: clamp(24px, 2.8vw, 40px) !important;
+    background: rgba(248, 241, 230, 0.055) !important;
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    box-shadow: 0 18px 55px rgba(8, 6, 4, 0.01) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transform: translate3d(0, var(--parallax-y, 0px), 0) !important;
+    text-shadow: none !important;
+  }
+
+  main#home .hero-copy::before {
+    display: none !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead,
+  main#home .hero-copy .eyebrow {
+    color: rgba(31, 20, 15, 0.98) !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+  }
+
+  main#home .hero-release-title {
+    display: inline-flex !important;
+    background: rgba(255, 248, 235, 0.05) !important;
+    border-color: rgba(183, 111, 50, 0.13) !important;
+  }
+
+  main#home .hero-ladonna-question {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 4 !important;
+    top: clamp(118px, 16vh, 170px) !important;
+    right: clamp(36px, 6vw, 140px) !important;
+    width: min(360px, 23vw) !important;
+    background: rgba(13, 18, 18, 0.1) !important;
+    border-color: rgba(221, 177, 88, 0.24) !important;
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.07) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  main#home .hero-ladonna-question strong {
+    color: #fff7e8 !important;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  main#home .hero-ladonna-question small {
+    color: rgba(255, 247, 232, 0.86) !important;
+  }
+
+  main#home .realm-entry,
+  main#home .hero-realm,
+  main#home .hero-portal,
+  main#home a[href*="quantum-series.html"].realm-entry {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home .hero-bg img {
+    left: 57.5% !important;
+    top: calc(var(--header-height, 88px) + 24px) !important;
+    height: calc(136svh - var(--header-height, 88px)) !important;
+    transform: translateX(-18%) !important;
+  }
+}
+/* Delivery pass: crisp fixed Ladonna portrait and clean card media. */
+@media (min-width: 901px) {
+  main#home .hero {
+    position: relative !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    min-height: 620px !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    background:
+      radial-gradient(circle at 73% 58%, rgba(43, 132, 157, 0.22), transparent 24%),
+      linear-gradient(90deg, #110d0a 0%, #15100d 48%, #201813 100%) !important;
+  }
+
+  main#home .hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    overflow: hidden !important;
+    transform: none !important;
+    will-change: auto !important;
+    background: transparent !important;
+  }
+
+  main#home .hero-bg img {
+    position: fixed !important;
+    z-index: 0 !important;
+    left: 55.5% !important;
+    top: calc(var(--header-height, 88px) + 58px) !important;
+    width: auto !important;
+    height: calc(132svh - var(--header-height, 88px)) !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    transform: translateX(-28%) !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    pointer-events: none !important;
+  }
+
+  main#home .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(17, 13, 10, 0.30) 0%, rgba(17, 13, 10, 0.08) 31%, rgba(17, 13, 10, 0) 48%, rgba(17, 13, 10, 0.42) 100%),
+      radial-gradient(circle at 73% 52%, rgba(29, 110, 140, 0.20), transparent 28%);
+  }
+
+  main#home .hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(17, 13, 10, 0.08), rgba(17, 13, 10, 0.02) 42%, rgba(17, 13, 10, 0.26) 100%);
+  }
+
+  main#home .hero-shade {
+    display: none !important;
+  }
+
+  main#home .hero-inner {
+    position: relative !important;
+    z-index: 3 !important;
+    width: min(100% - 56px, 1520px) !important;
+    min-height: 100% !important;
+    grid-template-columns: minmax(560px, 780px) 1fr !important;
+    gap: clamp(30px, 5vw, 80px) !important;
+    align-items: center !important;
+  }
+
+  main#home .hero-copy {
+    width: min(780px, 52vw) !important;
+    max-width: 780px !important;
+    margin-top: clamp(22px, 4vh, 58px) !important;
+    padding: clamp(24px, 2.8vw, 38px) !important;
+    background: rgba(248, 241, 230, 0.12) !important;
+    border: 1px solid rgba(255, 247, 232, 0.38) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    text-shadow: none !important;
+    transform: translate3d(0, var(--parallax-y, 0px), 0) !important;
+  }
+
+  main#home .hero-copy::before {
+    display: none !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead,
+  main#home .hero-copy .eyebrow {
+    color: rgba(35, 24, 18, 0.96) !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  }
+
+  main#home .hero-release-title {
+    display: inline-flex !important;
+    gap: 0.55rem !important;
+    align-items: baseline !important;
+    margin: 10px 0 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: rgba(61, 38, 27, 0.95) !important;
+    font-weight: 900 !important;
+  }
+
+  main#home .hero-release-title span:first-child {
+    color: #b26a2e !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    font-size: 0.82rem !important;
+  }
+
+  main#home .hero-release-title strong {
+    font-family: var(--serif, Georgia, serif) !important;
+    font-size: clamp(1.45rem, 2.1vw, 2rem) !important;
+  }
+
+  main#home .hero-ladonna-question {
+    display: block !important;
+    position: absolute !important;
+    z-index: 4 !important;
+    top: clamp(115px, 15vh, 160px) !important;
+    right: clamp(36px, 5vw, 112px) !important;
+    width: min(330px, 22vw) !important;
+    padding: 22px 24px !important;
+    background: rgba(12, 18, 18, 0.12) !important;
+    border: 1px solid rgba(221, 177, 88, 0.22) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  main#home .hero-ladonna-question strong {
+    display: block !important;
+    font-family: var(--serif, Georgia, serif) !important;
+    font-size: clamp(1.7rem, 2.2vw, 2.35rem) !important;
+    line-height: 0.95 !important;
+    color: #fff7e8 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55) !important;
+  }
+
+  main#home .hero-ladonna-question small {
+    display: block !important;
+    margin-top: 12px !important;
+    color: rgba(255, 247, 232, 0.88) !important;
+    line-height: 1.5 !important;
+  }
+
+  main#home .realm-entry,
+  main#home .hero-realm,
+  main#home .hero-portal,
+  main#home a[href*="quantum-series.html"].realm-entry {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home .hero-bg img {
+    left: 55.5% !important;
+    top: calc(var(--header-height, 88px) + 50px) !important;
+    height: calc(134svh - var(--header-height, 88px)) !important;
+    transform: translateX(-27%) !important;
+  }
+}
+
+.children-section .child-cover,
+.child-cover,
+.coming-cover,
+.coming-card .coming-cover,
+.coming-card-feature .coming-cover {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.children-section .child-cover img,
+.child-cover img,
+.coming-cover img,
+.coming-card .coming-cover img,
+.coming-card-feature .coming-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (min-width: 900px) {
+  .children-section .child-cover,
+  .child-cover {
+    min-height: clamp(270px, 22vw, 360px) !important;
+    height: clamp(270px, 22vw, 360px) !important;
+    padding: 12px !important;
+  }
+
+  .coming-cover,
+  .coming-card .coming-cover,
+  .coming-card-feature .coming-cover {
+    min-height: clamp(270px, 22vw, 360px) !important;
+    height: clamp(270px, 22vw, 360px) !important;
+    padding: 14px !important;
+  }
+
+  .coming-grid,
+  .coming-list,
+  .coming-soon-grid {
+    align-items: stretch !important;
+  }
+
+  .coming-card,
+  .coming-card-feature {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/* 2026-05-17 controlled hero rollback: only the homepage hero copy panel is translucent. */
+main#home .intro-band,
+main#home .book-card,
+main#home .storybook-card,
+main#home .child-book-card,
+.books-page .book-card,
+.children-page .child-book-card,
+.coming-soon-page .coming-card,
+.contact-page .contact-card {
+  opacity: 1 !important;
+}
+
+.children-page .child-book-card,
+.books-page .book-card {
+  background: rgba(248, 241, 230, 0.96) !important;
+}
+
+.coming-soon-page .coming-card {
+  background: rgba(47, 38, 31, 0.96) !important;
+}
+
+@media (min-width: 901px) {
+  main#home .hero {
+    position: relative !important;
+    min-height: calc(100svh - var(--header-height, 88px)) !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background:
+      radial-gradient(circle at 78% 58%, rgba(31, 121, 149, 0.16), transparent 30%),
+      linear-gradient(90deg, #0f0b08 0%, #130f0c 52%, #211913 100%) !important;
+  }
+
+  main#home .hero-bg {
+    position: fixed !important;
+    inset: var(--header-height, 88px) 0 auto 0 !important;
+    width: 100vw !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    z-index: 0 !important;
+    overflow: hidden !important;
+    transform: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: opacity 0.16s ease !important;
+    background:
+      radial-gradient(circle at 78% 58%, rgba(35, 116, 145, 0.16), transparent 30%),
+      linear-gradient(90deg, #0f0b08 0%, #15100d 52%, #211913 100%) !important;
+  }
+
+  body.hero-in-view main#home .hero-bg {
+    opacity: 1 !important;
+  }
+
+  main#home .hero-bg img {
+    position: absolute !important;
+    right: clamp(0px, 1.2vw, 28px) !important;
+    top: clamp(56px, 7svh, 92px) !important;
+    width: auto !important;
+    height: clamp(1280px, 188svh, 2400px) !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: contrast(1.08) saturate(1.08) !important;
+    mix-blend-mode: normal !important;
+  }
+
+  main#home .hero-bg::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      linear-gradient(90deg, rgba(15, 11, 8, 0.12) 0%, rgba(15, 11, 8, 0.02) 34%, rgba(15, 11, 8, 0) 58%, rgba(15, 11, 8, 0.18) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  main#home .hero-bg::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      radial-gradient(circle at 78% 60%, rgba(38, 124, 151, 0.10), transparent 26%),
+      linear-gradient(90deg, rgba(15, 11, 8, 0.04), transparent 45%, rgba(15, 11, 8, 0.08) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  main#home .hero-shade {
+    display: none !important;
+  }
+
+  main#home .hero-parallax-layer {
+    opacity: 0.055 !important;
+    pointer-events: none !important;
+  }
+
+  main#home .hero-inner {
+    position: relative !important;
+    z-index: 3 !important;
+    width: min(100% - 56px, 1500px) !important;
+    min-height: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(650px, 860px) 1fr !important;
+    align-items: center !important;
+    gap: clamp(28px, 4vw, 76px) !important;
+  }
+
+  main#home .hero-copy {
+    transform: none !important;
+    width: min(860px, 56vw) !important;
+    max-width: 860px !important;
+    margin: clamp(12px, 2vh, 34px) 0 0 !important;
+    padding: clamp(26px, 3vw, 42px) !important;
+    background: rgba(246, 239, 226, 0.36) !important;
+    border: 1px solid rgba(255, 250, 239, 0.54) !important;
+    box-shadow: 0 24px 82px rgba(0, 0, 0, 0.14) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: #1d120d !important;
+    text-shadow: none !important;
+  }
+
+  main#home .hero-copy::before {
+    display: none !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead,
+  main#home .hero-copy .eyebrow,
+  main#home .hero-series-brand,
+  main#home .hero-universe,
+  main#home .hero-release-title,
+  main#home .hero-release-title strong,
+  main#home .hero-release-title em {
+    color: #1f140e !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) !important;
+  }
+
+  main#home .now-available {
+    opacity: 1 !important;
+    color: #b46b2f !important;
+  }
+
+  main#home .hero-ladonna-question {
+    position: fixed !important;
+    top: calc(var(--header-height, 88px) + clamp(116px, 17svh, 184px)) !important;
+    right: clamp(24px, 4vw, 74px) !important;
+    z-index: 4 !important;
+    display: block !important;
+    width: min(330px, 22vw) !important;
+    padding: 20px 22px !important;
+    background: rgba(10, 13, 13, 0.44) !important;
+    border: 0 !important;
+    border-left: 3px solid var(--gold, #dcb158) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transform: none !important;
+    text-decoration: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.16s ease !important;
+  }
+
+  body.hero-in-view main#home .hero-ladonna-question {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  main#home .hero-ladonna-question strong {
+    display: block !important;
+    max-width: 11ch !important;
+    font-family: var(--serif, Georgia, serif) !important;
+    font-size: clamp(1.9rem, 2.35vw, 2.8rem) !important;
+    line-height: 0.94 !important;
+    color: #fffaf0 !important;
+    opacity: 1 !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.78) !important;
+  }
+
+  main#home .hero-ladonna-question span,
+  main#home .hero-ladonna-question small,
+  main#home .hero-ladonna-question p {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home .hero-bg img {
+    right: clamp(0px, 1vw, 24px) !important;
+    top: clamp(52px, 6.5svh, 84px) !important;
+    height: clamp(1320px, 192svh, 2500px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  main#home .hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 1 !important;
+  }
+
+  main#home .hero-bg img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 62% 0% !important;
+    filter: none !important;
+  }
+
+  main#home .hero-copy {
+    background: rgba(246, 239, 226, 0.84) !important;
+    color: #20140e !important;
+  }
+
+  main#home .hero-ladonna-question {
+    display: none !important;
+  }
+}
+/* 2026-05-17 hero-only focus pass: fixed crisp Ladonna and one translucent hero title panel. */
+@media (min-width: 901px) {
+  main#home .hero {
+    position: relative !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    min-height: calc(100svh - var(--header-height, 88px)) !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background:
+      radial-gradient(circle at 78% 58%, rgba(40, 125, 150, 0.18), transparent 34%),
+      linear-gradient(90deg, #120d0a 0%, #15100d 48%, #4c4b46 65%, #120e0b 100%) !important;
+  }
+
+  main#home .hero-bg {
+    position: fixed !important;
+    inset: var(--header-height, 88px) 0 auto 0 !important;
+    width: 100vw !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    z-index: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+    transform: none !important;
+    will-change: auto !important;
+    background:
+      radial-gradient(circle at 78% 58%, rgba(42, 132, 154, 0.16), transparent 35%),
+      linear-gradient(90deg, #120d0a 0%, #15100d 48%, #4c4b46 65%, #120e0b 100%) !important;
+  }
+
+  body.hero-in-view main#home .hero-bg {
+    opacity: 1 !important;
+  }
+
+  main#home .hero-bg::before,
+  main#home .hero-bg::after,
+  main#home .hero-shade {
+    display: none !important;
+  }
+
+  main#home .hero-bg img {
+    position: absolute !important;
+    right: clamp(6px, 1.8vw, 34px) !important;
+    top: clamp(72px, 9svh, 112px) !important;
+    width: auto !important;
+    height: clamp(1320px, 194svh, 2550px) !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  main#home .hero-parallax-layer {
+    opacity: 0.035 !important;
+  }
+
+  main#home .hero-inner {
+    position: relative !important;
+    z-index: 5 !important;
+    width: min(100% - 56px, 1500px) !important;
+    min-height: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(650px, 860px) 1fr !important;
+    align-items: center !important;
+  }
+
+  main#home .hero-copy {
+    width: min(860px, 56vw) !important;
+    max-width: 860px !important;
+    margin: clamp(10px, 2svh, 28px) 0 0 !important;
+    padding: clamp(26px, 3vw, 42px) !important;
+    background: rgba(246, 239, 226, 0.23) !important;
+    border: 1px solid rgba(255, 250, 239, 0.42) !important;
+    box-shadow: 0 24px 82px rgba(0, 0, 0, 0.12) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: #24150f !important;
+    text-shadow: none !important;
+  }
+
+  main#home .hero-copy h1,
+  main#home .tagline,
+  main#home .hero-series-brand,
+  main#home .hero-universe,
+  main#home .hero-release-title,
+  main#home .hero-release-title strong,
+  main#home .hero-release-title em {
+    color: #24150f !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.32), 0 10px 22px rgba(255, 255, 255, 0.14) !important;
+  }
+
+  main#home .hero-release-title {
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem 0.7rem !important;
+    margin: 0.55rem 0 0.65rem !important;
+    text-decoration: none !important;
+  }
+
+  main#home .hero-release-title span {
+    color: #a55d25 !important;
+    opacity: 1 !important;
+  }
+
+  main#home .hero-release-title strong {
+    font-size: clamp(1.45rem, 2vw, 2.2rem) !important;
+  }
+
+  main#home .hero-realm,
+  main#home .realm-entry,
+  main#home .hero-portal,
+  main#home a[href*="quantum-series.html"].realm-entry {
+    display: none !important;
+  }
+
+  body > .hero-ladonna-question.hero-ladonna-question-fixed {
+    position: fixed !important;
+    top: calc(var(--header-height, 88px) + clamp(110px, 14svh, 156px)) !important;
+    right: clamp(28px, 4.8vw, 88px) !important;
+    z-index: 12 !important;
+    width: clamp(230px, 18vw, 315px) !important;
+    padding: 16px 18px !important;
+    background: rgba(8, 10, 11, 0.22) !important;
+    border: 0 !important;
+    border-left: 3px solid rgba(220, 177, 88, 0.9) !important;
+    color: #fffaf0 !important;
+    text-decoration: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  body.hero-in-view > .hero-ladonna-question.hero-ladonna-question-fixed {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  body > .hero-ladonna-question.hero-ladonna-question-fixed strong {
+    display: block !important;
+    max-width: 10.5ch !important;
+    color: #fffaf0 !important;
+    font-family: var(--serif, Georgia, serif) !important;
+    font-size: clamp(1.9rem, 2.35vw, 2.85rem) !important;
+    line-height: 0.95 !important;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.88) !important;
+  }
+
+  body > .hero-ladonna-question.hero-ladonna-question-fixed span,
+  body > .hero-ladonna-question.hero-ladonna-question-fixed small,
+  body > .hero-ladonna-question.hero-ladonna-question-fixed p {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home .hero-bg img {
+    right: clamp(8px, 2vw, 40px) !important;
+    top: clamp(74px, 8.8svh, 108px) !important;
+    height: clamp(1400px, 198svh, 2650px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body > .hero-ladonna-question.hero-ladonna-question-fixed {
+    display: none !important;
+  }
+}
+
+/* 2026-08-28 shared mobile navigation pass. */
+@media (max-width: 680px) {
+  .site-header {
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 10px 12px !important;
+    padding: 10px 12px !important;
+  }
+
+  .brand {
+    min-width: 0 !important;
+  }
+
+  .brand strong,
+  .brand small {
+    white-space: normal !important;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    padding: 4px 0 6px !important;
+    scrollbar-width: thin !important;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto !important;
+    padding: 7px 9px !important;
+    border: 1px solid rgba(133, 96, 54, 0.22) !important;
+    border-radius: 999px !important;
+    background: rgba(255, 250, 242, 0.72) !important;
+    font-size: 0.78rem !important;
+    line-height: 1 !important;
+  }
+
+  .main-nav a::after {
+    display: none !important;
+  }
+
+  .main-nav a.is-active,
+  .main-nav a[aria-current="page"] {
+    border-color: rgba(188, 130, 58, 0.55) !important;
+    background: rgba(236, 199, 126, 0.35) !important;
+  }
+
+  .header-button {
+    width: auto !important;
+    justify-self: end !important;
+    padding: 9px 12px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .page-hero {
+    padding-top: 42px !important;
+  }
+
+  main#home .hero-inner {
+    padding-top: 48px !important;
+  }
+}
+
+/* 2026-05-17 homepage hero only: keep Ladonna centered, large, crisp, and fixed. */
+@media (min-width: 901px) {
+  main#home .hero-bg {
+    position: fixed !important;
+    inset: var(--header-height, 88px) 0 auto 0 !important;
+    width: 100vw !important;
+    height: calc(100svh - var(--header-height, 88px)) !important;
+    overflow: hidden !important;
+    transform: none !important;
+    background:
+      radial-gradient(circle at 50% 42%, rgba(80, 92, 88, 0.44), rgba(18, 12, 9, 0.98) 72%) !important;
+  }
+
+  main#home .hero-bg::before,
+  main#home .hero-bg::after,
+  main#home .hero-shade {
+    display: none !important;
+  }
+
+  main#home .hero-bg img {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: clamp(2px, 0.8svh, 12px) !important;
+    width: auto !important;
+    height: clamp(1340px, 186svh, 2550px) !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: translateX(-50%) !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  main#home .hero-bg img {
+    left: 50% !important;
+    right: auto !important;
+    top: clamp(2px, 0.6svh, 10px) !important;
+    height: clamp(1420px, 190svh, 2700px) !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* 2026-08-28 authority expansion pages. */
+.authority-page {
+  background:
+    radial-gradient(circle at 8% 5%, rgba(214, 171, 96, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(246, 238, 225, 0.94));
+}
+
+.authority-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.authority-stack.compact {
+  align-content: start;
+  gap: 18px;
+}
+
+.authority-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.authority-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.authority-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.authority-panel,
+.authority-cta {
+  border: 1px solid rgba(84, 60, 37, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 250, 242, 0.84);
+  box-shadow: 0 18px 54px rgba(37, 25, 13, 0.08);
+  padding: clamp(24px, 3vw, 38px);
+}
+
+.authority-panel h2,
+.authority-cta h2 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  line-height: 1;
+}
+
+.authority-panel p,
+.authority-cta p,
+.authority-list {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.authority-panel p:last-child,
+.authority-cta p:last-child {
+  margin-bottom: 0;
+}
+
+.authority-soft {
+  background:
+    radial-gradient(circle at 85% 8%, rgba(39, 83, 91, 0.13), transparent 30%),
+    rgba(255, 250, 242, 0.42);
+}
+
+.authority-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.authority-list li {
+  margin: 0 0 0.8rem;
+}
+
+.authority-list li:last-child {
+  margin-bottom: 0;
+}
+
+.authority-list.columns {
+  columns: 2;
+  column-gap: clamp(28px, 5vw, 64px);
+}
+
+.authority-list.columns li {
+  break-inside: avoid;
+}
+
+.asset-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: end;
+  margin-top: 18px;
+}
+
+.asset-strip img {
+  width: 100%;
+  max-height: 190px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(37, 25, 13, 0.18));
+}
+
+.empty-state {
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.authority-cta {
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.authority-cta .hero-actions {
+  justify-content: center;
+}
+
+.essay-teaser {
+  display: grid;
+  gap: 10px;
+  padding-top: clamp(18px, 2vw, 26px) !important;
+  padding-bottom: clamp(18px, 2vw, 26px) !important;
+}
+
+.essay-teaser-card {
+  border-left: 4px solid var(--gold);
+  padding: clamp(16px, 2vw, 22px);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.92), rgba(239, 226, 207, 0.7));
+}
+
+.essay-teaser-card h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  line-height: 1.08;
+}
+
+.essay-teaser-card p {
+  max-width: 860px;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.essay-teaser-card .book-label {
+  margin-bottom: 6px;
+}
+
+.essay-teaser-card .button {
+  margin-top: 4px;
+}
+
+.behind-series-section {
+  background:
+    radial-gradient(circle at 78% 12%, rgba(25, 112, 131, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(246, 238, 225, 0.96));
+}
+
+.essay-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 24px;
+  align-items: start;
+}
+
+.essay-article {
+  max-width: 900px;
+}
+
+.essay-article p {
+  margin: 0 0 1.15rem;
+  color: #3f3128;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+  line-height: 1.78;
+}
+
+.essay-article h2 {
+  margin: 2.2rem 0 1rem;
+  font-size: clamp(1.7rem, 3vw, 2.85rem);
+  line-height: 1.05;
+}
+
+.essay-byline {
+  margin-top: 14px !important;
+  color: var(--ink) !important;
+}
+
+.essay-footer-actions {
+  margin-top: 34px;
+}
+
+.more-essays {
+  position: sticky;
+  top: calc(var(--header-height, 88px) + 24px);
+}
+
+@media (max-width: 1080px) {
+  .authority-grid.two,
+  .authority-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .authority-list.columns {
+    columns: 1;
+  }
+
+  .essay-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .more-essays {
+    position: static;
   }
 }
 
 @media (max-width: 680px) {
-  main#home .release-title {
-    font-size: clamp(2.45rem, 13vw, 4rem) !important;
+  .authority-panel,
+  .authority-cta {
+    border-radius: 16px !important;
+    padding: 22px !important;
   }
 
-  main#home .release-subtitle {
-    max-width: 100% !important;
-    font-size: clamp(1.05rem, 5vw, 1.35rem) !important;
-  }
-}
-
-/* Final hero image placement: keep Ladonna out from behind the book title panel. */
-@media (min-width: 1000px) {
-  main#home .hero-bg {
-    display: block !important;
-    z-index: 0 !important;
-    transform: none !important;
-    will-change: auto !important;
-    pointer-events: none !important;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 27%, rgba(0, 0, 0, 0.12) 34%, rgba(0, 0, 0, 0.72) 43%, #000 55%, #000 100%) !important;
-    mask-image: linear-gradient(90deg, transparent 0%, transparent 27%, rgba(0, 0, 0, 0.12) 34%, rgba(0, 0, 0, 0.72) 43%, #000 55%, #000 100%) !important;
+  .authority-panel h2,
+  .authority-cta h2 {
+    font-size: clamp(1.55rem, 8vw, 2.35rem) !important;
   }
 
-  main#home .hero-bg img {
-    top: 78% !important;
-    right: clamp(-420px, -19vw, -285px) !important;
-    left: auto !important;
-    width: clamp(1341px, 86vw, 1543px) !important;
-    height: auto !important;
-    max-width: none !important;
-    transform: translateY(-50%) !important;
-    object-fit: contain !important;
-    opacity: 1 !important;
-    filter: saturate(1.1) contrast(1.08) brightness(1.1) !important;
-    image-rendering: auto !important;
-    will-change: auto !important;
+  .asset-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .asset-strip img {
+    max-height: 155px;
   }
 }
 
-@media (min-width: 1000px) {
-  main#home .hero-copy {
-    max-width: 610px !important;
-    padding: clamp(22px, 2.5vw, 34px) !important;
+/* 2026-08-28 final shared mobile navigation pass. */
+@media (max-width: 680px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 8px 10px !important;
+    padding: 9px 12px !important;
   }
 
-  main#home .hero-copy h1 {
-    font-size: clamp(2.9rem, 4vw, 4.75rem) !important;
+  .brand {
+    min-width: 0 !important;
+    gap: 9px !important;
   }
 
-  main#home .release-title {
-    font-size: clamp(2.6rem, 4vw, 4.75rem) !important;
+  .brand-mark,
+  .brand img {
+    flex: 0 0 auto !important;
   }
 
-  main#home .release-subtitle {
-    font-size: clamp(1.05rem, 1.4vw, 1.5rem) !important;
+  .brand strong {
+    font-size: 0.9rem !important;
+    line-height: 1.05 !important;
   }
-}
 
-/* Final panel balance pass. */
-@media (min-width: 1000px) {
-  main#home .hero-shade {
-    background:
-      linear-gradient(90deg, rgba(255, 249, 238, 0.24) 0%, rgba(255, 249, 238, 0.14) 32%, rgba(18, 11, 7, 0.02) 54%, rgba(18, 11, 7, 0.26) 100%),
-      radial-gradient(circle at 74% 42%, rgba(39, 171, 214, 0.14), transparent 30%) !important;
+  .brand small {
+    font-size: 0.66rem !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    padding: 2px 0 5px !important;
+    scrollbar-width: thin !important;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    height: 4px !important;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto !important;
+    padding: 7px 9px !important;
+    border: 1px solid rgba(133, 96, 54, 0.22) !important;
+    border-radius: 999px !important;
+    background: rgba(255, 250, 242, 0.72) !important;
+    font-size: 0.78rem !important;
+    line-height: 1 !important;
+  }
+
+  .main-nav a:last-child {
+    margin-right: 12px !important;
+  }
+
+  .main-nav a::after {
+    display: none !important;
+  }
+
+  .main-nav a.is-active,
+  .main-nav a[aria-current="page"] {
+    border-color: rgba(188, 130, 58, 0.55) !important;
+    background: rgba(236, 199, 126, 0.35) !important;
+  }
+
+  .header-button {
+    display: none !important;
+  }
+
+  .page-hero {
+    padding-top: 38px !important;
   }
 
   main#home .hero-inner {
-    grid-template-columns: minmax(440px, 560px) 1fr !important;
-  }
-
-  main#home .hero-copy {
-    max-width: 575px !important;
-    padding: 12px 22px 14px !important;
-    position: relative !important;
-    z-index: 6 !important;
-    transform: translate3d(calc(clamp(48px, 10vw, 185px) + var(--parallax-x, 0px)), calc(var(--parallax-y, 0px) + var(--parallax-hover-y, 0px)), 0) !important;
-    will-change: transform !important;
-  }
-
-  main#home .hero-release {
-    gap: 2px !important;
-    margin-bottom: 8px !important;
-  }
-
-  main#home .release-title {
-    font-size: clamp(2.15rem, 3vw, 3.55rem) !important;
-    line-height: 0.9 !important;
-  }
-
-  main#home .release-subtitle {
-    font-size: clamp(1rem, 1.15vw, 1.25rem) !important;
-    padding: 5px 10px 6px !important;
-  }
-
-  main#home .hero-copy h1 {
-    font-size: clamp(2.35rem, 2.9vw, 3.45rem) !important;
-    line-height: 0.9 !important;
-  }
-
-  main#home .tagline {
-    max-width: 530px !important;
-    font-size: clamp(0.92rem, 1vw, 1.06rem) !important;
-    line-height: 1.34 !important;
-  }
-
-  main#home .quantum-storyline {
-    max-width: 540px !important;
-    margin: 14px 0 2px !important;
-    color: #231711 !important;
-    font-family: var(--font-heading) !important;
-    font-size: clamp(1.45rem, 2vw, 2.35rem) !important;
-    font-weight: 800 !important;
-    line-height: 1.02 !important;
-    letter-spacing: 0 !important;
-  }
-
-  main#home .quantum-storyline span {
-    display: inline-block !important;
-    margin: 0 0.16em 0.2em 0 !important;
-    opacity: 0.12 !important;
-    transform: translate3d(0, 12px, 0) !important;
-    filter: blur(2px) !important;
-    transition: opacity 0.32s ease, transform 0.32s ease, filter 0.32s ease !important;
-  }
-
-  main#home .quantum-storyline span.is-visible {
-    opacity: 1 !important;
-    transform: translate3d(0, 0, 0) !important;
-    filter: blur(0) !important;
+    padding-top: 44px !important;
   }
 }
 
-/* Keep Ladonna planted while the copy panel keeps its parallax movement. */
-@media (min-width: 1000px) {
-  main#home .hero-bg {
-    position: absolute !important;
-    inset: 0 !important;
-    transform: none !important;
-    translate: none !important;
-    rotate: none !important;
-    scale: none !important;
-    transition: none !important;
-    animation: none !important;
-    will-change: auto !important;
-  }
+/* 2026-08-28 symmetry pass for repeated site content. */
+.book-grid,
+.children-books,
+.series-grid,
+.authority-grid {
+  align-items: stretch !important;
+}
 
-  main#home .hero-bg img {
-    transform: translate3d(0, -50%, 0) !important;
-    translate: none !important;
-    rotate: none !important;
-    scale: none !important;
-    transition: none !important;
-    animation: none !important;
-    will-change: auto !important;
+.book-card,
+.child-book-card,
+.series-card,
+.authority-panel {
+  height: 100% !important;
+}
+
+.book-card,
+.child-book-card,
+.series-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.book-copy,
+.child-book-copy {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+}
+
+.book-copy .card-actions,
+.child-book-copy .button,
+.series-card > .button,
+.series-card > .text-link {
+  margin-top: auto !important;
+}
+
+.children-books .child-cover {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: clamp(250px, 23vw, 335px) !important;
+  padding: 16px !important;
+  background: rgba(255, 250, 242, 0.72) !important;
+}
+
+.children-books .child-cover a {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.children-books .child-cover img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: clamp(220px, 21vw, 305px) !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border-radius: 10px !important;
+}
+
+.coming-soon-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.coming-soon-card {
+  min-height: 100% !important;
+  justify-content: flex-start !important;
+  padding: 24px !important;
+}
+
+.coming-soon-card .coming-cover,
+.coming-soon-card .coming-cover-feature {
+  width: 100% !important;
+  max-width: none !important;
+  height: clamp(230px, 18vw, 300px) !important;
+  min-height: clamp(230px, 18vw, 300px) !important;
+  aspect-ratio: auto !important;
+  margin: 0 0 20px !important;
+  padding: 12px !important;
+}
+
+.coming-soon-card .coming-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.coming-soon-card h3 {
+  min-height: 3.55em !important;
+  margin-bottom: 8px !important;
+  font-size: clamp(1.18rem, 1.15vw, 1.42rem) !important;
+  line-height: 1.18 !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance;
+}
+
+.coming-soon-card p:not(.book-label):not(.book-subtitle) {
+  min-height: 4.8em !important;
+  margin-bottom: 18px !important;
+  font-size: 0.98rem !important;
+  line-height: 1.55 !important;
+}
+
+.coming-soon-card .book-label {
+  margin-bottom: 8px !important;
+  font-size: 0.72rem !important;
+  line-height: 1.2 !important;
+}
+
+.coming-soon-card .book-subtitle {
+  min-height: 1.35em !important;
+  margin-bottom: 12px !important;
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+}
+
+.coming-soon-card .coming-soon-action {
+  width: 100% !important;
+  min-height: 44px !important;
+  margin-top: auto !important;
+  padding: 0 18px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: normal !important;
+}
+
+@media (max-width: 1180px) {
+  .coming-soon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 
-/* Pin the Quantum Divide hero until the Ladonna hook fully reveals. */
-@media (min-width: 1000px) {
-  main#home .hero {
-    position: relative !important;
-    height: 185svh !important;
-    min-height: 1350px !important;
-    max-height: none !important;
-    overflow: visible !important;
-    background: #17120f !important;
+@media (max-width: 680px) {
+  .coming-soon-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  main#home .hero-pin {
-    position: sticky !important;
-    top: 80px !important;
-    height: calc(100svh - 80px) !important;
-    min-height: 620px !important;
-    overflow: hidden !important;
-    background: #17120f !important;
+  .coming-soon-card .coming-cover,
+  .coming-soon-card .coming-cover-feature {
+    height: clamp(280px, 86vw, 420px) !important;
+    min-height: clamp(280px, 86vw, 420px) !important;
   }
 
-  main#home .hero-pin .hero-bg,
-  main#home .hero-pin .hero-shade,
-  main#home .hero-pin .hero-parallax-layer {
-    position: absolute !important;
-  }
-
-  main#home .hero-pin .hero-bg {
-    inset: 0 !important;
-    transform: none !important;
-    translate: none !important;
-    rotate: none !important;
-    scale: none !important;
-    transition: none !important;
-    animation: none !important;
-    will-change: auto !important;
-  }
-
-  main#home .hero-pin .hero-bg img {
-    transform: translate3d(0, -50%, 0) !important;
-    translate: none !important;
-    rotate: none !important;
-    scale: none !important;
-    transition: none !important;
-    animation: none !important;
-    will-change: auto !important;
-  }
-
-  main#home .hero-pin .hero-inner {
-    height: 100% !important;
+  .coming-soon-card h3 {
+    font-size: clamp(1.25rem, 6vw, 1.65rem) !important;
     min-height: 0 !important;
   }
 
-  main#home .hero + .intro-band {
-    position: relative !important;
-    z-index: 3 !important;
+  .coming-soon-card p:not(.book-label):not(.book-subtitle) {
+    min-height: 0 !important;
   }
+
+  .children-books .child-cover {
+    min-height: clamp(250px, 70vw, 360px) !important;
+  }
+
+  .children-books .child-cover img {
+    max-height: clamp(220px, 64vw, 330px) !important;
+  }
+}
+
+/* 2026-08-28 Quantum Divide composite hero: use the finished wide scene, not the old cutout portrait. */
+@media (min-width: 901px) {
+  main#home .hero {
+    background: #071016 !important;
+  }
+
+  main#home .hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 1 !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  body.hero-in-view main#home .hero-bg {
+    opacity: 1 !important;
+  }
+
+  main#home .hero-bg::before,
+  main#home .hero-bg::after {
+    display: none !important;
+  }
+
+  main#home .hero-bg img {
+    position: absolute !important;
+    inset: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  main#home .hero-shade {
+    display: block !important;
+    z-index: 1 !important;
+    background:
+      linear-gradient(90deg, rgba(5, 10, 13, 0.22) 0%, rgba(5, 10, 13, 0.08) 45%, rgba(5, 10, 13, 0.36) 100%),
+      linear-gradient(0deg, rgba(5, 10, 13, 0.32) 0%, rgba(5, 10, 13, 0.02) 52%, rgba(5, 10, 13, 0.18) 100%) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  main#home .hero-bg img {
+    object-fit: cover !important;
+    object-position: 68% center !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
+
+/* 2026-08-28 final supplied hero image: keep the wide Quantum Divide scene intact. */
+@media (min-width: 901px) {
+  main#home .hero-bg img {
+    object-fit: cover !important;
+    object-position: center center !important;
+    filter: none !important;
+  }
+
+  main#home .hero-shade {
+    background:
+      linear-gradient(90deg, rgba(5, 10, 13, 0.18) 0%, rgba(5, 10, 13, 0.05) 46%, rgba(5, 10, 13, 0.24) 100%),
+      linear-gradient(0deg, rgba(5, 10, 13, 0.28) 0%, rgba(5, 10, 13, 0.01) 54%, rgba(5, 10, 13, 0.14) 100%) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  main#home .hero-bg img {
+    object-fit: cover !important;
+    object-position: 66% center !important;
+  }
+}
+
+/* 2026-08-29 Press center rebuild: professional media page hierarchy. */
+.press-center-page .page-hero {
+  padding-block: clamp(48px, 7vw, 82px);
+}
+
+.press-center-page .section {
+  padding-block: clamp(34px, 5vw, 64px);
+}
+
+.press-center-page h2 {
+  font-size: clamp(1.8rem, 3.2vw, 3.15rem);
+  line-height: 1.02;
+}
+
+.press-center-page h3 {
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.08;
+}
+
+.press-bio {
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+.press-author-photo {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 250, 242, 0.86);
+  box-shadow: 0 18px 46px rgba(37, 25, 13, 0.12);
+}
+
+.press-author-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.press-copy-block {
+  max-width: 880px;
+}
+
+.press-copy-block p,
+.press-section-heading p,
+.press-secondary-copy p,
+.press-contact-cta p,
+.press-resource-grid p,
+.press-topic-grid p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.press-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.press-essay-section,
+.press-children-section,
+.press-materials-section {
+  background: rgba(255, 250, 242, 0.42);
+}
+
+.press-essay-teaser {
+  max-width: 920px;
+  padding: 0 !important;
+}
+
+.press-essay-teaser .essay-teaser-card {
+  max-width: 820px;
+}
+
+.press-section-heading {
+  max-width: 920px;
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.press-book-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 32px);
+  margin-bottom: 26px;
+}
+
+.press-book-card {
+  text-align: center;
+}
+
+.press-book-card img {
+  width: min(100%, 230px);
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 24px rgba(37, 25, 13, 0.18));
+}
+
+.press-book-card h3 {
+  max-width: 270px;
+  margin: 14px auto 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+}
+
+.press-book-card a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.press-book-card a:hover {
+  color: #9b5f24;
+}
+
+.press-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.press-topic-grid article,
+.press-resource-grid article {
+  border-left: 3px solid rgba(196, 141, 53, 0.82);
+  border-radius: 12px;
+  background: rgba(255, 250, 242, 0.68);
+  padding: 18px 20px;
+}
+
+.press-topic-grid h3,
+.press-resource-grid h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+}
+
+.press-topic-grid p,
+.press-resource-grid p {
+  margin: 0;
+}
+
+.press-secondary-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 380px);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+}
+
+.press-secondary-copy {
+  max-width: 760px;
+}
+
+.press-secondary-copy h2 {
+  font-size: clamp(1.55rem, 2.8vw, 2.55rem);
+}
+
+.press-secondary-art {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.press-secondary-art img {
+  width: min(47%, 160px);
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 18px rgba(37, 25, 13, 0.14));
+}
+
+.press-note {
+  max-width: 720px;
+  border-left: 3px solid rgba(196, 141, 53, 0.82);
+  padding-left: 16px;
+}
+
+.press-review-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 880px;
+  border-left: 4px solid var(--gold);
+  border-radius: 14px;
+  background: rgba(255, 250, 242, 0.72);
+  box-shadow: 0 14px 38px rgba(37, 25, 13, 0.07);
+  padding: clamp(18px, 2.5vw, 28px);
+}
+
+.press-review-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.press-review-card p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.press-review-card p:last-child {
+  margin-bottom: 0;
+}
+
+.press-review-card blockquote {
+  margin: 12px 0 10px;
+  max-width: 680px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 800;
+  line-height: 1.22;
+}
+
+.press-review-rating {
+  color: var(--ink) !important;
+  font-weight: 900;
+}
+
+.press-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.press-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 12px;
+}
+
+.press-inline-links a,
+.press-resource-grid .text-link {
+  color: #9b5f24;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.press-inline-links a:hover,
+.press-resource-grid .text-link:hover {
+  color: var(--ink);
+}
+
+.press-contact-cta {
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 82% 14%, rgba(196, 141, 53, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(255, 250, 242, 0.96), rgba(239, 226, 207, 0.78));
+  box-shadow: 0 18px 54px rgba(37, 25, 13, 0.08);
+  padding: clamp(28px, 5vw, 54px);
+}
+
+.press-contact-cta p {
+  max-width: 780px;
+}
+
+@media (max-width: 1080px) {
+  .press-resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .press-bio,
+  .press-secondary-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .press-author-photo {
+    max-width: 320px;
+  }
+
+  .press-book-row,
+  .press-topic-grid,
+  .press-resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .press-book-card {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .press-book-card img {
+    width: 110px;
+  }
+
+  .press-book-card h3 {
+    margin: 0;
+  }
+
+  .press-review-card {
+    display: grid;
+  }
+}
+
+@media (max-width: 520px) {
+  .press-page .main-nav {
+    flex-wrap: wrap !important;
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+  }
+
+  .press-page .main-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .press-page .main-nav a {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+  }
+
+  .press-actions,
+  .press-contact-cta .press-actions {
+    display: grid;
+  }
+
+  .press-actions .button {
+    width: 100%;
+  }
+
+  .press-book-card {
+    grid-template-columns: 92px minmax(0, 1fr);
+  }
+
+  .press-book-card img {
+    width: 92px;
+  }
+
+  .press-secondary-art {
+    justify-content: flex-start;
+  }
+}
+
+/* 2026-08-29 pre-publish hero clearance: keep all copy off Ladonna. */
+@media (min-width: 901px) {
+  main#home .hero-bg img {
+    object-position: 64% center !important;
+  }
+
+  main#home .hero-inner {
+    grid-template-columns: minmax(420px, 610px) minmax(0, 1fr) !important;
+  }
+
+  main#home .hero-copy {
+    max-width: 590px !important;
+    padding: clamp(26px, 3vw, 42px) !important;
+  }
+
+  main#home .hero-copy h1 {
+    font-size: clamp(3.1rem, 4.7vw, 5rem) !important;
+  }
+
+  main#home .now-available {
+    font-size: clamp(2.1rem, 3.2vw, 3.7rem) !important;
+  }
+
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead {
+    max-width: 520px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  main#home .hero {
+    display: flex !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    background: #071016 !important;
+    flex-direction: column !important;
+  }
+
+  main#home .hero-bg {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: clamp(300px, 86vw, 430px) !important;
+    min-height: 0 !important;
+    opacity: 1 !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  main#home .hero-bg img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: 72% center !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  main#home .hero-bg::before,
+  main#home .hero-bg::after,
+  main#home .hero-shade,
+  main#home .hero-parallax-layer {
+    display: none !important;
+  }
+
+  main#home .hero-inner {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(238, 228, 212, 0.96)) !important;
+  }
+
+  main#home .hero-copy {
+    width: min(100% - 32px, 520px) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 26px 0 30px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    text-align: left !important;
+  }
+
+  main#home .hero-copy::before {
+    display: none !important;
+  }
+
+  main#home .hero-copy h1 {
+    font-size: clamp(2.65rem, 13vw, 4rem) !important;
+    line-height: 0.92 !important;
+  }
+
+  main#home .now-available {
+    font-size: clamp(2rem, 10vw, 3.2rem) !important;
+    color: #b56a2a !important;
+  }
+
+  main#home .hero-copy .eyebrow,
+  main#home .hero-copy h1,
+  main#home .hero-copy .tagline,
+  main#home .hero-copy .lead,
+  main#home .hero-series-brand,
+  main#home .hero-universe,
+  main#home .hero-release-title,
+  main#home .hero-release-title strong,
+  main#home .hero-release-title em {
+    color: var(--ink) !important;
+    text-shadow: none !important;
+  }
+
+  main#home .hero-actions {
+    display: grid !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  main#home .hero-actions .button {
+    width: 100% !important;
+  }
+}
+
+/* 2026-08-29 mobile polish: keep the header navigation clean on phone screens. */
+@media (max-width: 680px) {
+  .site-header {
+    gap: 12px !important;
+  }
+
+  .main-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    margin-inline: auto !important;
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .main-nav a {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 6px !important;
+    font-size: 0.79rem !important;
+    text-align: center !important;
+    line-height: 1.05 !important;
+    white-space: nowrap !important;
+  }
+
+  .header-button {
+    width: min(100%, 220px) !important;
+    min-height: 44px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-nav a {
+    font-size: 0.74rem !important;
+    padding-inline: 6px !important;
+  }
+}
+
+main#home .hero-series-brand,
+main#home .hero-universe,
+main#home .hero-copy .tagline {
+  font-weight: 800 !important;
+}
+
+.child-book-copy h3.full-child-title {
+  display: block !important;
+  font-size: clamp(1.2rem, 1.5vw, 1.56rem) !important;
+  line-height: 0.98 !important;
+}
+
+.child-book-copy h3.full-child-title span {
+  display: block !important;
+  margin-top: 8px !important;
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.22rem, 1.62vw, 1.68rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.02 !important;
+}
+
+.book-copy h3.full-quantum-title {
+  display: block !important;
+  font-size: clamp(1.58rem, 2vw, 2rem) !important;
+  line-height: 0.98 !important;
+}
+
+.book-copy h3.full-quantum-title span {
+  display: block !important;
+  margin-top: 8px !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(0.86rem, 1vw, 1rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.16em !important;
+  line-height: 1.18 !important;
+  text-transform: uppercase !important;
+}
+
+.press-bio-highlight,
+.signup-copy > p:not(.section-kicker),
+.signup-copy .form-note {
+  font-weight: 800 !important;
+}
+
+.press-book-card h3.full-press-title,
+.coming-soon-card h3.full-coming-title {
+  display: block !important;
+  line-height: 1 !important;
+}
+
+.press-book-card h3.full-press-title span,
+.coming-soon-card h3.full-coming-title span {
+  display: block !important;
+  margin-top: 7px !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.78em !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.18 !important;
+  text-transform: uppercase !important;
+}
+
+/* 2026-08-31 visual repair: protect faces and complete cover art across the public pages. */
+@media (min-width: 901px) {
+  main#home .hero {
+    min-height: clamp(675px, 56vw, 760px) !important;
+  }
+
+  main#home .hero-bg img {
+    object-position: 64% 28% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  main#home .hero-bg {
+    height: clamp(345px, 95vw, 500px) !important;
+  }
+
+  main#home .hero-bg img {
+    object-position: 70% top !important;
+  }
+}
+
+.cover-link,
+.child-cover,
+.coming-cover,
+.coming-cover-feature,
+.press-book-card > a,
+.press-secondary-art {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cover-link img,
+.child-cover img,
+.coming-cover img,
+.press-book-card img,
+.press-secondary-art img {
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.cover-link img {
+  width: auto !important;
+  max-height: clamp(245px, 22vw, 335px) !important;
+}
+
+.child-cover {
+  min-height: clamp(230px, 21vw, 315px) !important;
+}
+
+.child-cover img {
+  width: auto !important;
+  height: auto !important;
+  max-height: clamp(220px, 20vw, 300px) !important;
+  background: rgba(255, 252, 241, 0.72) !important;
+}
+
+.coming-cover img {
+  width: auto !important;
+  height: auto !important;
+  max-height: 100% !important;
+}
+
+.press-author-photo img,
+.series-card.large .series-card-art {
+  object-position: center 10% !important;
+}
+
+.book-copy h3.full-quantum-title,
+.child-book-copy h3.full-child-title,
+.press-book-card h3.full-press-title,
+.coming-soon-card h3.full-coming-title {
+  text-wrap: balance !important;
+}
+
+.child-book-copy h3.full-child-title {
+  font-size: clamp(1.06rem, 1.32vw, 1.36rem) !important;
+  line-height: 1.04 !important;
+}
+
+.child-book-copy h3.full-child-title span {
+  margin-top: 5px !important;
+  font-size: clamp(1.12rem, 1.42vw, 1.48rem) !important;
+  line-height: 1.05 !important;
+}
+
+@media (max-width: 680px) {
+  .cover-link img,
+  .child-cover img,
+  .coming-cover img,
+  .press-book-card img {
+    max-height: min(72vw, 330px) !important;
+  }
+
+  .child-cover {
+    min-height: min(78vw, 360px) !important;
+  }
+}
+
+.page-hero .section-title {
+  width: min(100% - 40px, 980px) !important;
+  overflow: visible !important;
+}
+
+.page-hero .section-title h1 {
+  max-width: 900px !important;
+  margin-inline: auto !important;
+  font-size: clamp(3.2rem, 5.6vw, 5.85rem) !important;
+  line-height: 0.96 !important;
+  text-wrap: balance !important;
+}
+
+.page-hero .section-title p {
+  max-width: 820px !important;
+  margin-inline: auto !important;
+}
+
+.book-grid,
+.children-books,
+.coming-soon-grid,
+.press-book-row {
+  max-width: min(100%, 1180px) !important;
+  margin-inline: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .book-grid,
+  .children-books,
+  .coming-soon-grid,
+  .press-book-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .book-grid,
+  .children-books,
+  .coming-soon-grid,
+  .press-book-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .page-hero .section-title h1 {
+    font-size: clamp(2.55rem, 12vw, 4rem) !important;
+  }
+}
+
+/* 2026-09-02 page-fit pass: reduce tall empty bands and keep covers/portraits complete. */
+.page-main > .page-hero {
+  padding: clamp(34px, 4vh, 52px) 0 clamp(30px, 3.5vh, 46px) !important;
+}
+
+.page-main > .page-hero + .section,
+.page-main > .page-hero + .children-section,
+.page-main > .page-hero + .section.series-section {
+  padding-top: clamp(38px, 5vh, 64px) !important;
+}
+
+.page-main > .section {
+  padding-top: clamp(48px, 6vh, 76px) !important;
+  padding-bottom: clamp(48px, 6vh, 76px) !important;
+}
+
+.page-hero .section-title h1 {
+  max-width: 980px !important;
+  font-size: clamp(3rem, 5.4vw, 6rem) !important;
+  line-height: 0.96 !important;
+}
+
+.page-hero .section-title p {
+  max-width: 760px !important;
+  margin-top: 16px !important;
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem) !important;
+  line-height: 1.5 !important;
+}
+
+.book-grid,
+.children-books,
+.coming-soon-grid {
+  gap: clamp(20px, 2.2vw, 30px) !important;
+}
+
+.book-card,
+.child-book-card,
+.coming-soon-card {
+  min-height: 0 !important;
+}
+
+.cover-link,
+.child-cover,
+.coming-cover,
+.press-book-card > a {
+  overflow: visible !important;
+}
+
+.cover-link img,
+.child-cover img,
+.coming-cover img,
+.press-book-card img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.book-grid .cover-link {
+  min-height: clamp(250px, 19vw, 320px) !important;
+  padding: clamp(16px, 1.7vw, 22px) clamp(14px, 1.6vw, 20px) 4px !important;
+}
+
+.book-grid .cover-link img {
+  max-height: clamp(235px, 18vw, 300px) !important;
+}
+
+.children-books .child-cover {
+  min-height: clamp(210px, 18vw, 285px) !important;
+  padding: clamp(16px, 1.7vw, 22px) !important;
+}
+
+.children-books .child-cover img {
+  max-height: clamp(200px, 17vw, 270px) !important;
+}
+
+.coming-soon-grid {
+  max-width: min(100%, 1120px) !important;
+}
+
+.coming-soon-card {
+  padding: clamp(18px, 2vw, 26px) !important;
+}
+
+.coming-soon-card .coming-cover,
+.coming-soon-card .coming-cover-feature {
+  min-height: clamp(230px, 22vw, 330px) !important;
+  max-height: clamp(250px, 24vw, 360px) !important;
+  padding: clamp(14px, 1.5vw, 18px) !important;
+}
+
+.coming-soon-card .coming-cover img {
+  width: auto !important;
+  height: auto !important;
+  max-height: 100% !important;
+  max-width: 100% !important;
+}
+
+.press-center-page .page-hero {
+  padding-top: clamp(34px, 4vh, 50px) !important;
+  padding-bottom: clamp(30px, 3.5vh, 44px) !important;
+}
+
+.press-bio-section {
+  padding-top: clamp(38px, 5vh, 62px) !important;
+}
+
+.press-author-photo {
+  aspect-ratio: 4 / 5 !important;
+  max-height: 360px !important;
+}
+
+.press-author-photo img,
+.portrait-frame img {
+  object-position: center 8% !important;
+}
+
+.contact-main .signup-section,
+.signup-section {
+  padding-top: clamp(42px, 5vh, 68px) !important;
+  padding-bottom: clamp(42px, 5vh, 68px) !important;
+}
+
+@media (min-width: 700px) {
+  .signup-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.8fr) !important;
+    gap: clamp(24px, 4vw, 46px) !important;
+    align-items: center !important;
+  }
+
+  .signup-copy h2 {
+    font-size: clamp(2.25rem, 5.2vw, 4.6rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  .signup-copy p {
+    line-height: 1.5 !important;
+  }
+
+  .signup-form {
+    padding: clamp(18px, 2.2vw, 28px) !important;
+  }
+
+  .mailerlite-signup {
+    min-height: 210px !important;
+  }
+
+  .mailerlite-signup .ml-embedded,
+  .mailerlite-signup iframe {
+    min-height: 170px !important;
+  }
+}
+
+@media (min-width: 901px) {
+  main#home .hero {
+    min-height: clamp(620px, 52vw, 730px) !important;
+  }
+
+  main#home .hero-bg img {
+    object-fit: cover !important;
+    object-position: 50% 8% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-main > .page-hero {
+    padding: 32px 0 28px !important;
+  }
+
+  .page-main > .page-hero + .section,
+  .page-main > .page-hero + .children-section {
+    padding-top: 34px !important;
+  }
+
+  .page-hero .section-title h1 {
+    font-size: clamp(2.45rem, 10vw, 3.8rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  main#home .hero-bg img {
+    object-position: 58% top !important;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+  main#home .hero {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 42px !important;
+  }
+
+  main#home .hero-inner {
+    min-height: 0 !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+    gap: 24px !important;
+  }
+
+  main#home .hero-copy {
+    padding: 20px !important;
+  }
+
+  main#home .now-available {
+    font-size: clamp(1.9rem, 6vw, 2.7rem) !important;
+    margin-bottom: 8px !important;
+  }
+
+  main#home .hero-copy h1 {
+    font-size: clamp(2.65rem, 8vw, 4rem) !important;
+    line-height: 0.9 !important;
+  }
+
+  main#home .hero-copy .book-title-inline,
+  main#home .hero-copy .book-subtitle,
+  main#home .hero-copy p {
+    font-size: clamp(0.94rem, 2.2vw, 1.08rem) !important;
+    line-height: 1.38 !important;
+  }
+
+  main#home .hero-copy .hero-actions {
+    margin-top: 14px !important;
+  }
+
+  main#home .hero-bg {
+    height: min(50vh, 390px) !important;
+  }
+
+  main#home .intro-band {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .children-section {
+    padding-top: 38px !important;
+  }
+
+  .children-section .section-title {
+    margin-bottom: 28px !important;
+  }
+
+  .children-section .section-title h1 {
+    font-size: clamp(3.1rem, 8vw, 5rem) !important;
+  }
+}
+
+/* Final visual-fit layer for book/gallery pages. */
+.book-card,
+.child-book-card,
+.coming-soon-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.book-card .cover-link,
+.child-cover,
+.coming-cover,
+.coming-cover-feature {
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
+}
+
+.book-card .cover-link img,
+.child-cover img,
+.coming-cover img,
+.coming-cover-feature img,
+.press-book-card img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.book-card h3,
+.child-book-copy h3,
+.coming-soon-card h3 {
+  line-height: 1.02 !important;
+  margin-top: 12px !important;
+}
+
+.book-card .eyebrow,
+.child-status,
+.coming-soon-card .eyebrow {
+  min-height: 1.45em !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.book-card p,
+.child-book-copy p,
+.coming-soon-card p {
+  line-height: 1.45 !important;
+}
+
+@media (min-width: 901px) {
+  .book-grid,
+  .children-books,
+  .coming-soon-grid {
+    align-items: stretch !important;
+  }
+
+  .book-card .cover-link {
+    min-height: clamp(250px, 19vw, 318px) !important;
+  }
+
+  .children-books .child-cover,
+  .child-cover {
+    min-height: clamp(225px, 17vw, 285px) !important;
+  }
+
+  .coming-soon-card .coming-cover,
+  .coming-soon-card .coming-cover-feature {
+    min-height: clamp(235px, 21vw, 330px) !important;
+  }
+
+  .book-card .cover-link img {
+    max-height: clamp(230px, 18vw, 300px) !important;
+  }
+
+  .children-books .child-cover img,
+  .child-cover img {
+    max-height: clamp(205px, 16vw, 270px) !important;
+  }
+
+  .coming-soon-card .coming-cover img,
+  .coming-soon-card .coming-cover-feature img {
+    max-height: clamp(215px, 19vw, 300px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .book-card .cover-link,
+  .child-cover,
+  .coming-cover,
+  .coming-cover-feature {
+    min-height: 0 !important;
+  }
+
+  .book-card .cover-link img,
+  .child-cover img,
+  .coming-cover img,
+  .coming-cover-feature img {
+    max-height: min(62vw, 300px) !important;
+  }
+}
+
+/* Coming Soon needs the complete covers and titles visible together above the fold. */
+.page-main .series-section:has(.coming-soon-grid) {
+  padding-top: clamp(38px, 5vh, 62px) !important;
+}
+
+.coming-soon-grid {
+  gap: clamp(20px, 2.2vw, 34px) !important;
+}
+
+.coming-soon-card {
+  gap: 10px !important;
+  padding: clamp(18px, 1.8vw, 24px) !important;
+}
+
+.coming-soon-card .book-label {
+  margin-top: 2px !important;
+  margin-bottom: 0 !important;
+}
+
+.coming-soon-card h3.full-coming-title {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.coming-soon-card p:not(.book-label):not(.book-subtitle) {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+@media (min-width: 901px) {
+  .page-main > .page-hero:has(+ .series-section .coming-soon-grid) {
+    padding-top: clamp(16px, 2.2vh, 26px) !important;
+    padding-bottom: clamp(16px, 2.2vh, 26px) !important;
+    min-height: 0 !important;
+  }
+
+  .page-hero:has(+ .series-section .coming-soon-grid) .section-title h1 {
+    font-size: clamp(3.5rem, 4.7vw, 4.85rem) !important;
+    line-height: 0.92 !important;
+    max-width: min(100%, 1220px) !important;
+    margin-top: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .coming-soon-main .section-title {
+    max-width: min(100%, 1220px) !important;
+  }
+
+  .coming-soon-main > .series-section {
+    padding-top: clamp(14px, 2vh, 26px) !important;
+  }
+
+  .coming-soon-main .coming-soon-grid {
+    padding-top: 0 !important;
+    padding-bottom: 48px !important;
+  }
+
+  .coming-soon-card .coming-cover,
+  .coming-soon-card .coming-cover-feature {
+    min-height: clamp(172px, 13vw, 212px) !important;
+    max-height: clamp(172px, 13vw, 212px) !important;
+    margin-bottom: 8px !important;
+    padding: clamp(12px, 1.1vw, 16px) !important;
+  }
+
+  .coming-soon-card .coming-cover img,
+  .coming-soon-card .coming-cover-feature img {
+    max-height: clamp(154px, 11.6vw, 186px) !important;
+  }
+
+  .coming-soon-card h3.full-coming-title {
+    font-size: clamp(1.42rem, 1.62vw, 1.8rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .coming-soon-card p:not(.book-label):not(.book-subtitle) {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .coming-soon-card h3.full-coming-title span {
+    font-size: 0.48em !important;
+    margin-top: 8px !important;
+  }
+}
+
+/* Contact page fit: keep the signup copy and form visible together. */
+.contact-main > .page-hero {
+  padding-top: clamp(18px, 3vh, 34px) !important;
+  padding-bottom: clamp(18px, 3vh, 34px) !important;
+  min-height: 0 !important;
+}
+
+.contact-main .page-hero .section-title h1 {
+  font-size: clamp(3rem, 4.5vw, 4.9rem) !important;
+  line-height: 0.95 !important;
+  max-width: min(100%, 1120px) !important;
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+}
+
+.contact-main .page-hero .section-title p {
+  max-width: 900px !important;
+  font-size: clamp(0.98rem, 1vw, 1.08rem) !important;
+}
+
+.contact-main .signup-section {
+  padding-top: clamp(24px, 3vh, 38px) !important;
+  padding-bottom: clamp(30px, 3.5vh, 46px) !important;
+}
+
+.contact-main .signup-copy h2 {
+  font-size: clamp(2.55rem, 3.9vw, 4.05rem) !important;
+  line-height: 1 !important;
+  max-width: 700px !important;
+  margin-bottom: 18px !important;
+}
+
+.contact-main .signup-copy p {
+  font-size: clamp(0.98rem, 1vw, 1.05rem) !important;
+  line-height: 1.45 !important;
+}
+
+@media (min-width: 901px) {
+  .contact-main .signup-panel {
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.85fr) !important;
+    gap: clamp(34px, 5vw, 78px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-main .page-hero .section-title h1,
+  .contact-main .signup-copy h2 {
+    font-size: clamp(2.55rem, 8.5vw, 4rem) !important;
+  }
+}
+
+/* Site-wide page fit: keep first book rows visible with their titles and actions. */
+.books-main > .page-hero,
+.press-center-page > .page-hero {
+  padding-top: clamp(24px, 3.2vh, 40px) !important;
+  padding-bottom: clamp(24px, 3.2vh, 40px) !important;
+  min-height: 0 !important;
+}
+
+.books-main .page-hero .section-title h1,
+.press-center-page .page-hero .section-title h1 {
+  font-size: clamp(3.35rem, 4.8vw, 5.3rem) !important;
+  line-height: 0.94 !important;
+  margin-top: 10px !important;
+  margin-bottom: 14px !important;
+}
+
+.books-main > .books-section.section,
+.books-main > .page-hero + .books-section.section {
+  padding-top: clamp(18px, 2.4vh, 28px) !important;
+  padding-bottom: clamp(44px, 5vh, 70px) !important;
+}
+
+.books-main .book-grid {
+  gap: clamp(24px, 3vw, 34px) !important;
+}
+
+.books-main .book-card {
+  gap: 10px !important;
+  padding: clamp(18px, 1.8vw, 24px) !important;
+  min-height: 0 !important;
+}
+
+.books-main .book-card .cover-link {
+  min-height: clamp(172px, 12.8vw, 206px) !important;
+  max-height: clamp(172px, 12.8vw, 206px) !important;
+  margin-bottom: 6px !important;
+  padding: clamp(10px, 1vw, 14px) !important;
+}
+
+.books-main .book-card .cover-link img {
+  max-height: clamp(154px, 11vw, 180px) !important;
+}
+
+.books-main .book-card .book-label {
+  margin-bottom: 4px !important;
+}
+
+.books-main .book-card h3.full-quantum-title {
+  font-size: clamp(1.55rem, 1.78vw, 1.98rem) !important;
+  line-height: 1.02 !important;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+.books-main .book-card h3.full-quantum-title span {
+  font-size: 0.46em !important;
+  margin-top: 8px !important;
+}
+
+.books-main .book-card p:not(.book-label) {
+  font-size: 0.94rem !important;
+  line-height: 1.36 !important;
+  margin-top: 10px !important;
+  margin-bottom: 8px !important;
+}
+
+.books-main .book-card .card-actions {
+  margin-top: 8px !important;
+  padding-top: 0 !important;
+}
+
+.children-main .children-section {
+  padding-top: clamp(30px, 4vh, 48px) !important;
+  padding-bottom: clamp(52px, 6vh, 78px) !important;
+}
+
+.children-main .section-title {
+  margin-bottom: clamp(22px, 3vh, 34px) !important;
+}
+
+.children-main .section-title h1 {
+  font-size: clamp(3.5rem, 5.2vw, 5.6rem) !important;
+  line-height: 0.94 !important;
+  margin-top: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.children-main .children-books {
+  gap: clamp(24px, 3vw, 34px) !important;
+}
+
+.children-main .child-book-card {
+  gap: 10px !important;
+  padding: clamp(18px, 1.8vw, 24px) !important;
+  min-height: 0 !important;
+}
+
+.children-main .child-cover {
+  min-height: clamp(190px, 14.6vw, 235px) !important;
+  max-height: clamp(190px, 14.6vw, 235px) !important;
+  margin-bottom: 8px !important;
+  padding: clamp(12px, 1.2vw, 16px) !important;
+}
+
+.children-main .child-cover img {
+  max-height: clamp(170px, 12.8vw, 207px) !important;
+}
+
+.children-main .child-status {
+  margin-bottom: 8px !important;
+}
+
+.children-main .child-book-copy h3 {
+  font-size: clamp(1.46rem, 1.72vw, 1.9rem) !important;
+  line-height: 1.02 !important;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+.children-main .child-book-copy h3.full-child-title span {
+  font-size: 0.78em !important;
+  margin-top: 2px !important;
+}
+
+.children-main .child-book-copy p {
+  font-size: 0.96rem !important;
+  line-height: 1.38 !important;
+  margin-bottom: 14px !important;
+}
+
+/* Remove decorative cover rings and let card art use more of the frame. */
+.electric-book {
+  display: grid !important;
+  place-items: center !important;
+  padding-bottom: 0 !important;
+}
+
+.electric-book::before,
+.electric-book::after,
+.electric-field {
+  display: none !important;
+  content: none !important;
+}
+
+@media (min-width: 901px) {
+  .books-main .book-card .cover-link,
+  main#home .book-card .cover-link {
+    min-height: clamp(245px, 19vw, 315px) !important;
+    max-height: none !important;
+    padding: clamp(12px, 1.2vw, 18px) !important;
+    margin-bottom: 8px !important;
+  }
+
+  .books-main .book-card .cover-link img,
+  main#home .book-card .cover-link img {
+    width: 100% !important;
+    max-width: min(100%, 260px) !important;
+    height: auto !important;
+    max-height: clamp(230px, 18vw, 300px) !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .coming-soon-main .coming-cover,
+  .coming-soon-main .coming-cover-feature {
+    min-height: clamp(245px, 19vw, 315px) !important;
+    max-height: none !important;
+    padding: clamp(12px, 1.2vw, 18px) !important;
+  }
+
+  .coming-soon-main .coming-cover img,
+  .coming-soon-main .coming-cover-feature img {
+    max-height: clamp(230px, 18vw, 300px) !important;
+  }
+}
+
+/* Keep the homepage opening screen as the hero only, without extra glow swirls. */
+main#home .hero-parallax-layer,
+main#home .hero-gold-line,
+main#home .hero-blue-glow {
+  display: none !important;
+}
+
+@media (min-width: 901px) {
+  main#home .hero {
+    height: clamp(430px, 32vw, 610px) !important;
+    min-height: clamp(430px, 32vw, 610px) !important;
+    max-height: 610px !important;
+    overflow: hidden !important;
+  }
+
+  main#home .hero-inner {
+    min-height: 100% !important;
+  }
+
+  main#home .hero-bg img {
+    object-fit: cover !important;
+    object-position: 50% 0% !important;
+  }
+
+  main#home .hero-copy {
+    max-width: min(620px, 43vw) !important;
+    padding: clamp(18px, 2.15vw, 34px) !important;
+    transform: none !important;
+  }
+
+  main#home .now-available {
+    font-size: clamp(2rem, 3.05vw, 3.65rem) !important;
+    line-height: 0.92 !important;
+    margin-bottom: 8px !important;
+  }
+
+  main#home .hero-copy h1 {
+    font-size: clamp(2.9rem, 4.15vw, 4.85rem) !important;
+    line-height: 0.88 !important;
+    margin: 6px 0 8px !important;
+  }
+
+  main#home .hero-release-title {
+    margin: 6px 0 8px !important;
+  }
+
+  main#home .hero-release-title strong {
+    font-size: clamp(1.45rem, 1.8vw, 2.1rem) !important;
+  }
+
+  main#home .hero-series-brand,
+  main#home .hero-universe,
+  main#home .hero-copy .tagline {
+    font-size: clamp(0.9rem, 1vw, 1.05rem) !important;
+    line-height: 1.28 !important;
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+  }
+
+  main#home .hero-actions {
+    margin-top: 14px !important;
+    gap: 10px !important;
+  }
+
+  main#home .hero-actions .button {
+    min-height: 38px !important;
+    padding: 9px 18px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  main#home .hero-parallax-layer,
+  main#home .hero-gold-line,
+  main#home .hero-blue-glow {
+    display: none !important;
+  }
+}
+
+/* Phase 1 recovery fit guard: keep the children catalog inside the viewport. */
+.children-page .storybook-sky,
+.children-main .storybook-sky {
+  display: none !important;
+}
+
+.children-page .child-book-card.reveal,
+.children-page .child-book-card.reveal.is-visible,
+.children-main .child-book-card.reveal,
+.children-main .child-book-card.reveal.is-visible {
+  transform: none !important;
+}
+
+/* A definite grid track keeps portrait covers inside their frames. */
+.coming-soon-main .coming-soon-card .coming-cover {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+  aspect-ratio: auto !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+}
+
+.coming-soon-main .coming-soon-card .coming-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
 }
