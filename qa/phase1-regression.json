@@ -1,0 +1,1312 @@
+{
+  "date": "2026-09-08T04:08:44.354Z",
+  "method": "Headless Microsoft Edge; live production HTTPS responses delivered through Node fetch; local static server applies _redirects. No mocked response bodies.",
+  "routes": [
+    {
+      "route": "/books",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/quantum-series",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/children",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": false,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [
+          {
+            "url": "http://127.0.0.1:3003/images/quantum-network-sphere-video.mp4",
+            "error": "net::ERR_ABORTED"
+          }
+        ],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/educators",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/book-clubs",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/libraries",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/press",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/appearances",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/reviews",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/coming-soon",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/inside-the-quantum-series/why-i-created-dr-ladonna-stone",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/thank-you",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/contact",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/privacy",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/terms",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/books",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/quantum-series",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/children",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": false,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [
+          {
+            "url": "http://127.0.0.1:3003/images/quantum-network-sphere-video.mp4",
+            "error": "net::ERR_ABORTED"
+          }
+        ],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [
+          "Failed to load resource: net::ERR_FAILED",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "httpErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://aries-blackstone.com/images/quantum-network-sphere-video.mp4",
+            "error": "net::ERR_FAILED"
+          },
+          {
+            "url": "https://aries-blackstone.com/images/quantum-network-sphere-video.mp4",
+            "error": "net::ERR_FAILED"
+          }
+        ],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/educators",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/libraries",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/book-clubs",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/press",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/appearances",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/reviews",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/coming-soon",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/inside-the-quantum-series/why-i-created-dr-ladonna-stone",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/thank-you",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/terms",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/privacy",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    },
+    {
+      "route": "/contact",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "comparison": {
+        "text": true,
+        "headings": true,
+        "links": true,
+        "images": true
+      },
+      "local": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": [],
+        "horizontalOverflow": false,
+        "hiddenReveals": 0
+      },
+      "production": {
+        "consoleErrors": [],
+        "httpErrors": [],
+        "failedRequests": [],
+        "missingImages": []
+      }
+    }
+  ],
+  "source": [
+    {
+      "file": "script.js",
+      "status": 200,
+      "equal": false,
+      "productionPinned": 0,
+      "localPinned": 0,
+      "productionSha256": "fdef57d7748cd5c563c02883d42911701f70c72c91903196e6305dbe12092381"
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "equal": true,
+      "productionPinned": 0,
+      "localPinned": 0,
+      "productionSha256": "a248f32c02b8f38def434db12e7214a289830083135c07ff935cd04b895db61d"
+    },
+    {
+      "file": "children.html",
+      "status": 200,
+      "equal": false,
+      "productionPinned": 0,
+      "localPinned": 0,
+      "productionSha256": "7d389f7787a18d93837e4591d1f85ce39e9dbadb77cb7be14a94eec71db4d8ec"
+    },
+    {
+      "file": "desktop-fixes.css",
+      "status": 200,
+      "equal": false,
+      "productionPinned": 0,
+      "localPinned": 0,
+      "productionSha256": "d45bcfba1775978bce6815979f8d56b3dc77f0fde6954a985a53488c26802b99"
+    },
+    {
+      "file": "quantum-series.html",
+      "status": 200,
+      "equal": false,
+      "productionPinned": 0,
+      "localPinned": 0,
+      "productionSha256": "116f417215f964e33164ff003e0cd3156f6aace16f22e8371959162c98ef46cf"
+    }
+  ],
+  "interactions": [
+    {
+      "width": 1440,
+      "check": "active navigation",
+      "route": "books",
+      "active": [
+        "Books"
+      ]
+    },
+    {
+      "width": 1440,
+      "check": "active navigation",
+      "route": "children",
+      "active": [
+        "Children"
+      ]
+    },
+    {
+      "width": 1440,
+      "check": "active navigation",
+      "route": "press",
+      "active": [
+        "Press"
+      ]
+    },
+    {
+      "width": 1440,
+      "check": "active navigation",
+      "route": "coming-soon",
+      "active": [
+        "Coming Soon"
+      ]
+    },
+    {
+      "width": 1440,
+      "check": "active navigation",
+      "route": "contact",
+      "active": [
+        "Contact"
+      ]
+    },
+    {
+      "width": 1440,
+      "check": "signup anchor",
+      "url": "http://127.0.0.1:3002/contact.html#signup",
+      "visible": true
+    },
+    {
+      "width": 1440,
+      "check": "newsletter embed",
+      "embed": 1,
+      "emailInputs": 1
+    },
+    {
+      "width": 1440,
+      "check": "footer Books navigation",
+      "url": "http://127.0.0.1:3002/books.html"
+    },
+    {
+      "width": 1440,
+      "check": "character selection",
+      "src": "images/max-character.png",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "check": "character selection",
+      "src": "images/zoey-character.png",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "check": "video playback",
+      "result": {
+        "playing": true,
+        "error": null
+      }
+    },
+    {
+      "width": 1440,
+      "check": "homepage internal links",
+      "count": 17,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "active navigation",
+      "route": "books",
+      "active": [
+        "Books"
+      ]
+    },
+    {
+      "width": 390,
+      "check": "active navigation",
+      "route": "children",
+      "active": [
+        "Children"
+      ]
+    },
+    {
+      "width": 390,
+      "check": "active navigation",
+      "route": "press",
+      "active": [
+        "Press"
+      ]
+    },
+    {
+      "width": 390,
+      "check": "active navigation",
+      "route": "coming-soon",
+      "active": [
+        "Coming Soon"
+      ]
+    },
+    {
+      "width": 390,
+      "check": "active navigation",
+      "route": "contact",
+      "active": [
+        "Contact"
+      ]
+    },
+    {
+      "width": 390,
+      "check": "signup anchor",
+      "url": "http://127.0.0.1:3002/contact.html#signup",
+      "visible": true
+    },
+    {
+      "width": 390,
+      "check": "newsletter embed",
+      "embed": 1,
+      "emailInputs": 1
+    },
+    {
+      "width": 390,
+      "check": "footer Books navigation",
+      "url": "http://127.0.0.1:3002/books.html"
+    },
+    {
+      "width": 390,
+      "check": "character selection",
+      "src": "images/max-character.png",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "character selection",
+      "src": "images/zoey-character.png",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "video playback",
+      "result": {
+        "playing": true,
+        "error": null
+      }
+    },
+    {
+      "width": 390,
+      "check": "homepage internal links",
+      "count": 17,
+      "passed": true
+    }
+  ],
+  "internalLinks": [
+    {
+      "link": "/#home",
+      "status": 200
+    },
+    {
+      "link": "/books",
+      "status": 200
+    },
+    {
+      "link": "/children",
+      "status": 200
+    },
+    {
+      "link": "/press",
+      "status": 200
+    },
+    {
+      "link": "/coming-soon",
+      "status": 200
+    },
+    {
+      "link": "/contact",
+      "status": 200
+    },
+    {
+      "link": "/contact#signup",
+      "status": 200
+    },
+    {
+      "link": "/inside-the-quantum-series/why-i-created-dr-ladonna-stone",
+      "status": 200
+    },
+    {
+      "link": "/#about",
+      "status": 200
+    },
+    {
+      "link": "/libraries",
+      "status": 200
+    },
+    {
+      "link": "/book-clubs",
+      "status": 200
+    },
+    {
+      "link": "/educators",
+      "status": 200
+    },
+    {
+      "link": "/reviews",
+      "status": 200
+    },
+    {
+      "link": "/appearances",
+      "status": 200
+    },
+    {
+      "link": "/privacy",
+      "status": 200
+    },
+    {
+      "link": "/terms",
+      "status": 200
+    },
+    {
+      "link": "/#contact",
+      "status": 200
+    },
+    {
+      "link": "/press#press-author-bio",
+      "status": 200
+    },
+    {
+      "link": "/images/author-photo.jpg",
+      "status": 200
+    },
+    {
+      "link": "/images/quantum-edge-floating2.png",
+      "status": 200
+    },
+    {
+      "link": "/images/quantum-pursuit-floating2.png",
+      "status": 200
+    },
+    {
+      "link": "/images/quantum-divide-floating2.png",
+      "status": 200
+    },
+    {
+      "link": "/images/max-zoey-book-1-cover.jpg",
+      "status": 200
+    },
+    {
+      "link": "/images/max-zoey-book-2-cover.jpg",
+      "status": 200
+    },
+    {
+      "link": "/images/max-zoey-book-3-cover.png",
+      "status": 200
+    }
+  ],
+  "finalCoverChecks": [
+    {
+      "width": 375,
+      "covers": [
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "covers": [
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "covers": [
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "width": 900,
+      "covers": [
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "covers": [
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "inside": true
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Homepage text differs only by the approved author introduction.",
+    "Full suite was rerun after removing content-visibility. A subsequent scoped Coming Soon cover fix passed bounds checks at five widths.",
+    "Aborted local video requests occur when capture contexts close; separate playback checks passed.",
+    "Production mobile video download timed out in the fetch transport; it is not classified as a site HTTP failure."
+  ]
+}

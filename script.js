@@ -12,13 +12,14 @@ let pointerY = 0;
 document.body.classList.add("is-ready");
 
 const setActiveNavigation = () => {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const pageName = (pathname) => pathname.replace(/\/$/, "").split("/").pop()?.replace(/\.html$/, "") || "index";
+  const currentPage = pageName(window.location.pathname);
   const currentHash = window.location.hash;
 
   document.querySelectorAll(".main-nav a").forEach((link) => {
     const linkUrl = new URL(link.href, window.location.href);
-    const linkPage = linkUrl.pathname.split("/").pop() || "index.html";
-    const isHome = currentPage === "index.html" && linkPage === "index.html";
+    const linkPage = pageName(linkUrl.pathname);
+    const isHome = currentPage === "index" && linkPage === "index";
     const isSamePage = currentPage === linkPage && !isHome;
     const isActive = isSamePage || (isHome && (!currentHash || linkUrl.hash === currentHash || linkUrl.hash === "#home"));
 

@@ -3938,11 +3938,19 @@ main#home .hero-blue-glow {
   transform: none !important;
 }
 
-@supports (content-visibility: auto) {
-  main#home > section:not(.hero),
-  .page-main > section:not(:first-child),
-  .site-footer {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 620px;
-  }
+/* A definite grid track keeps portrait covers inside their frames. */
+.coming-soon-main .coming-soon-card .coming-cover {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+  aspect-ratio: auto !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+}
+
+.coming-soon-main .coming-soon-card .coming-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
 }
