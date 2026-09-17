@@ -9,6 +9,14 @@ let characterResetTimer;
 let pointerX = 0;
 let pointerY = 0;
 
+// Do not send visitors to a generic social-network homepage. Placeholder
+// social links stay hidden until the official Aries Blackstone profile URL is set.
+document.querySelectorAll('.footer-social[href="https://www.instagram.com/"], .footer-social[href="https://instagram.com/"]').forEach((link) => {
+  link.hidden = true;
+  link.setAttribute("aria-hidden", "true");
+  link.tabIndex = -1;
+});
+
 document.body.classList.add("is-ready");
 
 const setActiveNavigation = () => {
