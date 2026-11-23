@@ -3,6 +3,7 @@
   "purpose": "Required source files for the public Aries Blackstone author site. CI treats this manifest as the minimum rebuildable site surface.",
   "routes": [
     { "route": "/", "source": "index.html", "required": true },
+    { "route": "/quantum-edge", "source": "quantum-edge.html", "required": true },
     { "route": "/books", "source": "books.html", "required": true },
     { "route": "/children", "source": "children.html", "required": true },
     { "route": "/quantum-series", "source": "quantum-series.html", "required": true },
