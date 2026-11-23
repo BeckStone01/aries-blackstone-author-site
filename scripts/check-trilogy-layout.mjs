@@ -47,6 +47,20 @@ try {
     assert.equal(new URL(page.url()).pathname, '/quantum-pursuit');
     await page.getByRole('link', { name: 'Next in the series: Quantum Divide' }).click();
     assert.equal(new URL(page.url()).pathname, '/quantum-divide');
+    await page.getByRole('link', { name: 'Why I created Dr. Ladonna Stone' }).click();
+    const essayPath = new URL(page.url()).pathname;
+    assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://aries-blackstone.com' + essayPath);
+    for (const route of ['/reviews', '/appearances', '/coming-soon', '/contact', '/children', '/books']) {
+      await page.goto(origin + route);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, route + ' overflows at ' + width);
+      const levels = await page.locator('main :is(h1,h2,h3,h4)').evaluateAll(nodes => nodes.map(node => Number(node.tagName[1])));
+      assert.equal(levels[0], 1, route);
+      assert.ok(levels.every((level, i) => i === 0 || level <= levels[i - 1] + 1), route + ' skips a heading level');
+    }
+    await page.goto(origin + '/reviews');
+    assert.equal(await page.getByRole('link', { name: 'Read Ams Strong’s full review' }).getAttribute('href'), 'https://forums.onlinebookclub.org/viewtopic.php?f=53&t=392192');
+    await page.getByRole('link', { name: 'read the opening excerpt from Quantum Edge' }).click();
+    assert.equal(new URL(page.url()).pathname, '/quantum-edge');
     assert.deepEqual(errors, []);
     await page.close();
     console.log('Trilogy reader checks passed at ' + width + 'px.');
