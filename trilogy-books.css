@@ -1,0 +1,10 @@
+.trilogy-intro { display: grid; grid-template-columns: minmax(12rem, 20rem) minmax(0, 37rem); gap: clamp(1.5rem, 5vw, 4rem); align-items: center; justify-content: center; }
+.trilogy-intro img { width: 100%; height: auto; }
+.trilogy-intro h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.04; margin: .3em 0; }
+.trilogy-intro h1 span { display: block; font-size: .48em; margin-top: .25em; }
+.trilogy-page p { line-height: 1.65; }
+.trilogy-sample { max-width: 48rem; margin: 2rem auto; }
+.trilogy-sample blockquote { margin: 1.5rem 0; padding-left: 1.25rem; border-left: .2rem solid #a6772c; }
+@media (max-width: 680px) { .trilogy-intro { grid-template-columns: 1fr; } .trilogy-intro img { max-width: 11rem; justify-self: center; } }
+.full-quantum-title > a { color: inherit; text-decoration: none; }
+.full-quantum-title > a:hover, .full-quantum-title > a:focus-visible { text-decoration: underline; }
