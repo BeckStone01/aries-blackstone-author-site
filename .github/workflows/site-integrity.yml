@@ -27,3 +27,8 @@ jobs:
 
       - name: Check site source integrity
         run: node scripts/check-site-integrity.mjs
+
+      - name: Check trilogy pages on mobile and desktop
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
+          node scripts/check-trilogy-layout.mjs

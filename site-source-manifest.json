@@ -4,6 +4,8 @@
   "routes": [
     { "route": "/", "source": "index.html", "required": true },
     { "route": "/quantum-edge", "source": "quantum-edge.html", "required": true },
+    { "route": "/quantum-pursuit", "source": "quantum-pursuit.html", "required": true },
+    { "route": "/quantum-divide", "source": "quantum-divide.html", "required": true },
     { "route": "/books", "source": "books.html", "required": true },
     { "route": "/children", "source": "children.html", "required": true },
     { "route": "/quantum-series", "source": "quantum-series.html", "required": true },
